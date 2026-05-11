@@ -1,19 +1,18 @@
 ﻿using System.Collections;
 using System.Globalization;
 
-namespace TemporaLinq;
+namespace de.baggerbagger.TemporaLinq;
 
-public record Dates : IEnumerable<DateOnly>
+public record Dates : IDateEnumerable
 {
-    private readonly Calendar calendar;
-
     public DateOnly EndDate { get; private init; }
 
     public DateOnly StartDate { get; private init; }
 
+    public CalendarConfig Config { get; private init; } = CalendarConfig.Default;
     private Dates(Calendar calendar)
     {
-        this.calendar = calendar;
+        Config = new CalendarConfig(calendar, Weekends.Western);
         StartDate = DateOnly.FromDateTime(calendar.MinSupportedDateTime);
         EndDate = DateOnly.FromDateTime(calendar.MaxSupportedDateTime);
     }
@@ -29,6 +28,7 @@ public record Dates : IEnumerable<DateOnly>
 
     public Dates From(DateOnly date) => this with { StartDate = date };
     public Dates To(DateOnly date) => this with { EndDate = date };
+    public Dates WithWeekend(params DayOfWeek[] days) => this with { Config = Config.WithWeekend(days) };
 
     public IEnumerator<DateOnly> GetEnumerator()
     {
@@ -39,7 +39,7 @@ public record Dates : IEnumerable<DateOnly>
     }
 
     private DateOnly NextDay(DateOnly date) 
-        => DateOnly.FromDateTime(calendar.AddDays(date.ToDateTime(TimeOnly.MinValue), 1));
+        => DateOnly.FromDateTime(Config.Calendar.AddDays(date.ToDateTime(TimeOnly.MinValue), 1));
 
     IEnumerator IEnumerable.GetEnumerator()
         => GetEnumerator();
