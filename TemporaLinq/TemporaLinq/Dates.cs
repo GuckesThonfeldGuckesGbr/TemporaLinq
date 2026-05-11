@@ -27,6 +27,12 @@ public record Dates : IDateEnumerable
         => OfCalendar(CultureInfo.InvariantCulture.Calendar);
 
     public Dates From(DateOnly date) => this with { StartDate = date };
+    
+    /// <summary>
+    /// The end date is exclusive
+    /// </summary>
+    /// <param name="date"></param>
+    /// <returns></returns>
     public Dates To(DateOnly date) => this with { EndDate = date };
     public Dates WithWeekend(params DayOfWeek[] days) => this with { Config = Config.WithWeekend(days) };
 

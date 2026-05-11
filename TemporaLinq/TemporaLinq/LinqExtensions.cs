@@ -69,7 +69,7 @@ public static class LinqExtensions
         => Enumerable.Except(seq, second).AsDateEnumerable(seq.Config);
 
     public static IDateEnumerable Except(this IDateEnumerable seq, IEnumerable<DateOnly> second,
-        IEqualityComparer<DateOnly> comparer)
+        IEqualityComparer<DateOnly>? comparer)
         => Enumerable.Except(seq, second, comparer).AsDateEnumerable(seq.Config);
 
     public static IDateEnumerable Concat(this IDateEnumerable seq, IEnumerable<DateOnly> second)
