@@ -7,47 +7,27 @@ public static class Operations
     /// </summary>
     /// <param name="dateStreams"></param>
     /// <returns></returns>
-    public static IEnumerable<DateOnly> Merge(IEnumerable<IEnumerable<DateOnly>> dateStreams)
+    public static IEnumerable<DateOnly> Merge(this IEnumerable<IEnumerable<DateOnly>> dateStreams)
     {
-        // iterate over all dateStreams and yield the lowest date, increment that enumerator then
+        var heap = new PriorityQueue<IEnumerator<DateOnly>, DateOnly>();
 
-        var enumerators = dateStreams
-            .Select(stream => stream.GetEnumerator())
-            .Where(enumerator => enumerator.MoveNext())
-            .ToList();
+        var nonEmptyEnumerators = dateStreams
+            .Select(str => str.GetEnumerator())
+            .Where(e => e.MoveNext());
+        
+        foreach (var enumerator in nonEmptyEnumerators) 
+            heap.Enqueue(enumerator, enumerator.Current);
 
-        var nextValues = new DateOnly[enumerators.Count];
-
-        for (var i = 0; i < enumerators.Count; i++)
+        while (heap.Count > 0)
         {
-            nextValues[i] = enumerators[i].Current;
-        }
+            var smallestEnum = heap.Dequeue();
 
-        while (nextValues.Any(v => v != default))
-        {
-            var minValue = nextValues.Min();
-            if (minValue != DateOnly.MaxValue)
-                yield return minValue;
+            yield return smallestEnum.Current;
+
+            if (smallestEnum.MoveNext())
+                heap.Enqueue(smallestEnum, smallestEnum.Current);
             else
-                yield break;
-
-            for (var i = 0; i < nextValues.Length; i++)
-            {
-                if (nextValues[i] == minValue)
-                {
-                    var hasNext = enumerators[i].MoveNext();
-                    if (hasNext)
-                    {
-                        nextValues[i] = enumerators[i].Current;
-                    }
-                    else
-                    {
-                        nextValues[i] = DateOnly.MaxValue;
-                    }
-
-                    break;
-                }
-            }
+                smallestEnum.Dispose();
         }
     }
 
