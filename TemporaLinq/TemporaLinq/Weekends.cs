@@ -1,4 +1,4 @@
-﻿namespace de.baggerbagger.TemporaLinq;
+﻿namespace TemporaLinq;
 
 public static class Weekends
 {

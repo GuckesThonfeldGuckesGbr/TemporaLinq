@@ -1,6 +1,6 @@
 ﻿using System.Globalization;
 
-namespace de.baggerbagger.TemporaLinq;
+namespace TemporaLinq;
 
 public record CalendarConfig(Calendar Calendar, DayOfWeek[] WeekendDays)
 {

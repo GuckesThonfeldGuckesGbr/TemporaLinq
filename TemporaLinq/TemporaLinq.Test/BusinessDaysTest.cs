@@ -1,5 +1,4 @@
-﻿using de.baggerbagger.TemporaLinq;
-using FluentAssertions;
+﻿using FluentAssertions;
 using static System.DayOfWeek;
 
 namespace TemporaLinq.Test;

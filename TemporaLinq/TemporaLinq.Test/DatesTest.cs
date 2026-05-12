@@ -1,5 +1,4 @@
 using System.Globalization;
-using de.baggerbagger.TemporaLinq;
 using FluentAssertions;
 
 namespace TemporaLinq.Test;

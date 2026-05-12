@@ -1,8 +1,8 @@
 ﻿using System.Collections;
 
-namespace de.baggerbagger.TemporaLinq;
+namespace TemporaLinq;
 
-internal record DateEnumerableWrapper(IEnumerable<DateOnly> Dates, CalendarConfig Config) : IDateEnumerable
+internal record DateEnumerableWrapper(IEnumerable<DateOnly> Dates, CalendarConfig Config) : MonotonicAscendingEnumerableWrapper<DateOnly>(Dates), IDateEnumerable
 {
     public IEnumerator<DateOnly> GetEnumerator() => Dates.GetEnumerator();
 

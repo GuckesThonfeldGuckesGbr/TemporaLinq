@@ -1,5 +1,4 @@
-﻿using de.baggerbagger.TemporaLinq;
-using FluentAssertions;
+﻿using FluentAssertions;
 using static System.DayOfWeek;
 
 namespace TemporaLinq.Test;
@@ -273,16 +272,6 @@ public class LinqExtensionsTest
     }
 
     [Fact]
-    public void Union_WithComparer_PreservesConfig()
-    {
-        var dates = CreateDateRange();
-        var second = Builder.From(new DateOnly(2026, 1, 1)).To(new DateOnly(2026, 1, 5));
-        var union = dates.Union(second, null);
-
-        union.Config.Should().BeSameAs(dates.Config);
-    }
-
-    [Fact]
     public void Union_RemovesDuplicates()
     {
         var dates = Builder.From(new DateOnly(2026, 1, 1)).To(new DateOnly(2026, 1, 5));
@@ -327,7 +316,11 @@ public class LinqExtensionsTest
     public void Except_PreservesConfig()
     {
         var dates = CreateDateRange();
-        var second = new[] { new DateOnly(2026, 1, 1), new DateOnly(2026, 1, 15), new DateOnly(2026, 1, 31) };
+        var second = new[] { 
+            new DateOnly(2026, 1, 1),
+            new DateOnly(2026, 1, 15),
+            new DateOnly(2026, 1, 31) }
+            .AsMonotonicallyAscendingEnumerable();
         var except = dates.Except(second);
 
         except.Config.Should().BeSameAs(dates.Config);
@@ -338,8 +331,8 @@ public class LinqExtensionsTest
     public void Except_WithComparer_PreservesConfig()
     {
         var dates = CreateDateRange();
-        var second = new[] { new DateOnly(2026, 1, 1) };
-        var except = dates.Except(second, null);
+        var second = new[] { new DateOnly(2026, 1, 1) }.AsMonotonicallyAscendingEnumerable();
+        var except = dates.Except(second);
 
         except.Config.Should().BeSameAs(dates.Config);
     }

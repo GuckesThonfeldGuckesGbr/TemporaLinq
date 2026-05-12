@@ -1,4 +1,4 @@
-﻿namespace de.baggerbagger.TemporaLinq;
+﻿namespace TemporaLinq;
 
 public static class LinqExtensions
 {
@@ -54,10 +54,6 @@ public static class LinqExtensions
     public static IDateEnumerable Union(this IDateEnumerable seq, IEnumerable<DateOnly> second)
         => Enumerable.Union(seq, second).AsDateEnumerable(seq.Config);
 
-    public static IDateEnumerable Union(this IDateEnumerable seq, IEnumerable<DateOnly> second,
-        IEqualityComparer<DateOnly> comparer)
-        => Enumerable.Union(seq, second, comparer).AsDateEnumerable(seq.Config);
-
     public static IDateEnumerable Intersect(this IDateEnumerable seq, IEnumerable<DateOnly> second)
         => Enumerable.Intersect(seq, second).AsDateEnumerable(seq.Config);
 
@@ -65,15 +61,12 @@ public static class LinqExtensions
         IEqualityComparer<DateOnly> comparer)
         => Enumerable.Intersect(seq, second, comparer).AsDateEnumerable(seq.Config);
 
-    public static IDateEnumerable Except(this IDateEnumerable seq, IEnumerable<DateOnly> second)
-        => Enumerable.Except(seq, second).AsDateEnumerable(seq.Config);
-
-    public static IDateEnumerable Except(this IDateEnumerable seq, IEnumerable<DateOnly> second,
-        IEqualityComparer<DateOnly>? comparer)
-        => Enumerable.Except(seq, second, comparer).AsDateEnumerable(seq.Config);
-
     public static IDateEnumerable Concat(this IDateEnumerable seq, IEnumerable<DateOnly> second)
         => Enumerable.Concat(seq, second).AsDateEnumerable(seq.Config);
+
     public static IDateEnumerable Reverse(this IDateEnumerable seq)
         => Enumerable.Reverse(seq).AsDateEnumerable(seq.Config);
+
+    public static IMonotonicallyAscendingEnumerable<T> AsMonotonicallyAscendingEnumerable<T>(this IEnumerable<T> enumerable) where T : IComparable, IComparable<T>
+        => new MonotonicAscendingEnumerableWrapper<T>(enumerable);
 }

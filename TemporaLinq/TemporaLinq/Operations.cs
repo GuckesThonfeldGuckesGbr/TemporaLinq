@@ -1,4 +1,4 @@
-﻿namespace de.baggerbagger.TemporaLinq;
+﻿namespace TemporaLinq;
 
 public static class Operations
 {
@@ -14,8 +14,8 @@ public static class Operations
         var nonEmptyEnumerators = dateStreams
             .Select(str => str.GetEnumerator())
             .Where(e => e.MoveNext());
-        
-        foreach (var enumerator in nonEmptyEnumerators) 
+
+        foreach (var enumerator in nonEmptyEnumerators)
             heap.Enqueue(enumerator, enumerator.Current);
 
         while (heap.Count > 0)
@@ -33,4 +33,46 @@ public static class Operations
 
     public static IEnumerable<DateOnly> Merge(this IDateEnumerable dates, params IDateEnumerable[] others)
         => Merge(new[] { dates }.Concat(others));
+
+    public static IDateEnumerable Except(this IDateEnumerable seq, IMonotonicallyAscendingEnumerable<DateOnly> second)
+    {
+        return new DateEnumerableWrapper(ExceptImpl(), seq.Config);
+
+        IEnumerable<DateOnly> ExceptImpl()
+        {
+            using var seqEnum = seq.GetEnumerator();
+            using var secondEnum = second.GetEnumerator();
+
+            var seqHasNext = seqEnum.MoveNext();
+            var secondHasNext = secondEnum.MoveNext();
+
+            while (seqHasNext)
+            {
+                if (!secondHasNext)
+                {
+                    do
+                    {
+                        yield return seqEnum.Current;
+                    } while (seqEnum.MoveNext());
+
+                    yield break;
+                }
+
+                if (seqEnum.Current < secondEnum.Current)
+                {
+                    yield return seqEnum.Current;
+                    seqHasNext = seqEnum.MoveNext();
+                }
+                else if (seqEnum.Current > secondEnum.Current)
+                {
+                    secondHasNext = secondEnum.MoveNext();
+                }
+                else
+                {
+                    seqHasNext = seqEnum.MoveNext();
+                    secondHasNext = secondEnum.MoveNext();
+                }
+            }
+        }
+    }
 }
