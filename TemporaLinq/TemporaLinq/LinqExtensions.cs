@@ -54,13 +54,6 @@ public static class LinqExtensions
     public static IDateEnumerable Union(this IDateEnumerable seq, IEnumerable<DateOnly> second)
         => Enumerable.Union(seq, second).AsDateEnumerable(seq.Config);
 
-    public static IDateEnumerable Intersect(this IDateEnumerable seq, IEnumerable<DateOnly> second)
-        => Enumerable.Intersect(seq, second).AsDateEnumerable(seq.Config);
-
-    public static IDateEnumerable Intersect(this IDateEnumerable seq, IEnumerable<DateOnly> second,
-        IEqualityComparer<DateOnly> comparer)
-        => Enumerable.Intersect(seq, second, comparer).AsDateEnumerable(seq.Config);
-
     public static IDateEnumerable Concat(this IDateEnumerable seq, IEnumerable<DateOnly> second)
         => Enumerable.Concat(seq, second).AsDateEnumerable(seq.Config);
 

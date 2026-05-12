@@ -285,21 +285,16 @@ public class LinqExtensionsTest
     public void Intersect_PreservesConfig()
     {
         var dates = CreateDateRange();
-        var second = new[] { new DateOnly(2026, 1, 1), new DateOnly(2026, 1, 15), new DateOnly(2026, 1, 31) };
+        var second = new[]
+        {
+            new DateOnly(2026, 1, 1), 
+            new DateOnly(2026, 1, 15), 
+            new DateOnly(2026, 1, 31)
+        }.AsMonotonicallyAscendingEnumerable();
         var intersect = dates.Intersect(second);
 
         intersect.Config.Should().BeSameAs(dates.Config);
         intersect.Should().HaveCount(3);
-    }
-
-    [Fact]
-    public void Intersect_WithComparer_PreservesConfig()
-    {
-        var dates = CreateDateRange();
-        var second = new[] { new DateOnly(2026, 1, 1), new DateOnly(2026, 1, 15) };
-        var intersect = dates.Intersect(second, null);
-
-        intersect.Config.Should().BeSameAs(dates.Config);
     }
 
     [Fact]

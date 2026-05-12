@@ -75,4 +75,98 @@ public static class Operations
             }
         }
     }
+
+    /// <summary>
+    /// Returns a stream of values that contains all unique values from both sorted streams in ascending order.
+    /// Uses an efficient O(n+m) merge algorithm.
+    /// </summary>
+    public static IDateEnumerable Union(this IDateEnumerable first, IMonotonicallyAscendingEnumerable<DateOnly> second)
+    {
+        return new DateEnumerableWrapper(UnionImpl(first, second), first.Config);
+
+        IEnumerable<DateOnly> UnionImpl(IDateEnumerable a, IMonotonicallyAscendingEnumerable<DateOnly> b)
+        {
+            using var firstEnum = a.GetEnumerator();
+            using var secondEnum = b.GetEnumerator();
+
+            var firstHasNext = firstEnum.MoveNext();
+            var secondHasNext = secondEnum.MoveNext();
+
+            while (firstHasNext || secondHasNext)
+            {
+                if (!secondHasNext)
+                {
+                    do
+                    {
+                        yield return firstEnum.Current;
+                    } while (firstEnum.MoveNext());
+
+                    yield break;
+                }
+
+                if (!firstHasNext)
+                {
+                    do
+                    {
+                        yield return secondEnum.Current;
+                    } while (secondEnum.MoveNext());
+
+                    yield break;
+                }
+
+                if (firstEnum.Current < secondEnum.Current)
+                {
+                    yield return firstEnum.Current;
+                    firstHasNext = firstEnum.MoveNext();
+                }
+                else if (firstEnum.Current > secondEnum.Current)
+                {
+                    yield return secondEnum.Current;
+                    secondHasNext = secondEnum.MoveNext();
+                }
+                else
+                {
+                    yield return firstEnum.Current;
+                    firstHasNext = firstEnum.MoveNext();
+                    secondHasNext = secondEnum.MoveNext();
+                }
+            }
+        }
+    }
+
+    /// <summary>
+    /// Returns a stream of values that contains only values present in both sorted streams in ascending order.
+    /// Uses an efficient O(n+m) merge algorithm.
+    /// </summary>
+    public static IDateEnumerable Intersect(this IDateEnumerable first, IMonotonicallyAscendingEnumerable<DateOnly> second)
+    {
+        return new DateEnumerableWrapper(IntersectImpl(first, second), first.Config);
+
+        IEnumerable<DateOnly> IntersectImpl(IDateEnumerable a, IMonotonicallyAscendingEnumerable<DateOnly> b)
+        {
+            using var firstEnum = a.GetEnumerator();
+            using var secondEnum = b.GetEnumerator();
+
+            var firstHasNext = firstEnum.MoveNext();
+            var secondHasNext = secondEnum.MoveNext();
+
+            while (firstHasNext && secondHasNext)
+            {
+                if (firstEnum.Current < secondEnum.Current)
+                {
+                    firstHasNext = firstEnum.MoveNext();
+                }
+                else if (firstEnum.Current > secondEnum.Current)
+                {
+                    secondHasNext = secondEnum.MoveNext();
+                }
+                else
+                {
+                    yield return firstEnum.Current;
+                    firstHasNext = firstEnum.MoveNext();
+                    secondHasNext = secondEnum.MoveNext();
+                }
+            }
+        }
+    }
 }
