@@ -22,7 +22,12 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\TemporaLinq.Holidays\TemporaLinq.Holidays.csproj" />
       <ProjectReference Include="..\TemporaLinq\TemporaLinq.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Holidays\" />
     </ItemGroup>
 
 </Project>
