@@ -1,4 +1,4 @@
-﻿name: CI
+name: CI
 
 on:
   push:
@@ -21,14 +21,14 @@ jobs:
           dotnet-version: '8.0.x'
 
       - name: Restore dependencies
-        run: dotnet restore TemporaLinq/TemporaLinq.sln
+        run: dotnet restore TemporaLinq.sln
 
       - name: Build
-        run: dotnet build TemporaLinq/TemporaLinq.sln --configuration Release --no-restore
+        run: dotnet build TemporaLinq.sln --configuration Release --no-restore
 
       - name: Test with coverage
         run: |
-          dotnet test TemporaLinq/TemporaLinq.sln \
+          dotnet test TemporaLinq.sln \
             --configuration Release \
             --no-build \
             --verbosity normal \
