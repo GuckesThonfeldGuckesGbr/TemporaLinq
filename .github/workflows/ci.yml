@@ -21,14 +21,14 @@ jobs:
           dotnet-version: '8.0.x'
 
       - name: Restore dependencies
-        run: dotnet restore TemporaLinq.sln
+        run: dotnet restore TemporaLinq/TemporaLinq.sln
 
       - name: Build
-        run: dotnet build TemporaLinq.sln --configuration Release --no-restore
+        run: dotnet build TemporaLinq/TemporaLinq.sln --configuration Release --no-restore
 
       - name: Test with coverage
         run: |
-          dotnet test TemporaLinq.sln \
+          dotnet test TemporaLinq/TemporaLinq.sln \
             --configuration Release \
             --no-build \
             --verbosity normal \
@@ -46,4 +46,4 @@ jobs:
         if: failure()
         with:
           name: test-results
-          path: ./TestResults/**/*.trx
+          path: ./TemporaLinq/TestResults/**/*.trx
