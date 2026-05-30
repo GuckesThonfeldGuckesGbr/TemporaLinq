@@ -44,22 +44,19 @@ public static class LinqExtensions
     public static IDateEnumerable SelectMany(this IDateEnumerable seq,
         Func<DateOnly, int, IEnumerable<DateOnly>> selector)
         => Enumerable.SelectMany(seq, selector).AsDateEnumerable(seq.Config);
+    
+    public static DateOnly First(this IMonotonicallyAscendingEnumerable<DateOnly> seq, DayOfWeek dayOfWeek)
+    {
+        var ret = seq.FirstOrDefault(dayOfWeek);
+        return ret != default
+            ? ret
+            : throw new InvalidOperationException($"No {dayOfWeek} found in date sequence");
+    }
 
-    public static IDateEnumerable Distinct(this IDateEnumerable seq)
-        => Enumerable.Distinct(seq).AsDateEnumerable(seq.Config);
+    public static DateOnly FirstOrDefault(this IMonotonicallyAscendingEnumerable<DateOnly> seq, DayOfWeek dayOfWeek)
+        => seq.FirstOrDefault(d => d.DayOfWeek == dayOfWeek);
 
-    public static IDateEnumerable Distinct(this IDateEnumerable seq, IEqualityComparer<DateOnly> comparer)
-        => Enumerable.Distinct(seq, comparer).AsDateEnumerable(seq.Config);
-
-    public static IDateEnumerable Union(this IDateEnumerable seq, IEnumerable<DateOnly> second)
-        => Enumerable.Union(seq, second).AsDateEnumerable(seq.Config);
-
-    public static IDateEnumerable Concat(this IDateEnumerable seq, IEnumerable<DateOnly> second)
-        => Enumerable.Concat(seq, second).AsDateEnumerable(seq.Config);
-
-    public static IDateEnumerable Reverse(this IDateEnumerable seq)
-        => Enumerable.Reverse(seq).AsDateEnumerable(seq.Config);
-
-    public static IMonotonicallyAscendingEnumerable<T> AsMonotonicallyAscendingEnumerable<T>(this IEnumerable<T> enumerable) where T : IComparable, IComparable<T>
+    public static IMonotonicallyAscendingEnumerable<T> AsMonotonicallyAscendingEnumerable<T>(
+        this IEnumerable<T> enumerable) where T : IComparable<T>
         => new MonotonicAscendingEnumerableWrapper<T>(enumerable);
 }

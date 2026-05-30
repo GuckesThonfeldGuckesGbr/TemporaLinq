@@ -68,7 +68,7 @@ public class LinqExtensionsTest
     public void BusinessDays_AfterLinqOperations()
     {
         var dates = CreateDateRange()
-            .Where(d => d.Day >= 1 && d.Day <= 15)
+            .Where(d => d.Day is >= 1 and <= 15)
             .Take(10)
             .BusinessDays();
 
@@ -86,16 +86,6 @@ public class LinqExtensionsTest
     }
 
     [Fact]
-    public void Reverse_PreservesConfig()
-    {
-        var dates = CreateDateRange();
-        var reversed = dates.Reverse();
-
-        reversed.Config.Should().BeSameAs(dates.Config);
-        reversed.First().Should().Be(new DateOnly(2026, 1, 31));
-    }
-
-    [Fact]
     public void TakeWhile_PreservesConfig()
     {
         var dates = CreateDateRange();
@@ -109,7 +99,7 @@ public class LinqExtensionsTest
     public void TakeWhile_WithIndex_PreservesConfig()
     {
         var dates = CreateDateRange();
-        var taken = dates.TakeWhile((d, i) => i < 5);
+        var taken = dates.TakeWhile((_, i) => i < 5);
 
         taken.Config.Should().BeSameAs(dates.Config);
         taken.Should().HaveCount(5);
@@ -177,7 +167,7 @@ public class LinqExtensionsTest
     public void SkipWhile_WithIndex_PreservesConfig()
     {
         var dates = CreateDateRange();
-        var skipped = dates.SkipWhile((d, i) => i < 5);
+        var skipped = dates.SkipWhile((_, i) => i < 5);
 
         skipped.Config.Should().BeSameAs(dates.Config);
         skipped.Should().HaveCount(26);
@@ -235,7 +225,7 @@ public class LinqExtensionsTest
     public void SelectMany_PreservesConfig()
     {
         var dates = CreateDateRange();
-        var selected = dates.SelectMany(d => new[] { d, d.AddDays(1) });
+        var selected = dates.SelectMany(d => [d, d.AddDays(1)]);
 
         selected.Config.Should().BeSameAs(dates.Config);
         selected.Should().HaveCount(62);
@@ -245,7 +235,7 @@ public class LinqExtensionsTest
     public void SelectMany_WithIndex_PreservesConfig()
     {
         var dates = CreateDateRange();
-        var selected = dates.SelectMany((d, i) => new[] { d });
+        var selected = dates.SelectMany((d, _) => [d]);
 
         selected.Config.Should().BeSameAs(dates.Config);
         selected.Should().HaveCount(31);
@@ -348,29 +338,6 @@ public class LinqExtensionsTest
         var except = dates.Except(dates);
 
         except.Should().BeEmpty();
-    }
-
-    [Fact]
-    public void Concat_PreservesConfig()
-    {
-        var dates = Builder.From(new DateOnly(2026, 1, 1)).To(new DateOnly(2026, 1, 5));
-        var second = Builder.From(new DateOnly(2026, 2, 1)).To(new DateOnly(2026, 2, 3));
-        var concat = dates.Concat(second);
-
-        concat.Config.Should().BeSameAs(dates.Config);
-        concat.Should().HaveCount(8);
-    }
-
-    [Fact]
-    public void Concat_AppendsSequence()
-    {
-        var dates = Builder.From(new DateOnly(2026, 1, 1)).To(new DateOnly(2026, 1, 2));
-        var second = new[] { new DateOnly(2026, 1, 3), new DateOnly(2026, 1, 4) };
-        var concat = dates.Concat(second);
-
-        concat.First().Should().Be(new DateOnly(2026, 1, 1));
-        concat.Last().Should().Be(new DateOnly(2026, 1, 4));
-        concat.Should().HaveCount(4);
     }
 
     [Fact]

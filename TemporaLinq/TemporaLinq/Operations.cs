@@ -7,9 +7,9 @@ public static class Operations
     /// </summary>
     /// <param name="dateStreams"></param>
     /// <returns></returns>
-    public static IEnumerable<DateOnly> Merge(this IEnumerable<IEnumerable<DateOnly>> dateStreams)
+    public static IEnumerable<T> Merge<T>(IEnumerable<IEnumerable<T>> dateStreams)
     {
-        var heap = new PriorityQueue<IEnumerator<DateOnly>, DateOnly>();
+        var heap = new PriorityQueue<IEnumerator<T>, T>();
 
         var nonEmptyEnumerators = dateStreams
             .Select(str => str.GetEnumerator())
@@ -31,8 +31,13 @@ public static class Operations
         }
     }
 
-    public static IEnumerable<DateOnly> Merge(this IDateEnumerable dates, params IDateEnumerable[] others)
-        => Merge(new[] { dates }.Concat(others));
+    public static IDateEnumerable Merge(this IDateEnumerable dates,
+        params IMonotonicallyAscendingEnumerable<DateOnly>[] others)
+        => Merge(new[] { dates }.Concat(others)).AsDateEnumerable(dates.Config);
+
+    public static IMonotonicallyAscendingEnumerable<T> Merge<T>(this IMonotonicallyAscendingEnumerable<T> dates,
+        params IMonotonicallyAscendingEnumerable<T>[] others) where T : IComparable<T>
+        => Merge(new[] { dates }.Concat(others)).AsMonotonicallyAscendingEnumerable();
 
     public static IDateEnumerable Except(this IDateEnumerable seq, IMonotonicallyAscendingEnumerable<DateOnly> second)
     {
@@ -138,7 +143,8 @@ public static class Operations
     /// Returns a stream of values that contains only values present in both sorted streams in ascending order.
     /// Uses an efficient O(n+m) merge algorithm.
     /// </summary>
-    public static IDateEnumerable Intersect(this IDateEnumerable first, IMonotonicallyAscendingEnumerable<DateOnly> second)
+    public static IDateEnumerable Intersect(this IDateEnumerable first,
+        IMonotonicallyAscendingEnumerable<DateOnly> second)
     {
         return new DateEnumerableWrapper(IntersectImpl(first, second), first.Config);
 
@@ -165,6 +171,26 @@ public static class Operations
                     yield return firstEnum.Current;
                     firstHasNext = firstEnum.MoveNext();
                     secondHasNext = secondEnum.MoveNext();
+                }
+            }
+        }
+    }
+
+    public static IDateEnumerable Distinct(this IDateEnumerable seq)
+    {
+        return new DateEnumerableWrapper(DistinctImpl(seq), seq.Config);
+
+        IEnumerable<DateOnly> DistinctImpl(IDateEnumerable dates)
+        {
+            using var dateEnumerator = dates.GetEnumerator();
+            DateOnly? last = null;
+            while (dateEnumerator.MoveNext())
+            {
+                var current = dateEnumerator.Current;
+                if (current != last)
+                {
+                    yield return current;
+                    last = current;
                 }
             }
         }
