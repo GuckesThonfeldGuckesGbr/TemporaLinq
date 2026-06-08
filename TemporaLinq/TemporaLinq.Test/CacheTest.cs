@@ -5,6 +5,7 @@ using TemporaLinq.Holidays;
 
 namespace TemporaLinq.Test;
 
+[Collection("Cache")]
 public class CacheTest
 {
     private const int ExpectedSpeedup = 5;

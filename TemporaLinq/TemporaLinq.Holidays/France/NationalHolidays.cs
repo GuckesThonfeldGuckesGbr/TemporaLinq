@@ -2,10 +2,10 @@
 using Memoizer;
 using static TemporaLinq.Holidays.HolidayNames;
 
-namespace TemporaLinq.Holidays.Germany;
+namespace TemporaLinq.Holidays.France;
 
 /// <summary>
-/// Provides German national (federal) holidays.
+/// Provides French national (federal) holidays.
 /// </summary>
 public record NationalHolidays : HolidayEnumerable<NationalHolidays>
 {
@@ -24,10 +24,14 @@ public record NationalHolidays : HolidayEnumerable<NationalHolidays>
                 new(easter.AddDays(1), EasterMonday),
                 new(easter.AddDays(39), AscensionDay),
                 new(new DateOnly(year, 5, 1), LabourDay),
+                new(new DateOnly(year, 5, 8), VictoryDay),
+                new(easter.AddDays(49), WhitSunday),
                 new(easter.AddDays(50), WhitMonday),
-                new(new DateOnly(year, 10, 3), DayOfGermanUnity),
-                new(new DateOnly(year, 12, 25), ChristmasDay),
-                new(new DateOnly(year, 12, 26), StStephensDay)
+                new(new DateOnly(year, 7, 14), BastilleDay),
+                new(new DateOnly(year, 8, 15), AssumptionDay),
+                new(new DateOnly(year, 11, 1), AllSaintsDay),
+                new(new DateOnly(year, 11, 11), ArmisticeDay),
+                new(new DateOnly(year, 12, 25), ChristmasDay)
             }
             .Order()
             .ToImmutableList();

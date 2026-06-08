@@ -2,7 +2,7 @@
 using Memoizer;
 using static TemporaLinq.Holidays.HolidayNames;
 
-namespace TemporaLinq.Holidays.Germany;
+namespace TemporaLinq.Holidays.Italy;
 
 /// <summary>
 /// Provides German national (federal) holidays.
@@ -20,12 +20,16 @@ public record NationalHolidays : HolidayEnumerable<NationalHolidays>
         return new List<Holiday>
             {
                 new(new DateOnly(year, 1, 1), NewYearsDay),
-                new(easter.AddDays(-2), GoodFriday),
+                new(new DateOnly(year, 1, 6), Epiphany),
+                new(easter, EasterSunday),
                 new(easter.AddDays(1), EasterMonday),
                 new(easter.AddDays(39), AscensionDay),
+                new(new DateOnly(year, 4, 25), LiberationDay),
                 new(new DateOnly(year, 5, 1), LabourDay),
-                new(easter.AddDays(50), WhitMonday),
-                new(new DateOnly(year, 10, 3), DayOfGermanUnity),
+                new(new DateOnly(year, 6, 2), RepublicDay),
+                new(new DateOnly(year, 8, 15), AssumptionDay),
+                new(new DateOnly(year, 11, 1), AllSaintsDay),
+                new(new DateOnly(year, 12, 8), ImmaculateConception),
                 new(new DateOnly(year, 12, 25), ChristmasDay),
                 new(new DateOnly(year, 12, 26), StStephensDay)
             }
