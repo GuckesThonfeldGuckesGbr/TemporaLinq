@@ -2,7 +2,7 @@
 using Memoizer;
 using static TemporaLinq.Holidays.HolidayNames;
 
-namespace TemporaLinq.Holidays.France;
+namespace TemporaLinq.Holidays.Europe.France;
 
 public record AlsaceMoselle : HolidayEnumerable<AlsaceMoselle>
 {

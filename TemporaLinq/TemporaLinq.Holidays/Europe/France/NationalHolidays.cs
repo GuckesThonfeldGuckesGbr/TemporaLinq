@@ -2,7 +2,7 @@
 using Memoizer;
 using static TemporaLinq.Holidays.HolidayNames;
 
-namespace TemporaLinq.Holidays.France;
+namespace TemporaLinq.Holidays.Europe.France;
 
 /// <summary>
 /// Provides French national (federal) holidays.

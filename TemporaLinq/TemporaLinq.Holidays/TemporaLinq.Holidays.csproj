@@ -14,4 +14,9 @@
       <PackageReference Include="Memoizer.NETStandard" Version="2023.5.1.16" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="NorthAmerica\" />
+      <Folder Include="Europe\" />
+    </ItemGroup>
+
 </Project>

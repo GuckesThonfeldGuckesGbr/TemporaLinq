@@ -27,7 +27,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Holidays\" />
+      <Folder Include="Holidays\NorthAmerica\" />
     </ItemGroup>
 
 </Project>

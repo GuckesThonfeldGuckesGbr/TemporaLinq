@@ -2,7 +2,7 @@
 using Memoizer;
 using static TemporaLinq.Holidays.HolidayNames;
 
-namespace TemporaLinq.Holidays.Italy;
+namespace TemporaLinq.Holidays.Europe.Italy;
 
 public record TrentinoAltoAdige : HolidayEnumerable<TrentinoAltoAdige>
 {

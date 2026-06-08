@@ -1,9 +1,8 @@
 ﻿using FluentAssertions;
-using TemporaLinq.Holidays;
-using TemporaLinq.Holidays.France;
+using TemporaLinq.Holidays.Europe.France;
 using static TemporaLinq.Holidays.HolidayNames;
 
-namespace TemporaLinq.Test.Holidays;
+namespace TemporaLinq.Test.Holidays.Europe;
 
 public class FranceTest
 {

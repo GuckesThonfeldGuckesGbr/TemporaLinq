@@ -3,7 +3,7 @@ using System.Globalization;
 using Memoizer;
 using static TemporaLinq.Holidays.HolidayNames;
 
-namespace TemporaLinq.Holidays.Germany;
+namespace TemporaLinq.Holidays.Europe.Germany;
 
 using static Operations;
 

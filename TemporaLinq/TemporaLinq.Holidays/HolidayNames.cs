@@ -8,7 +8,10 @@ public enum HolidayNames
     AssumptionDay,
     AugsburgPeaceFestival, // Germany
     BastilleDay, // France
+    BirthdayOfMartinLutherKingJr, // USA
+    BirthdayOfGeorgeWashington, // USA
     ChristmasDay,
+    ColumbusDay, // USA
     CorpusChristi,
     DayOfGermanUnity, // Germany
     EasterMonday,
@@ -19,9 +22,12 @@ public enum HolidayNames
     FeastOfStPetronius, // Italy
     GoodFriday,
     ImmaculateConception, // Italy
+    IndependenceDay, // USA
     InternationalWomensDay,
+    Juneteenth, // USA
     LabourDay,
     LiberationDay, // Italy
+    MemorialDay, // USA
     NewYearsDay,
     ReformationDay, // Germany
     RepentanceAndPrayerDay, // Germany
@@ -30,8 +36,10 @@ public enum HolidayNames
     StAmbrose, // Italy
     StPeterAndPaul, // Italy
     StStephensDay,
+    ThanksgivingDay, // USA
     WhitMonday,
     WhitSunday,
     WorldChildrensDay,
+    VeteransDay, // USA
     VictoryDay // France
 }
