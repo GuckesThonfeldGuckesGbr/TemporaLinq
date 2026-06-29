@@ -21,18 +21,20 @@ public enum HolidayNames
     FeastOfStJohnTheBaptist, // Italy
     FeastOfStPetronius, // Italy
     GoodFriday,
-    ImmaculateConception, // Italy
+    ImmaculateConception,
     IndependenceDay, // USA
     InternationalWomensDay,
     Juneteenth, // USA
     LabourDay,
     LiberationDay, // Italy
     MemorialDay, // USA
+    NationalDayOfSpain, // Spain
     NewYearsDay,
     ReformationDay, // Germany
     RepentanceAndPrayerDay, // Germany
     RepublicDay, // Italy
     SanMarco, // Italy
+    SpanishConstitutionDay, // Spain
     StAmbrose, // Italy
     StPeterAndPaul, // Italy
     StStephensDay,

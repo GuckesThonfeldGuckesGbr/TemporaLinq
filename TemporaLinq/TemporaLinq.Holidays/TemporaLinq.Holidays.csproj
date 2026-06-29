@@ -16,7 +16,6 @@
 
     <ItemGroup>
       <Folder Include="NorthAmerica\" />
-      <Folder Include="Europe\" />
     </ItemGroup>
 
 </Project>
