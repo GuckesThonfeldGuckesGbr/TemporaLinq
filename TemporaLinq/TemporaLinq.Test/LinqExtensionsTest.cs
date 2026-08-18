@@ -3,6 +3,9 @@ using static System.DayOfWeek;
 
 namespace TemporaLinq.Test;
 
+using TemporaLinq.Dates;
+using Dates = TemporaLinq.Dates.Dates;
+
 public class LinqExtensionsTest
 {
     private static readonly Dates Builder = Dates.Invariant();

@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Globalization;
 
-namespace TemporaLinq;
+namespace TemporaLinq.Dates;
 
 public record Dates : IDateEnumerable
 {

@@ -3,6 +3,9 @@ using FluentAssertions;
 
 namespace TemporaLinq.Test;
 
+using TemporaLinq.Dates;
+using Dates = TemporaLinq.Dates.Dates;
+
 public class DatesTest
 {
     [Fact]

@@ -2,6 +2,9 @@
 
 namespace TemporaLinq.Test;
 
+using TemporaLinq.Dates;
+using Dates = TemporaLinq.Dates.Dates;
+
 public class OperationsTest
 {
     [Fact]

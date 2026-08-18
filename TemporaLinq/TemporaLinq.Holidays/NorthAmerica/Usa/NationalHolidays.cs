@@ -5,6 +5,9 @@ using static TemporaLinq.Holidays.HolidayNames;
 
 namespace TemporaLinq.Holidays.NorthAmerica.Usa;
 
+using TemporaLinq.Dates;
+using Dates = TemporaLinq.Dates.Dates;
+
 /// <summary>
 /// Provides US national (federal) holidays.
 /// </summary>

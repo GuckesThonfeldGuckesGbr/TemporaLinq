@@ -5,6 +5,8 @@ using static TemporaLinq.Holidays.HolidayNames;
 
 namespace TemporaLinq.Holidays.Europe.Germany;
 
+using TemporaLinq.Dates;
+using Dates = TemporaLinq.Dates.Dates;
 using static Operations;
 
 public record Augsburg : HolidayEnumerable<Augsburg>

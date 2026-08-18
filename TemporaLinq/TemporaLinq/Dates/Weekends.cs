@@ -1,4 +1,4 @@
-﻿namespace TemporaLinq;
+﻿namespace TemporaLinq.Dates;
 
 public static class Weekends
 {
