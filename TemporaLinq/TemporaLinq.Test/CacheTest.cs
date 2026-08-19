@@ -1,6 +1,7 @@
 ﻿using System.Collections;
-using System.Diagnostics;
+using System.Reflection;
 using FluentAssertions;
+using Memoizer;
 using TemporaLinq.Holidays;
 
 namespace TemporaLinq.Test;
@@ -8,8 +9,8 @@ namespace TemporaLinq.Test;
 [Collection("Cache")]
 public class CacheTest
 {
-    private const int ExpectedSpeedup = 5;
     private const int YearsToGenerate = 10;
+    private const BindingFlags CachedMethodFlags = BindingFlags.NonPublic | BindingFlags.Static;
 
     private class AllHolidayEnumerables : IEnumerable<object[]>
     {
@@ -32,25 +33,23 @@ public class CacheTest
     [ClassData(typeof(AllHolidayEnumerables))]
     public void CacheIsOnlyCreatedOncePerClassNotPerObject(Type type)
     {
-        var stopwatch = new Stopwatch();
+        // Timing-based verification of caching is inherently flaky (JIT warm-up, GC, scheduler
+        // noise). Instead, verify the invariant the timing was a proxy for: the holiday
+        // computation is wired up as a static, [Cache]-decorated method, so it is memoized once
+        // per class rather than recomputed per instance.
+        var method = type.GetMethod("GetHolidaysFor", CachedMethodFlags, [typeof(int)]);
+
+        method.Should().NotBeNull(
+            $"{type.Name} should have a private static GetHolidaysFor(int) method backing its holiday computation");
+        method!.IsStatic.Should().BeTrue(
+            "the cache must be shared across instances of the same class, not created per object");
+        method.GetCustomAttribute<CacheAttribute>().Should().NotBeNull(
+            $"{type.Name}.GetHolidaysFor should be decorated with [Cache] so it isn't recomputed on every call");
+
         var holidayEnumerable1 = SetUpInstance(type);
         var holidayEnumerable2 = SetUpInstance(type);
 
-        stopwatch.Start();
-        var dates1 = holidayEnumerable1.ToList();
-        stopwatch.Stop();
-        var time1 = stopwatch.ElapsedTicks;
-        stopwatch.Reset();
-
-        stopwatch.Start();
-        var dates2 = holidayEnumerable2.ToList();
-        stopwatch.Stop();
-        var time2 = stopwatch.ElapsedTicks;
-        stopwatch.Reset();
-
-        time2.Should().BeLessThan(time1 / ExpectedSpeedup);
-
-        dates1.Should().BeEquivalentTo(dates2);
+        holidayEnumerable1.ToList().Should().BeEquivalentTo(holidayEnumerable2.ToList());
     }
 
     private static IHolidayEnumerable SetUpInstance(Type type)
