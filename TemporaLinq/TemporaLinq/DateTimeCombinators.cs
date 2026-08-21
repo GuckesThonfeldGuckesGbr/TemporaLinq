@@ -10,8 +10,6 @@ public static class DateTimeCombinators
 
     private static IEnumerable<DateTime> OnImpl(IDateEnumerable dates, ITimeEnumerable times)
     {
-        foreach (var date in dates)
-        foreach (var time in times)
-            yield return date.ToDateTime(time);
+        return dates.SelectMany(_ => times, (date, time) => date.ToDateTime(time));
     }
 }
