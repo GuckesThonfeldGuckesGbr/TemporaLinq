@@ -6,6 +6,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemporaLinq.Test", "Tempora
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemporaLinq.Holidays", "TemporaLinq.Holidays\TemporaLinq.Holidays.csproj", "{72D2BD40-95D5-4E4C-A8A4-DB6929F5A51F}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{8A4301B4-2E02-48D0-8026-2BCAD0FB3F9D}"
+	ProjectSection(SolutionItems) = preProject
+		IDEAS.md = IDEAS.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

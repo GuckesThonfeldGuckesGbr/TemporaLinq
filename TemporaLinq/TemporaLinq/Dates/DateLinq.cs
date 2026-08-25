@@ -65,8 +65,11 @@ public static class DateLinq
     public static IDateEnumerable EveryNth(this IDateEnumerable seq, int n)
         => seq.Where((_, idx) => idx % n == 0).AsDateEnumerable(seq.Config);
 
-    public static IDateEnumerable BusinessDays(this IDateEnumerable seq)
+    public static IDateEnumerable OnlyBusinessDays(this IDateEnumerable seq)
         => seq.Where(d => !seq.Config.WeekendDays.Contains(d.DayOfWeek)).AsDateEnumerable(seq.Config);
+
+    public static IDateEnumerable OnlyWeekends(this IDateEnumerable seq)
+        => seq.Where(d => seq.Config.WeekendDays.Contains(d.DayOfWeek)).AsDateEnumerable(seq.Config);
 
     public static IDateEnumerable WithContext(this IEnumerable<DateOnly> seq, IDateEnumerable context)
         => seq.AsDateEnumerable(context.Config);

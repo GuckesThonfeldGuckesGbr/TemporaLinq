@@ -29,7 +29,7 @@ internal class MonotonicAscendingEnumerator<T>(IEnumerator<T> source) : IEnumera
 
     public T Current => _current ?? throw new InvalidOperationException("Enumeration has not started.");
 
-    object? IEnumerator.Current => Current;
+    object IEnumerator.Current => Current;
 
     public bool MoveNext()
     {
@@ -40,7 +40,7 @@ internal class MonotonicAscendingEnumerator<T>(IEnumerator<T> source) : IEnumera
 
         if (_hasPrevious)
         {
-            if (_previous!.CompareTo(_current) == 0)
+            if (_previous.CompareTo(_current) == 0)
             {
                 throw new InvalidOperationException(
                     $"Sequence is not monotonically ascending. Previous value: {_previous}, Current value: {_current}");

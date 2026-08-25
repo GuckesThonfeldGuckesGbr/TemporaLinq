@@ -41,7 +41,7 @@ public class CacheTest
 
         method.Should().NotBeNull(
             $"{type.Name} should have a private static GetHolidaysFor(int) method backing its holiday computation");
-        method!.IsStatic.Should().BeTrue(
+        method.IsStatic.Should().BeTrue(
             "the cache must be shared across instances of the same class, not created per object");
         method.GetCustomAttribute<CacheAttribute>().Should().NotBeNull(
             $"{type.Name}.GetHolidaysFor should be decorated with [Cache] so it isn't recomputed on every call");

@@ -4,8 +4,6 @@ This document outlines potential features that could be added to the TemporaLinq
 
 ## 1. Working Days Support
 
-- Filter to business days (Mon-Fri) only
-- Filter to weekends only
 - Support for custom holiday exclusions
 
 ## 2. Date Filtering LINQ Extensions
@@ -29,5 +27,4 @@ This document outlines potential features that could be added to the TemporaLinq
 
 ## 5. Calendar Support
 
-- Generate dates for a specific culture's holidays
 - Support for fiscal quarters

@@ -15,7 +15,7 @@ public class BusinessDaysTest
     {
         // 2026 starts on Thursday
         var jan2026 = Builder.From(new DateOnly(2026, 1, 1)).To(new DateOnly(2026, 1, 31)).WithContext(Builder);
-        var businessDays = jan2026.BusinessDays().ToList();
+        var businessDays = jan2026.OnlyBusinessDays().ToList();
 
         // Should exclude Saturdays and Sundays
         businessDays.Should().AllSatisfy(date => date.DayOfWeek.Should().NotBe(Saturday));
@@ -34,7 +34,7 @@ public class BusinessDaysTest
             .To(new DateOnly(2026, 1, 31))
             .WithWeekend(Thursday, Friday);
         
-        var businessDays = jan2026.BusinessDays().ToList();
+        var businessDays = jan2026.OnlyBusinessDays().ToList();
 
         // Should exclude Thursdays and Fridays
         businessDays.Should().AllSatisfy(date => date.DayOfWeek.Should().NotBe(Thursday));
@@ -62,7 +62,7 @@ public class BusinessDaysTest
         filtered.Config.WeekendDays.Should().BeEquivalentTo([Thursday, Friday]);
 
         // BusinessDays should use the preserved config
-        var businessDays = filtered.BusinessDays().ToList();
+        var businessDays = filtered.OnlyBusinessDays().ToList();
         businessDays.Should().AllSatisfy(date => date.DayOfWeek.Should().NotBe(Thursday));
         businessDays.Should().AllSatisfy(date => date.DayOfWeek.Should().NotBe(Friday));
     }

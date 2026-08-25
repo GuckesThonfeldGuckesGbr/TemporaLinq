@@ -73,7 +73,7 @@ public class LinqExtensionsTest
         var dates = CreateDateRange()
             .Where(d => d.Day is >= 1 and <= 15)
             .Take(10)
-            .BusinessDays();
+            .OnlyBusinessDays();
 
         dates.Should().AllSatisfy(d => d.DayOfWeek.Should().NotBe(Saturday));
         dates.Should().AllSatisfy(d => d.DayOfWeek.Should().NotBe(Sunday));
