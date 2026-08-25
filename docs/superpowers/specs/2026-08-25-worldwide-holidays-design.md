@@ -57,7 +57,7 @@ formula) · plain = computable via the existing formula-based pattern.
 
 ### Europe
 - Done: ✅ Germany, ✅ France, ✅ Italy, ✅ Spain
-- Tier E1: United Kingdom, Poland, Netherlands, Ukraine, Sweden, Switzerland, Belgium, Austria
+- Done: ✅ United Kingdom, ✅ Poland, ✅ Netherlands, ✅ Ukraine, ✅ Sweden, ✅ Switzerland, ✅ Belgium, ✅ Austria (Tier E1)
 - Tier E2: Ireland, Denmark, Norway, Finland, Czech Republic, Romania, Portugal, Greece
 - Tier E3: Hungary, Bulgaria, Serbia, Croatia, Slovakia, Slovenia, Lithuania, Latvia
 - Tier E4: Estonia, 🔴 Belarus, Iceland, Luxembourg, Malta, Cyprus, Moldova, Bosnia and Herzegovina
