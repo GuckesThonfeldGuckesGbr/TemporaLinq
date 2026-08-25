@@ -1,9 +1,11 @@
-﻿namespace TemporaLinq.Holidays;
+namespace TemporaLinq.Holidays;
 
 public enum HolidayNames
 {
     AllSaintsDay,
-    ArmisticeDay, // French
+    AllSoulsDay,
+    AntiFascistStruggleDay, // Croatia
+    ArmisticeDay, // French, Serbian
     AscensionDay,
     AssumptionDay,
     AugsburgPeaceFestival, // Germany
@@ -21,15 +23,18 @@ public enum HolidayNames
     ConstitutionDayOfDenmark, // Denmark
     ConstitutionDayOfNorway, // Norway
     ConstitutionDayOfPoland, // Poland
+    ConstitutionDayOfSlovakia, // Slovakia
     ConstitutionDayOfUkraine, // Ukraine
     CorpusChristi,
     CzechStatehoodDay, // Czech Republic
     DayOfGermanUnity, // Germany
+    DayOfUprisingAgainstOccupation, // Slovenia
     DefendersDay, // Ukraine
     EarlyMayBankHoliday, // UK, Ireland
     EasterMonday,
     EasterSunday,
     Epiphany,
+    EstablishmentDayOfSlovakRepublic, // Slovakia
     FeastOfStJanuarius, // Italy
     FeastOfStJohnTheBaptist, // Italy
     FeastOfStPetronius, // Italy
@@ -39,8 +44,10 @@ public enum HolidayNames
     GermanCommunityDay, // Belgium
     GoodFriday,
     GreekIndependenceDay, // Greece
+    HolySaturday, // Bulgaria, Serbia
     ImmaculateConception,
-    IndependenceDay, // USA, Ukraine, Finland
+    IndependenceAndUnityDayOfSlovenia, // Slovenia
+    IndependenceDay, // USA, Ukraine, Finland, Bulgaria
     IndependentCzechoslovakStateDay, // Czech Republic
     InternationalWomensDay,
     JanHusDay, // Czech Republic
@@ -49,42 +56,61 @@ public enum HolidayNames
     KingsDayOfTheNetherlands, // Netherlands
     LabourDay,
     LiberationDay, // Italy, Netherlands
+    LiberationDayOfBulgaria, // Bulgaria
+    LigoDay, // Latvia
     MaundyThursday, // Denmark, Norway
     MemorialDay, // USA
-    MidsummerDay, // Sweden, Finland
+    MidsummerDay, // Sweden, Finland, Lithuania, Latvia
     NationalDayOfAustria, // Austria
     NationalDayOfBelgium, // Belgium
+    NationalDayOfHungary, // Hungary
     NationalDayOfRomania, // Romania
     NationalDayOfSpain, // Spain
     NationalDayOfSweden, // Sweden
     NationalDayOfSwitzerland, // Switzerland
     NewYearsDay,
+    NewYearsEve, // Latvia
     OctoberBankHoliday, // Ireland
     OhiDay, // Greece
+    OurLadyOfSorrowsDay, // Slovakia
     PortugalDay, // Portugal
-    ReformationDay, // Germany
+    PresernDay, // Slovenia
+    ProclamationDayOfLatvia, // Latvia
+    ReformationDay, // Germany, Slovenia
     RepentanceAndPrayerDay, // Germany
     RepublicDay, // Italy, Portugal
-    RestorationOfIndependenceDay, // Portugal
-    SaintsCyrilAndMethodiusDay, // Czech Republic
+    RemembranceDayOfCroatia, // Croatia
+    RestorationOfIndependenceDay, // Portugal, Lithuania, Latvia
+    RestorationOfStateDay, // Lithuania
+    RevolutionDayOfHungary, // Hungary
+    SaintsCyrilAndMethodiusDay, // Czech Republic, Bulgaria, Slovakia
     SanMarco, // Italy
-    SecondJanuary, // Scotland, Romania
+    SecondJanuary, // Scotland, Romania, Slovenia
+    SlovakNationalUprisingDay, // Slovakia
     SpanishConstitutionDay, // Spain
     SpringBankHoliday, // UK
+    StateFoundationDayOfHungary, // Hungary
+    StatehoodDayOfCroatia, // Croatia
+    StatehoodDayOfLithuania, // Lithuania
+    StatehoodDayOfSerbia, // Serbia
+    StatehoodDayOfSlovenia, // Slovenia
     StAmbrose, // Italy
     StAndrewsDay, // Scotland, Romania
     StBrigidsDay, // Ireland
+    StGeorgesDay, // Bulgaria
     StPatricksDay, // Northern Ireland
     StPeterAndPaul, // Italy
     StStephensDay,
-    StruggleForFreedomAndDemocracyDay, // Czech Republic
+    StruggleForFreedomAndDemocracyDay, // Czech Republic, Slovakia
     SummerBankHoliday, // UK (England, Wales, Northern Ireland)
     SynaxisOfStJohnTheBaptist, // Romania
     ThanksgivingDay, // USA
+    UnificationDayOfBulgaria, // Bulgaria
     UnionDayOfRomania, // Romania
+    VeteransDay, // USA
+    VictoryAndHomelandThanksgivingDay, // Croatia
+    VictoryDay, // France, Ukraine, Czech Republic, Slovakia
     WhitMonday,
     WhitSunday,
     WorldChildrensDay,
-    VeteransDay, // USA
-    VictoryDay // France, Ukraine, Czech Republic
 }
