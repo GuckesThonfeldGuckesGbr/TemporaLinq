@@ -12,7 +12,7 @@ public class UkraineTest
     {
         var holidays = NationalHolidays.Create().From(new DateOnly(2026, 1, 1)).To(new DateOnly(2026, 12, 31));
 
-        holidays.Should().HaveCount(9);
+        holidays.Should().HaveCount(10);
     }
 
     [Fact]
@@ -37,5 +37,6 @@ public class UkraineTest
         var holidays = NationalHolidays.Create().From(new DateOnly(2026, 1, 1)).To(new DateOnly(2026, 12, 31));
 
         holidays.Should().Contain(h => h.Date == orthodoxEaster2026 && h.Name == EasterSunday);
+        holidays.Should().Contain(h => h.Date == orthodoxEaster2026.AddDays(49) && h.Name == WhitSunday);
     }
 }

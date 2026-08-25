@@ -29,6 +29,7 @@ public record NationalHolidays : HolidayEnumerable<NationalHolidays>
                 new(easter.AddDays(1), EasterMonday),
                 new(new DateOnly(year, 5, 1), LabourDay),
                 new(easter.AddDays(39), AscensionDay),
+                new(easter.AddDays(49), WhitSunday),
                 new(new DateOnly(year, 6, 6), NationalDayOfSweden),
                 new(Dates.Invariant().From(new DateOnly(year, 6, 20)).First(DayOfWeek.Saturday), MidsummerDay),
                 new(Dates.Invariant().From(new DateOnly(year, 10, 31)).First(DayOfWeek.Saturday), AllSaintsDay),

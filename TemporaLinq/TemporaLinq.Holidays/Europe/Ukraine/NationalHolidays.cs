@@ -22,6 +22,7 @@ public record NationalHolidays : HolidayEnumerable<NationalHolidays>
                 new(new DateOnly(year, 1, 1), NewYearsDay),
                 new(new DateOnly(year, 3, 8), InternationalWomensDay),
                 new(orthodoxEaster, EasterSunday),
+                new(orthodoxEaster.AddDays(49), WhitSunday),
                 new(new DateOnly(year, 5, 1), LabourDay),
                 new(new DateOnly(year, 5, 8), VictoryDay),
                 new(new DateOnly(year, 6, 28), ConstitutionDayOfUkraine),

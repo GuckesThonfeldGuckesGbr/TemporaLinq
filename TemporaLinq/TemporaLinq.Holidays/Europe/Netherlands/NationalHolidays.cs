@@ -6,6 +6,8 @@ namespace TemporaLinq.Holidays.Europe.Netherlands;
 
 /// <summary>
 /// Provides Dutch national public holidays.
+/// Liberation Day (May 5) is modeled as an annual holiday for simplicity; in practice it is a
+/// mandatory paid day off only every fifth year for most employees.
 /// </summary>
 public record NationalHolidays : HolidayEnumerable<NationalHolidays>
 {

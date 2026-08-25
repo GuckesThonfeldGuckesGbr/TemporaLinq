@@ -6,7 +6,7 @@ namespace TemporaLinq.Holidays.Europe.Switzerland;
 
 /// <summary>
 /// Provides the Swiss public holidays observed in the large majority of cantons.
-/// Full per-canton coverage is out of scope; see the type-level remarks.
+/// Full per-canton coverage is out of scope.
 /// </summary>
 public record NationalHolidays : HolidayEnumerable<NationalHolidays>
 {

@@ -12,7 +12,7 @@ public class SwedenTest
     {
         var holidays = NationalHolidays.Create().From(new DateOnly(2026, 1, 1)).To(new DateOnly(2026, 12, 31));
 
-        holidays.Should().HaveCount(12);
+        holidays.Should().HaveCount(13);
     }
 
     [Fact]
@@ -38,6 +38,7 @@ public class SwedenTest
         holidays.Should().Contain(h => h.Date == easter2026 && h.Name == EasterSunday);
         holidays.Should().Contain(h => h.Date == easter2026.AddDays(1) && h.Name == EasterMonday);
         holidays.Should().Contain(h => h.Date == easter2026.AddDays(39) && h.Name == AscensionDay);
+        holidays.Should().Contain(h => h.Date == easter2026.AddDays(49) && h.Name == WhitSunday);
     }
 
     [Fact]
@@ -60,7 +61,6 @@ public class SwedenTest
         var allSaints = holidays.First(h => h.Name == AllSaintsDay);
 
         allSaints.Date.DayOfWeek.Should().Be(DayOfWeek.Saturday);
-        (allSaints.Date.Month == 10 && allSaints.Date.Day == 31 || allSaints.Date.Month == 11 && allSaints.Date.Day <= 6)
-            .Should().BeTrue();
+        allSaints.Date.Should().BeOnOrAfter(new DateOnly(2026, 10, 31)).And.BeOnOrBefore(new DateOnly(2026, 11, 6));
     }
 }
