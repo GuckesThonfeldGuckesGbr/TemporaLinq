@@ -12,7 +12,7 @@ public enum HolidayNames
     BattleOfTheBoyneDay, // Northern Ireland
     BirthdayOfMartinLutherKingJr, // USA
     BirthdayOfGeorgeWashington, // USA
-    BoxingDay, // UK, Ireland, Canada, Australia, NZ
+    BoxingDay, // UK, Canada, Australia, NZ
     ChildrensDay, // Romania
     ChristmasDay,
     ChristmasEve, // Czech Republic
@@ -81,6 +81,7 @@ public enum HolidayNames
     SummerBankHoliday, // UK (England, Wales, Northern Ireland)
     SynaxisOfStJohnTheBaptist, // Romania
     ThanksgivingDay, // USA
+    UnionDayOfRomania, // Romania
     WhitMonday,
     WhitSunday,
     WorldChildrensDay,

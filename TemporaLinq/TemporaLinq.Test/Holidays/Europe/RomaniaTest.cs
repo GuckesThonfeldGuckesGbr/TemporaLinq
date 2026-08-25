@@ -12,7 +12,7 @@ public class RomaniaTest
     {
         var holidays = NationalHolidays.Create().From(new DateOnly(2026, 1, 1)).To(new DateOnly(2026, 12, 31));
 
-        holidays.Should().HaveCount(16);
+        holidays.Should().HaveCount(17);
     }
 
     [Fact]
@@ -24,6 +24,7 @@ public class RomaniaTest
         holidays.Should().Contain(h => h.Date == new DateOnly(2026, 1, 2) && h.Name == SecondJanuary);
         holidays.Should().Contain(h => h.Date == new DateOnly(2026, 1, 6) && h.Name == Epiphany);
         holidays.Should().Contain(h => h.Date == new DateOnly(2026, 1, 7) && h.Name == SynaxisOfStJohnTheBaptist);
+        holidays.Should().Contain(h => h.Date == new DateOnly(2026, 1, 24) && h.Name == UnionDayOfRomania);
         holidays.Should().Contain(h => h.Date == new DateOnly(2026, 5, 1) && h.Name == LabourDay);
         holidays.Should().Contain(h => h.Date == new DateOnly(2026, 6, 1) && h.Name == ChildrensDay);
         holidays.Should().Contain(h => h.Date == new DateOnly(2026, 8, 15) && h.Name == AssumptionDay);

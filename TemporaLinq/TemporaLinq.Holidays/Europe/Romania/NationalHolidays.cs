@@ -24,6 +24,7 @@ public record NationalHolidays : HolidayEnumerable<NationalHolidays>
                 new(new DateOnly(year, 1, 2), SecondJanuary),
                 new(new DateOnly(year, 1, 6), Epiphany),
                 new(new DateOnly(year, 1, 7), SynaxisOfStJohnTheBaptist),
+                new(new DateOnly(year, 1, 24), UnionDayOfRomania),
                 new(orthodoxEaster.AddDays(-2), GoodFriday),
                 new(orthodoxEaster, EasterSunday),
                 new(orthodoxEaster.AddDays(1), EasterMonday),
