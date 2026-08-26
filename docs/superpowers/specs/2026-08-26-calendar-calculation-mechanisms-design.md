@@ -40,18 +40,22 @@ Each calculation lives in `TemporaLinq.Holidays` as a static class, mirroring
 
 ### HijriCalendarCalculation
 
-Hijri years run ~354 days, so a fixed Hijri (month, day) drifts backward through the Gregorian
-calendar year over time and — roughly once every 33 years — falls twice within the same Gregorian
-year (and correspondingly is absent from another Gregorian year). Because of this, the API returns
-a sequence, not a single date:
+Hijri years run ~354 days — shorter than the Gregorian year — so a fixed Hijri (month, day)
+drifts backward through the Gregorian calendar over time and, roughly once every 33 years, falls
+**twice** within the same Gregorian year (confirmed empirically: e.g. Gregorian 2008 contains two
+occurrences of 1 Muharram, on 2008-01-09 and 2008-12-28). Because the Hijri year is shorter, not
+longer, this drift only ever produces doubles, never a skipped (zero-occurrence) year — every
+Gregorian year has at least one occurrence of any given Hijri (month, day). Because of this, the
+API returns a sequence, not a single date:
 
 ```csharp
 public static class HijriCalendarCalculation
 {
     /// <summary>
     /// Returns the Gregorian date(s) on which the given Hijri month/day falls within the
-    /// specified Gregorian year. Usually one date; occasionally zero or two, because a
-    /// Hijri year (~354 days) drifts against the Gregorian year.
+    /// specified Gregorian year. Always at least one date; occasionally two, because a
+    /// Hijri year (~354 days) is shorter than the Gregorian year and periodically drifts
+    /// enough to repeat within one Gregorian year.
     /// </summary>
     public static IEnumerable<DateOnly> DatesInGregorianYear(int gregorianYear, int hijriMonth, int hijriDay);
 }
@@ -180,5 +184,5 @@ low-priority entries not otherwise listed above.
 Each calculation class gets a test file at `TemporaLinq.Test/Holidays/<CalculationName>Test.cs`
 asserting known reference conversions (e.g. a specific well-documented Hijri New Year → Gregorian
 date pair) for a spread of years, plus — for `HijriCalendarCalculation` specifically — a test
-covering a year where the same Hijri (month, day) occurs zero or twice, to exercise the
-multi-occurrence branch.
+covering a year where the same Hijri (month, day) occurs twice (e.g. Gregorian 2008 for 1
+Muharram), to exercise the multi-occurrence branch.
