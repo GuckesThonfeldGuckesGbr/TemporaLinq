@@ -10,14 +10,16 @@ namespace TemporaLinq.Test;
 public class CacheTest
 {
     private const int YearsToGenerate = 10;
-    private const BindingFlags CachedMethodFlags = BindingFlags.NonPublic | BindingFlags.Static;
 
-    // 1902, not 1900: System.Globalization.ChineseLunisolarCalendar (used by
-    // ChineseLunisolarCalendarCalculation, which China/Hong Kong/Vietnam's holidays are
-    // built on) only supports Gregorian dates from 02/19/1901 onward, so the first
-    // Gregorian year whose full Jan 1-Dec 31 span is in range is 1902; using 1900 or 1901
-    // throws ArgumentOutOfRangeException.
-    private const int StartYear = 1902;
+    // Must stay within the valid date range of every calendar system any implemented country
+    // relies on. System.Globalization.ChineseLunisolarCalendar (China/Hong Kong/Vietnam) only
+    // supports Gregorian dates from 1901-02-19 onward, and System.Globalization
+    // .TaiwanLunisolarCalendar (Taiwan) only supports Gregorian dates from 1912-02-18 onward -
+    // 1950 clears both floors with margin, so an earlier base year would throw
+    // ArgumentOutOfRangeException for Taiwan's (the tighter constraint's) holiday computation.
+    private const int StartYear = 1950;
+
+    private const BindingFlags CachedMethodFlags = BindingFlags.NonPublic | BindingFlags.Static;
 
     private class AllHolidayEnumerables : IEnumerable<object[]>
     {

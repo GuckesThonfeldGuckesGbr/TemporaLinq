@@ -36,10 +36,11 @@ spirit as noting that `EasterSundayCalculation` is a formula, not a decree.
 ## API design
 
 **Status (2026-08-26):** `HijriCalendarCalculation`, `HebrewCalendarCalculation`,
-`PersianCalendarCalculation`, and `ChineseLunisolarCalendarCalculation` are implemented and
-tested. `EthiopianCalendarCalculation` and the Korean/Taiwanese lunisolar siblings are not yet
-built — build them when the country tier that needs them is reached, per this design's "only
-build the ones actually needed" guidance.
+`PersianCalendarCalculation`, `ChineseLunisolarCalendarCalculation`,
+`KoreanLunisolarCalendarCalculation`, and `TaiwanLunisolarCalendarCalculation` are implemented and
+tested (the latter two built for, and consumed by, the South Korea and Taiwan country
+implementations). `EthiopianCalendarCalculation` is not yet built — build it when the country
+tier that needs it is reached, per this design's "only build the ones actually needed" guidance.
 
 Each calculation lives in `TemporaLinq.Holidays` as a static class, mirroring
 `EasterSundayCalculation`'s shape.

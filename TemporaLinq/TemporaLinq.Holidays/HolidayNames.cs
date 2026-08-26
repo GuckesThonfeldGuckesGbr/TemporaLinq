@@ -22,12 +22,14 @@ public enum HolidayNames
     BirthdayOfMartinLutherKingJr, // USA
     BirthdayOfGeorgeWashington, // USA
     BoxingDay, // UK, Canada, Australia, NZ, Estonia, Iceland, Cyprus, Hong Kong
-    BuddhasBirthday, // Hong Kong
+    BuddhasBirthday, // Hong Kong, South Korea
     CandlemasDay, // Liechtenstein
-    ChildrensDay, // Romania
+    ChildrensDay, // Romania, South Korea, Taiwan
     ChristmasDay,
     ChristmasEve, // Czech Republic, Estonia, San Marino
     ChungYeungFestival, // Hong Kong
+    Chuseok, // South Korea
+    ChuseokEve, // South Korea
     CleanMonday, // Greece, Cyprus
     ColumbusDay, // USA
     CommemorationDayOfUae, // UAE
@@ -42,13 +44,15 @@ public enum HolidayNames
     ConstitutionDayOfUzbekistan, // Uzbekistan
     CorpusChristi,
     CzechStatehoodDay, // Czech Republic
+    DayAfterChuseok, // South Korea
+    DayAfterLunarNewYear, // South Korea
     DayOfGermanUnity, // Germany
     DayOfMacedonianUprising, // North Macedonia
     DayOfUprisingAgainstOccupation, // Slovenia
     DeathOfKhomeini, // Iran (14 Khordad)
     DefendersDay, // Ukraine
     DemocracyAndNationalUnityDay, // Turkey
-    DragonBoatFestival, // China, Hong Kong
+    DragonBoatFestival, // China, Hong Kong, Taiwan
     EarlyMayBankHoliday, // UK, Ireland
     EasterMonday,
     EasterSunday,
@@ -76,6 +80,7 @@ public enum HolidayNames
     GermanCommunityDay, // Belgium
     GoodFriday,
     GreekIndependenceDay, // Greece, Cyprus
+    HangeulDay, // South Korea
     HKSAREstablishmentDay, // Hong Kong
     HolySaturday, // Bulgaria, Serbia, Hong Kong
     HungKingsCommemorationDay, // Vietnam
@@ -83,6 +88,7 @@ public enum HolidayNames
     ImmaculateConception,
     IndependenceAndUnityDayOfSlovenia, // Slovenia
     IndependenceDay, // USA, Ukraine, Finland, Bulgaria, Estonia, Iceland, Malta, Cyprus, Moldova, Montenegro, North Macedonia, India, Pakistan, Bangladesh, Uzbekistan, Albania, Kosovo
+    IndependenceMovementDayOfKorea, // South Korea
     IndependentCzechoslovakStateDay, // Czech Republic
     InternationalWomensDay,
     InvestitureOfCaptainsRegent, // San Marino
@@ -98,15 +104,16 @@ public enum HolidayNames
     KingsDayOfTheNetherlands, // Netherlands
     LabourDay,
     LanguageMovementDay, // Bangladesh
-    LiberationDay, // Italy, Netherlands, Albania, Kuwait
+    LiberationDay, // Italy, Netherlands, Albania, Kuwait, South Korea
     LiberationDayOfBulgaria, // Bulgaria
     LigoDay, // Latvia
-    LunarNewYearsDay, // China, Hong Kong, Vietnam
+    LunarNewYearsDay, // China, Hong Kong, Vietnam, South Korea, Taiwan
+    LunarNewYearsEve, // South Korea, Taiwan
     MaundyThursday, // Denmark, Norway, Iceland
     MawlidAlNabi, // Iran (Shia observance, 17 Rabi' al-awwal)
-    MemorialDay, // USA, Moldova
+    MemorialDay, // USA, Moldova, South Korea
     MemoryAndHonorDay, // Uzbekistan
-    MidAutumnFestival, // China, Hong Kong
+    MidAutumnFestival, // China, Hong Kong, Taiwan
     MidsummerDay, // Sweden, Finland, Lithuania, Latvia, Estonia
     MiladUnNabi, // India, Pakistan, Bangladesh
     MotherTeresaDay, // Albania
@@ -125,8 +132,10 @@ public enum HolidayNames
     NationalDayOfSpain, // Spain
     NationalDayOfSweden, // Sweden
     NationalDayOfSwitzerland, // Switzerland
+    NationalDayOfTaiwan, // Taiwan
     NationalDayOfUae, // UAE
     NationalDayOfVietnam, // Vietnam
+    NationalFoundationDayOfKorea, // South Korea
     NationalMourningDay, // Bangladesh
     NationalSovereigntyAndChildrensDay, // Turkey
     NationalYouthDay, // Albania
@@ -144,6 +153,7 @@ public enum HolidayNames
     OurLanguageDay, // Moldova
     PakistanDay, // Pakistan
     Passover, // Israel (15 and 21 Nisan)
+    PeaceMemorialDayOfTaiwan, // Taiwan
     PortugalDay, // Portugal
     PresernDay, // Slovenia
     ProclamationDayOfLatvia, // Latvia
@@ -163,6 +173,7 @@ public enum HolidayNames
     SaintDevoteDay, // Monaco
     SaintsCyrilAndMethodiusDay, // Czech Republic, Bulgaria, Slovakia, North Macedonia
     SanMarco, // Italy
+    SecondDayOfLunarNewYear, // Taiwan
     SecondJanuary, // Scotland, Romania, Slovenia
     SetteGiugno, // Malta
     Shavuot, // Israel (6 Sivan)
@@ -193,6 +204,8 @@ public enum HolidayNames
     Tasua, // Iran (Shia, 9 Muharram)
     TeachersAndInstructorsDay, // Uzbekistan
     ThanksgivingDay, // USA
+    ThirdDayOfLunarNewYear, // Taiwan
+    TombSweepingDay, // Taiwan
     UnificationDayOfBulgaria, // Bulgaria
     UnionDayOfRomania, // Romania
     VeteransDay, // USA
