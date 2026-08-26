@@ -61,7 +61,7 @@ The Southeast Asian Buddhist lunisolar calendar underlying `SoutheastAsianBuddhi
 
 **Thingyan verification:** WebSearch confirmed the traditional/statutory 4-day span (Apr 13 Eve, Apr 14–15 water-festival days, Apr 16 Myanmar New Year's Day) is fixed by law each year, distinct from occasional government decrees adding extra bonus days around it (e.g. a 9-day span announced for 2026) — the latter is a one-off Cabinet-style addition, out of scope for the same reason Thailand's Jan 2 bonus day is out of scope.
 
-16 holiday instances total for 2026 (12 line items, Thingyan contributing 4 days).
+15 holiday instances total for 2026 (12 line items, Thingyan contributing 4 days).
 
 ## Global Constraints
 
@@ -169,7 +169,7 @@ git commit -m "feat: add Thailand national holidays"
 **Interfaces:**
 - Consumes: `HolidayEnumerable<T>`, `SoutheastAsianBuddhistCalendar.MakhaBuchaDate/VisakhaBuchaDate/AsalhaBuchaDate(int) -> DateOnly` (reused under Myanmar's local names), `HolidayNames` members from Task 1.
 
-- [ ] **Step 1: Write the failing test** — asserts `HaveCount(16)` for 2026 and exact dates for every line item above.
+- [ ] **Step 1: Write the failing test** — asserts `HaveCount(15)` for 2026 and exact dates for every line item above.
 
 - [ ] **Step 2: Run test to verify it fails**
 
