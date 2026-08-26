@@ -75,9 +75,10 @@ Ethiopian calendar calculations added by that design.
 
 ### Asia
 - Done: ✅ India (central Gazetted list only — Republic Day, Independence Day, Gandhi Jayanti, Good Friday, Christmas Day, and Hijri-computable Eid al-Fitr, Eid al-Adha/Bakrid, Muharram, and Milad-un-Nabi; Hindu-calendar holidays and state-specific days remain deferred pending a future Hindu/Buddhist calendar calculation mechanism), ✅ Turkey (`TemporaLinq.Holidays/Asia/Turkey/NationalHolidays.cs`, establishes the `Asia` folder convention), ✅ Israel (Hebrew-computable), ✅ China (Chinese-lunisolar-computable), ✅ South Korea (Korean-lunisolar-computable)
-- Tier AS1 remaining: Japan, Singapore (Hijri- and Chinese-lunisolar-computable components only — Hindu/Buddhist components deferred)
-- Done: ✅ Pakistan, ✅ Bangladesh (Hijri-based and fixed civil holidays only — Hindu/Buddhist minority holidays (Durga Puja, Buddha Purnima) remain deferred pending a future Hindu/Buddhist calendar calculation mechanism), ✅ Saudi Arabia, ✅ UAE, ✅ Vietnam (Chinese-lunisolar-computable, approximate) (Tier AS2)
-- Tier AS2 remaining: Philippines, Indonesia (Hijri- and Easter-computable components only — Nyepi/Vesak deferred), Malaysia (Hijri- and Chinese-lunisolar-computable components only — Hindu/Buddhist components deferred)
+- Tier AS1 remaining: Japan
+- Done: ✅ Pakistan, ✅ Bangladesh (Hijri-based and fixed civil holidays only — Hindu/Buddhist minority holidays (Durga Puja, Buddha Purnima) remain deferred pending a future Hindu/Buddhist calendar calculation mechanism), ✅ Saudi Arabia, ✅ UAE, ✅ Vietnam (Chinese-lunisolar-computable, approximate), ✅ Singapore (Hijri-, Chinese-lunisolar-, Easter-, and Buddhist-Vesak-computable — Deepavali (Hindu) deferred) (Tier AS2)
+- Tier AS2 remaining: Philippines
+- Done: ✅ Indonesia (Hijri-, Easter-, Chinese-lunisolar-, and Buddhist-Vesak/Waisak-computable components — Nyepi (Balinese Saka calendar) and Hindu Deepavali deferred), ✅ Malaysia (federal/national-level only: Hijri-, Chinese-lunisolar-, and Buddhist-Vesak-computable components plus the Agong's Birthday (first Monday of June) — Hindu Deepavali and state-specific holidays deferred) (Tier AS2)
 - Done: ✅ Qatar, ✅ Kuwait, ✅ Iraq (Hijri-computable, approximate — Sunni/Shia moon-sighting authorities occasionally differ by a day), ✅ Iran (Persian- and Hijri-computable), ✅ Hong Kong (Chinese-lunisolar-computable), ✅ Taiwan (Taiwan-lunisolar-computable) (Tier AS3)
 - Tier AS3 remaining: 🔴 Thailand (Buddhist lunar calendar, still hard), Kazakhstan
 - Tier AS4 (low priority): 🔴 Nepal, 🔴 Myanmar, 🔴 Cambodia, 🔴 Laos, 🔴 Mongolia, remaining Central Asia (Hijri-computable)
@@ -102,8 +103,10 @@ previously-🔴 countries (see that design's reclassification table) — tiers
 are no longer gated on it except for the small residual list of countries
 whose calendars remain genuinely irreducible to formula (Thailand, Sri
 Lanka, Nepal, Myanmar, Cambodia, Laos, Mongolia, Haiti, Venezuela, and the
-Hindu/Buddhist-calendar components of India/Indonesia/Malaysia/Singapore/
-Bangladesh).
+Hindu-calendar components of India/Indonesia/Malaysia/Singapore/Bangladesh,
+plus Indonesia's Balinese-Saka-calendar Nyepi — the Buddhist-calendar
+Vesak component of Indonesia/Malaysia/Singapore is done, per
+`SoutheastAsianBuddhistCalendar`).
 
 **First batch: Tier E1** — United Kingdom, Poland, Netherlands, Ukraine,
 Sweden, Switzerland, Belgium, Austria. All computable via the existing
