@@ -74,9 +74,9 @@ Ethiopian calendar calculations added by that design.
 - Tier SA2: Peru, Uruguay, Ecuador, Paraguay, Bolivia, 🔴 Venezuela, Guyana, Suriname
 
 ### Asia
-- Tier AS1: India (Hijri- and Easter-computable; central Gazetted list only — Hindu-calendar holidays and state-specific days deferred), Israel (Hebrew-computable), Japan, China (Chinese-lunisolar-computable), South Korea (Korean-lunisolar-computable), Singapore (Hijri- and Chinese-lunisolar-computable components only — Hindu/Buddhist components deferred), Turkey (Hijri-computable)
+- Tier AS1: India (Hijri- and Easter-computable; central Gazetted list only — Hindu-calendar holidays and state-specific days deferred), Israel (Hebrew-computable), Japan, China (Chinese-lunisolar-computable), ✅ South Korea, Singapore (Hijri- and Chinese-lunisolar-computable components only — Hindu/Buddhist components deferred), Turkey (Hijri-computable)
 - Tier AS2: Vietnam (Chinese-lunisolar-computable, approximate), Philippines, Indonesia (Hijri- and Easter-computable components only — Nyepi/Vesak deferred), Malaysia (Hijri- and Chinese-lunisolar-computable components only — Hindu/Buddhist components deferred), Pakistan (Hijri-computable), Bangladesh (Hijri-computable component only — Hindu/Buddhist minority holidays deferred), Saudi Arabia (Hijri-computable), UAE (Hijri-computable)
-- Tier AS3: 🔴 Thailand (Buddhist lunar calendar, still hard), Taiwan (Taiwan-lunisolar-computable), Hong Kong (Chinese-lunisolar-computable), Kazakhstan, Qatar (Hijri-computable), Kuwait (Hijri-computable), Iraq (Hijri-computable, approximate — Sunni/Shia moon-sighting authorities occasionally differ by a day), Iran (Persian- and Hijri-computable)
+- Tier AS3: 🔴 Thailand (Buddhist lunar calendar, still hard), ✅ Taiwan, Hong Kong (Chinese-lunisolar-computable), Kazakhstan, Qatar (Hijri-computable), Kuwait (Hijri-computable), Iraq (Hijri-computable, approximate — Sunni/Shia moon-sighting authorities occasionally differ by a day), Iran (Persian- and Hijri-computable)
 - Tier AS4 (low priority): 🔴 Sri Lanka, 🔴 Nepal, 🔴 Myanmar, 🔴 Cambodia, 🔴 Laos, 🔴 Mongolia, Uzbekistan (Hijri-computable), remaining Central Asia (Hijri-computable)
 
 ### Africa
