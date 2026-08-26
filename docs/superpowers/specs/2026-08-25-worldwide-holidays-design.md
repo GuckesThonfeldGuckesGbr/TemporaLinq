@@ -26,34 +26,32 @@ subclassing `HolidayEnumerable<T>`, using the shared `HolidayNames` enum and
 Germany/France/Italy/Spain/USA do today. Tests live at
 `TemporaLinq.Test/Holidays/<Continent>/<Country>Test.cs`.
 
-### Non-computable countries (new: static tables)
+### Non-Gregorian calendar countries (formula-based, not static tables)
 
-Some countries' holidays cannot be derived from a formula — Hijri
-(moon-sighting) dates, lunisolar calendars, or dates set by annual government
-decree/proclamation. For these, add a new base class:
-
-```csharp
-public abstract record StaticHolidayEnumerable<T> : IHolidayEnumerable
-    where T : StaticHolidayEnumerable<T>, new()
-```
-
-living beside `HolidayEnumerable<T>` in `TemporaLinq.Holidays`. It is backed by
-a hardcoded `IReadOnlyDictionary<int, ImmutableList<Holiday>>` (per-year
-tables sourced from published government/official calendars). Years outside
-the populated range yield no holidays — no exception — consistent with how
-`Merge()`-based composition already treats an empty source. It implements
-`IHolidayEnumerable` directly so it composes with the existing `Merge()`/`On()`
-combinators unchanged, and countries needing it subclass it directly instead
-of `HolidayEnumerable<T>`.
-
-This table data will need periodic manual refresh as new years are published.
-That is an accepted, known maintenance cost of this approach — not something
-this design solves.
+**Superseded 2026-08-26** — see
+`docs/superpowers/specs/2026-08-26-calendar-calculation-mechanisms-design.md`.
+The original plan below assumed non-Gregorian-calendar holidays are
+unformulable and need a hand-maintained per-year lookup table. That assumption
+was wrong for most cases: Hijri, Hebrew, Persian, and the Chinese/Korean/
+Taiwanese lunisolar calendars are all deterministic, rule-based (or
+framework-table-backed, zero-maintenance-for-us) calculations, the same kind
+of "formula, not a table" building block as `EasterSundayCalculation`. The
+companion design adds `HijriCalendarCalculation`, `HebrewCalendarCalculation`,
+`PersianCalendarCalculation`, and lunisolar equivalents, and reclassifies the
+checklist below accordingly. `StaticHolidayEnumerable<T>` (originally proposed
+here) is **not built** — see that design's "What this design does NOT do"
+section. A small number of calendars (Hindu lunisolar, Thai/Balinese/Burmese/
+Khmer/Lao/Mongolian Buddhist calendars, Tamil calendar) remain genuinely
+irreducible to formula and stay deferred; a static-table mechanism is
+revisited only if a country actually requiring one is reached.
 
 ## Full checklist
 
-Legend: ✅ done · 🔴 flagged hard (needs `StaticHolidayEnumerable<T>`, not a pure
-formula) · plain = computable via the existing formula-based pattern.
+Legend: ✅ done · 🔴 flagged hard (genuinely irreducible to a formula — see
+`docs/superpowers/specs/2026-08-26-calendar-calculation-mechanisms-design.md`
+for the full reclassification) · plain = computable via the existing
+formula-based pattern, including via the Hijri/Hebrew/Persian/lunisolar/
+Ethiopian calendar calculations added by that design.
 
 ### Europe
 - Done: ✅ Germany, ✅ France, ✅ Italy, ✅ Spain
@@ -61,9 +59,9 @@ formula) · plain = computable via the existing formula-based pattern.
 - Done: ✅ Ireland, ✅ Denmark, ✅ Norway, ✅ Finland, ✅ Czech Republic, ✅ Romania, ✅ Portugal, ✅ Greece (Tier E2)
 - Done: ✅ Hungary, ✅ Bulgaria, ✅ Serbia, ✅ Croatia, ✅ Slovakia, ✅ Slovenia, ✅ Lithuania, ✅ Latvia (Tier E3)
 - Done: ✅ Estonia, ✅ Iceland, ✅ Luxembourg, ✅ Malta, ✅ Cyprus, ✅ Moldova (Tier E4)
-- Tier E4 deferred: 🔴 Belarus, 🔴 Bosnia and Herzegovina (entity-fragmented calendar with Islamic lunar-calendar holidays)
+- Tier E4 remaining: Belarus, Bosnia and Herzegovina (Hijri-computable; entity-fragmentation of holiday law across Federation/Republika Srpska is a separate non-calendar complexity — scope when implemented)
 - Done: ✅ North Macedonia, ✅ Montenegro, ✅ Andorra, ✅ Monaco, ✅ San Marino, ✅ Liechtenstein, ✅ Vatican City (Tier E5)
-- Tier E5 deferred: 🔴 Albania, 🔴 Kosovo (Islamic lunar-calendar holidays, Eid al-Fitr / Eid al-Adha)
+- Tier E5 remaining: Albania, Kosovo (Hijri-computable)
 
 ### North America
 - Done: ✅ USA
@@ -76,14 +74,14 @@ formula) · plain = computable via the existing formula-based pattern.
 - Tier SA2: Peru, Uruguay, Ecuador, Paraguay, Bolivia, 🔴 Venezuela, Guyana, Suriname
 
 ### Asia
-- Tier AS1: 🔴 India, 🔴 Israel, Japan, 🔴 China, 🔴 South Korea, 🔴 Singapore, 🔴 Turkey
-- Tier AS2: 🔴 Vietnam, 🔴 Philippines, 🔴 Indonesia, 🔴 Malaysia, 🔴 Pakistan, 🔴 Bangladesh, 🔴 Saudi Arabia, 🔴 UAE
-- Tier AS3: 🔴 Thailand, 🔴 Taiwan, 🔴 Hong Kong, Kazakhstan, 🔴 Qatar, 🔴 Kuwait, 🔴 Iraq, 🔴 Iran
-- Tier AS4 (low priority, mostly 🔴): Sri Lanka, Nepal, Myanmar, Cambodia, Laos, Mongolia, Uzbekistan, remaining Central Asia
+- Tier AS1: India (Hijri- and Easter-computable; central Gazetted list only — Hindu-calendar holidays and state-specific days deferred), Israel (Hebrew-computable), Japan, China (Chinese-lunisolar-computable), South Korea (Korean-lunisolar-computable), Singapore (Hijri- and Chinese-lunisolar-computable components only — Hindu/Buddhist components deferred), Turkey (Hijri-computable)
+- Tier AS2: Vietnam (Chinese-lunisolar-computable, approximate), Philippines, Indonesia (Hijri- and Easter-computable components only — Nyepi/Vesak deferred), Malaysia (Hijri- and Chinese-lunisolar-computable components only — Hindu/Buddhist components deferred), Pakistan (Hijri-computable), Bangladesh (Hijri-computable component only — Hindu/Buddhist minority holidays deferred), Saudi Arabia (Hijri-computable), UAE (Hijri-computable)
+- Tier AS3: 🔴 Thailand (Buddhist lunar calendar, still hard), Taiwan (Taiwan-lunisolar-computable), Hong Kong (Chinese-lunisolar-computable), Kazakhstan, Qatar (Hijri-computable), Kuwait (Hijri-computable), Iraq (Hijri-computable, approximate — Sunni/Shia moon-sighting authorities occasionally differ by a day), Iran (Persian- and Hijri-computable)
+- Tier AS4 (low priority): 🔴 Sri Lanka, 🔴 Nepal, 🔴 Myanmar, 🔴 Cambodia, 🔴 Laos, 🔴 Mongolia, Uzbekistan (Hijri-computable), remaining Central Asia (Hijri-computable)
 
 ### Africa
-- Tier AF1: South Africa, 🔴 Nigeria, 🔴 Egypt, Kenya, 🔴 Morocco, Ghana
-- Tier AF2 (low priority, mostly 🔴): remaining African nations, incl. 🔴 Ethiopia (own calendar)
+- Tier AF1: South Africa, Nigeria (Hijri- and Easter-computable), Egypt (Hijri- and Coptic-Easter-computable), Kenya, Morocco (Hijri-computable), Ghana
+- Tier AF2 (low priority): remaining African nations, Ethiopia (Ethiopian-calendar-computable)
 
 ### Oceania
 - Tier OC1: Australia, New Zealand
@@ -92,9 +90,14 @@ formula) · plain = computable via the existing formula-based pattern.
 ## Batching / rollout
 
 One `writing-plans` implementation plan (and PR) per tier listed above,
-following the continent groupings and priority order shown. Tiers containing
-only or mostly 🔴 countries are deferred until the `StaticHolidayEnumerable<T>`
-mechanism exists and has been proven on at least one 🔴 country.
+following the continent groupings and priority order shown. As of
+2026-08-26, the calendar-calculation mechanisms design has unblocked most
+previously-🔴 countries (see that design's reclassification table) — tiers
+are no longer gated on it except for the small residual list of countries
+whose calendars remain genuinely irreducible to formula (Thailand, Sri
+Lanka, Nepal, Myanmar, Cambodia, Laos, Mongolia, Haiti, Venezuela, and the
+Hindu/Buddhist-calendar components of India/Indonesia/Malaysia/Singapore/
+Bangladesh).
 
 **First batch: Tier E1** — United Kingdom, Poland, Netherlands, Ukraine,
 Sweden, Switzerland, Belgium, Austria. All computable via the existing
@@ -110,6 +113,7 @@ dates for a spread of years, including movable-feast years.
 
 ## Out of scope for this design
 
-- Implementing any 🔴 (static-table) country — deferred to a follow-up design
-  once `StaticHolidayEnumerable<T>` exists and Tier E1 has shipped.
+- Implementing any remaining 🔴 country — see
+  `docs/superpowers/specs/2026-08-26-calendar-calculation-mechanisms-design.md`
+  for what's still genuinely hard and why.
 - Non-Europe tiers — each gets planned via `writing-plans` when its turn comes.
