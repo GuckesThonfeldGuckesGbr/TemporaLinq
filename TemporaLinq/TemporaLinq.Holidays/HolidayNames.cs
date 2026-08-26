@@ -225,6 +225,7 @@ public enum HolidayNames
     TombSweepingDay, // Taiwan
     UnificationDayOfBulgaria, // Bulgaria
     UnionDayOfRomania, // Romania
+    VesakDay, // Singapore, Malaysia, Indonesia
     VeteransDay, // USA
     VictoryAndHomelandThanksgivingDay, // Croatia
     VictoryDay, // France, Ukraine, Czech Republic, Slovakia, Estonia, Moldova, Bangladesh, Turkey
