@@ -14,12 +14,13 @@ public enum HolidayNames
     BattleOfTheBoyneDay, // Northern Ireland
     BirthdayOfMartinLutherKingJr, // USA
     BirthdayOfGeorgeWashington, // USA
-    BoxingDay, // UK, Canada, Australia, NZ
+    BoxingDay, // UK, Canada, Australia, NZ, Estonia, Iceland, Cyprus
     ChildrensDay, // Romania
     ChristmasDay,
-    ChristmasEve, // Czech Republic
-    CleanMonday, // Greece
+    ChristmasEve, // Czech Republic, Estonia
+    CleanMonday, // Greece, Cyprus
     ColumbusDay, // USA
+    CommerceDay, // Iceland
     ConstitutionDayOfDenmark, // Denmark
     ConstitutionDayOfNorway, // Norway
     ConstitutionDayOfPoland, // Poland
@@ -37,17 +38,21 @@ public enum HolidayNames
     EstablishmentDayOfSlovakRepublic, // Slovakia
     FeastOfStJanuarius, // Italy
     FeastOfStJohnTheBaptist, // Italy
+    FeastOfStJoseph, // Malta
+    FeastOfStPaulsShipwreck, // Malta
     FeastOfStPetronius, // Italy
+    FirstDayOfSummer, // Iceland
     FlemishCommunityDay, // Belgium
+    FreedomDayOfMalta, // Malta
     FreedomDayOfPortugal, // Portugal
     FrenchCommunityDay, // Belgium
     GermanCommunityDay, // Belgium
     GoodFriday,
-    GreekIndependenceDay, // Greece
+    GreekIndependenceDay, // Greece, Cyprus
     HolySaturday, // Bulgaria, Serbia
     ImmaculateConception,
     IndependenceAndUnityDayOfSlovenia, // Slovenia
-    IndependenceDay, // USA, Ukraine, Finland, Bulgaria
+    IndependenceDay, // USA, Ukraine, Finland, Bulgaria, Estonia, Iceland, Malta, Cyprus, Moldova
     IndependentCzechoslovakStateDay, // Czech Republic
     InternationalWomensDay,
     JanHusDay, // Czech Republic
@@ -58,12 +63,14 @@ public enum HolidayNames
     LiberationDay, // Italy, Netherlands
     LiberationDayOfBulgaria, // Bulgaria
     LigoDay, // Latvia
-    MaundyThursday, // Denmark, Norway
-    MemorialDay, // USA
-    MidsummerDay, // Sweden, Finland, Lithuania, Latvia
+    MaundyThursday, // Denmark, Norway, Iceland
+    MemorialDay, // USA, Moldova
+    MidsummerDay, // Sweden, Finland, Lithuania, Latvia, Estonia
     NationalDayOfAustria, // Austria
     NationalDayOfBelgium, // Belgium
+    NationalDayOfCyprus, // Cyprus
     NationalDayOfHungary, // Hungary
+    NationalDayOfLuxembourg, // Luxembourg
     NationalDayOfRomania, // Romania
     NationalDayOfSpain, // Spain
     NationalDayOfSweden, // Sweden
@@ -71,14 +78,16 @@ public enum HolidayNames
     NewYearsDay,
     NewYearsEve, // Latvia
     OctoberBankHoliday, // Ireland
-    OhiDay, // Greece
+    OhiDay, // Greece, Cyprus
     OurLadyOfSorrowsDay, // Slovakia
+    OurLadyOfVictoriesDay, // Malta
+    OurLanguageDay, // Moldova
     PortugalDay, // Portugal
     PresernDay, // Slovenia
     ProclamationDayOfLatvia, // Latvia
     ReformationDay, // Germany, Slovenia
     RepentanceAndPrayerDay, // Germany
-    RepublicDay, // Italy, Portugal
+    RepublicDay, // Italy, Portugal, Malta
     RemembranceDayOfCroatia, // Croatia
     RestorationOfIndependenceDay, // Portugal, Lithuania, Latvia
     RestorationOfStateDay, // Lithuania
@@ -86,6 +95,7 @@ public enum HolidayNames
     SaintsCyrilAndMethodiusDay, // Czech Republic, Bulgaria, Slovakia
     SanMarco, // Italy
     SecondJanuary, // Scotland, Romania, Slovenia
+    SetteGiugno, // Malta
     SlovakNationalUprisingDay, // Slovakia
     SpanishConstitutionDay, // Spain
     SpringBankHoliday, // UK
@@ -99,7 +109,7 @@ public enum HolidayNames
     StBrigidsDay, // Ireland
     StGeorgesDay, // Bulgaria
     StPatricksDay, // Northern Ireland
-    StPeterAndPaul, // Italy
+    StPeterAndPaul, // Italy, Malta
     StStephensDay,
     StruggleForFreedomAndDemocracyDay, // Czech Republic, Slovakia
     SummerBankHoliday, // UK (England, Wales, Northern Ireland)
@@ -109,7 +119,7 @@ public enum HolidayNames
     UnionDayOfRomania, // Romania
     VeteransDay, // USA
     VictoryAndHomelandThanksgivingDay, // Croatia
-    VictoryDay, // France, Ukraine, Czech Republic, Slovakia
+    VictoryDay, // France, Ukraine, Czech Republic, Slovakia, Estonia, Moldova
     WhitMonday,
     WhitSunday,
     WorldChildrensDay,
