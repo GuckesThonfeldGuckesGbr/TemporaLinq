@@ -16,11 +16,13 @@ public enum HolidayNames
     BerchtoldsDay, // Liechtenstein
     BirthdayOfMartinLutherKingJr, // USA
     BirthdayOfGeorgeWashington, // USA
-    BoxingDay, // UK, Canada, Australia, NZ, Estonia, Iceland, Cyprus
+    BoxingDay, // UK, Canada, Australia, NZ, Estonia, Iceland, Cyprus, Hong Kong
+    BuddhasBirthday, // Hong Kong
     CandlemasDay, // Liechtenstein
     ChildrensDay, // Romania
     ChristmasDay,
     ChristmasEve, // Czech Republic, Estonia, San Marino
+    ChungYeungFestival, // Hong Kong
     CleanMonday, // Greece, Cyprus
     ColumbusDay, // USA
     CommerceDay, // Iceland
@@ -36,6 +38,7 @@ public enum HolidayNames
     DayOfMacedonianUprising, // North Macedonia
     DayOfUprisingAgainstOccupation, // Slovenia
     DefendersDay, // Ukraine
+    DragonBoatFestival, // China, Hong Kong
     EarlyMayBankHoliday, // UK, Ireland
     EasterMonday,
     EasterSunday,
@@ -58,7 +61,9 @@ public enum HolidayNames
     GermanCommunityDay, // Belgium
     GoodFriday,
     GreekIndependenceDay, // Greece, Cyprus
-    HolySaturday, // Bulgaria, Serbia
+    HKSAREstablishmentDay, // Hong Kong
+    HolySaturday, // Bulgaria, Serbia, Hong Kong
+    HungKingsCommemorationDay, // Vietnam
     IlindenDay, // North Macedonia
     ImmaculateConception,
     IndependenceAndUnityDayOfSlovenia, // Slovenia
@@ -74,11 +79,14 @@ public enum HolidayNames
     LiberationDay, // Italy, Netherlands
     LiberationDayOfBulgaria, // Bulgaria
     LigoDay, // Latvia
+    LunarNewYearsDay, // China, Hong Kong, Vietnam
     MaundyThursday, // Denmark, Norway, Iceland
     MemorialDay, // USA, Moldova
+    MidAutumnFestival, // China, Hong Kong
     MidsummerDay, // Sweden, Finland, Lithuania, Latvia, Estonia
     NationalDayOfAustria, // Austria
     NationalDayOfBelgium, // Belgium
+    NationalDayOfChina, // China, Hong Kong
     NationalDayOfCyprus, // Cyprus
     NationalDayOfHungary, // Hungary
     NationalDayOfLuxembourg, // Luxembourg
@@ -87,6 +95,7 @@ public enum HolidayNames
     NationalDayOfSpain, // Spain
     NationalDayOfSweden, // Sweden
     NationalDayOfSwitzerland, // Switzerland
+    NationalDayOfVietnam, // Vietnam
     NativityOfMaryDay, // Liechtenstein
     NewYearsDay,
     NewYearsEve, // Latvia, San Marino
@@ -99,9 +108,11 @@ public enum HolidayNames
     PortugalDay, // Portugal
     PresernDay, // Slovenia
     ProclamationDayOfLatvia, // Latvia
+    QingmingFestival, // China, Hong Kong
     ReformationDay, // Germany, Slovenia
     RepentanceAndPrayerDay, // Germany
     RepublicDay, // Italy, Portugal, Malta
+    ReunificationDay, // Vietnam
     RemembranceDayOfCroatia, // Croatia
     RestorationOfIndependenceDay, // Portugal, Lithuania, Latvia
     RestorationOfStateDay, // Lithuania
