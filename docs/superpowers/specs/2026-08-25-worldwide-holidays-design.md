@@ -80,8 +80,8 @@ Ethiopian calendar calculations added by that design.
 - Tier AS2 remaining: Philippines, Indonesia (Hijri- and Easter-computable components only — Nyepi/Vesak deferred), Malaysia (Hijri- and Chinese-lunisolar-computable components only — Hindu/Buddhist components deferred)
 - Done: ✅ Qatar, ✅ Kuwait, ✅ Iraq (Hijri-computable, approximate — Sunni/Shia moon-sighting authorities occasionally differ by a day), ✅ Iran (Persian- and Hijri-computable), ✅ Hong Kong (Chinese-lunisolar-computable), ✅ Taiwan (Taiwan-lunisolar-computable) (Tier AS3)
 - Tier AS3 remaining: 🔴 Thailand (Buddhist lunar calendar, still hard), Kazakhstan
-- Tier AS4 (low priority): 🔴 Nepal, 🔴 Myanmar, 🔴 Cambodia, 🔴 Laos, 🔴 Mongolia, remaining Central Asia (Hijri-computable)
-- Done: ✅ Uzbekistan, ✅ Sri Lanka (full-moon-computable via new `TemporaLinq.Astronomy.LunarPhaseCalculation`; Maha Sivarathri, a Hindu lunar holiday, remains deferred) (Tier AS4)
+- Tier AS4 (low priority): 🔴 Nepal, 🔴 Myanmar, 🔴 Mongolia, remaining Central Asia (Hijri-computable)
+- Done: ✅ Uzbekistan, ✅ Sri Lanka (full-moon-computable via new `TemporaLinq.Astronomy.LunarPhaseCalculation`; Maha Sivarathri, a Hindu lunar holiday, remains deferred), ✅ Cambodia (Buddhist-lunisolar-computable via new `TemporaLinq.Astronomy.SoutheastAsianBuddhistCalendar` for Visak Bochea Day; Meak Bochea (removed from Cambodia's statutory list since 2020) and Asalha Bucha (never statutory there) are out of scope, as are Pchum Ben, the Water Festival, and the Royal Ploughing Ceremony — see `TemporaLinq.Holidays/Asia/Cambodia/NationalHolidays.cs`), ✅ Laos (fixed civil holidays only — per Laos's Labour Law (2013, Art. 55), it has no statutory Buddhist-calendar holiday at all; Visakha Bousa/Boun Khao Phansa/Boun Ok Phansa are widely observed culturally but not statutory, and National Teachers' Day is restricted to teachers/education staff — see `TemporaLinq.Holidays/Asia/Laos/NationalHolidays.cs`) (Tier AS4)
 
 ### Africa
 - Done: ✅ Nigeria, ✅ Egypt, ✅ Morocco (Tier AF1, partial)
@@ -101,7 +101,7 @@ following the continent groupings and priority order shown. As of
 previously-🔴 countries (see that design's reclassification table) — tiers
 are no longer gated on it except for the small residual list of countries
 whose calendars remain genuinely irreducible to formula (Thailand, Sri
-Lanka, Nepal, Myanmar, Cambodia, Laos, Mongolia, Haiti, Venezuela, and the
+Lanka, Nepal, Myanmar, Mongolia, Haiti, Venezuela, and the
 Hindu/Buddhist-calendar components of India/Indonesia/Malaysia/Singapore/
 Bangladesh).
 
