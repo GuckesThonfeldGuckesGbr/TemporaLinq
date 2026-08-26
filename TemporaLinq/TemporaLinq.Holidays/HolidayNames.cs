@@ -59,8 +59,8 @@ public enum HolidayNames
     EarlyMayBankHoliday, // UK, Ireland
     EasterMonday, // also Nigeria, Ethiopia
     EasterSunday, // also Ethiopia
-    EidAlAdha, // India, Pakistan, Bangladesh, Uzbekistan, Albania, Kosovo, Turkey, Saudi Arabia, UAE, Qatar, Kuwait, Iraq, Iran (Shia, 10 Dhu al-Hijjah), Nigeria, Egypt, Morocco
-    EidAlFitr, // India, Pakistan, Bangladesh, Uzbekistan, Albania, Kosovo, Turkey, Saudi Arabia, UAE, Qatar, Kuwait, Iraq, Iran (Shia, 1-2 Shawwal), Nigeria, Egypt, Morocco
+    EidAlAdha, // India, Pakistan, Bangladesh, Uzbekistan, Albania, Kosovo, Turkey, Saudi Arabia, UAE, Qatar, Kuwait, Iraq, Iran (Shia, 10 Dhu al-Hijjah), Nigeria, Egypt, Morocco, Sri Lanka
+    EidAlFitr, // India, Pakistan, Bangladesh, Uzbekistan, Albania, Kosovo, Turkey, Saudi Arabia, UAE, Qatar, Kuwait, Iraq, Iran (Shia, 1-2 Shawwal), Nigeria, Egypt, Morocco, Sri Lanka
     EidAlGhadir, // Iran (Shia, 18 Dhu al-Hijjah)
     Epiphany, // also Ethiopia (Timkat)
     EstablishmentDayOfSlovakRepublic, // Slovakia
@@ -93,7 +93,7 @@ public enum HolidayNames
     IlindenDay, // North Macedonia
     ImmaculateConception,
     IndependenceAndUnityDayOfSlovenia, // Slovenia
-    IndependenceDay, // USA, Ukraine, Finland, Bulgaria, Estonia, Iceland, Malta, Cyprus, Moldova, Montenegro, North Macedonia, India, Pakistan, Bangladesh, Uzbekistan, Albania, Kosovo, Nigeria, Morocco
+    IndependenceDay, // USA, Ukraine, Finland, Bulgaria, Estonia, Iceland, Malta, Cyprus, Moldova, Montenegro, North Macedonia, India, Pakistan, Bangladesh, Uzbekistan, Albania, Kosovo, Nigeria, Morocco, Sri Lanka
     IndependenceManifestoDay, // Morocco
     IndependenceMovementDayOfKorea, // South Korea
     IndependentCzechoslovakStateDay, // Czech Republic
@@ -109,7 +109,7 @@ public enum HolidayNames
     KashmirSolidarityDay, // Pakistan
     KhordadNationalUprisingDay, // Iran (15 Khordad uprising)
     KingsDayOfTheNetherlands, // Netherlands
-    LabourDay, // also Nigeria (Workers' Day), Egypt, Morocco
+    LabourDay, // also Nigeria (Workers' Day), Egypt, Morocco, Sri Lanka
     LanguageMovementDay, // Bangladesh
     LiberationDay, // Italy, Netherlands, Albania, Kuwait, South Korea
     LiberationDayOfBulgaria, // Bulgaria
@@ -164,6 +164,7 @@ public enum HolidayNames
     PatriotsVictoryDay, // Ethiopia
     PeaceMemorialDayOfTaiwan, // Taiwan
     PortugalDay, // Portugal
+    PoyaDay, // Sri Lanka
     PresernDay, // Slovenia
     ProclamationDayOfLatvia, // Latvia
     ProphetsBirthday, // UAE, Kuwait, Iraq, Egypt, Morocco, Nigeria
@@ -191,6 +192,7 @@ public enum HolidayNames
     Shavuot, // Israel (6 Sivan)
     SimchatTorah, // Israel (22 Tishrei, combined with Shmini Atzeret)
     SinaiLiberationDay, // Egypt
+    SinhalaAndTamilNewYearDay, // Sri Lanka
     SlovakNationalUprisingDay, // Slovakia
     SpanishConstitutionDay, // Spain
     SportsDayOfQatar, // Qatar
@@ -214,6 +216,7 @@ public enum HolidayNames
     SummerBankHoliday, // UK (England, Wales, Northern Ireland)
     SummerDay, // Albania
     SynaxisOfStJohnTheBaptist, // Romania
+    TamilThaiPongalDay, // Sri Lanka
     Tasua, // Iran (Shia, 9 Muharram)
     TeachersAndInstructorsDay, // Uzbekistan
     ThanksgivingDay, // USA
