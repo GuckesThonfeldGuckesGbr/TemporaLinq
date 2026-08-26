@@ -145,7 +145,7 @@ public enum HolidayNames
     LunarNewYearsEve, // South Korea, Taiwan
     MakhaBuchaDay, // Thailand
     MartyrsDayOfMyanmar, // Myanmar
-    MaundyThursday, // Denmark, Norway, Iceland
+    MaundyThursday, // Denmark, Norway, Iceland, Venezuela
     MawlidAlNabi, // Iran (Shia observance, 17 Rabi' al-awwal)
     MemorialDay, // USA, Moldova, South Korea
     MemoryAndHonorDay, // Uzbekistan
