@@ -3,6 +3,7 @@ namespace TemporaLinq.Holidays;
 public enum HolidayNames
 {
     AdwaVictoryDay, // Ethiopia
+    AgongsBirthday, // Malaysia (Yang di-Pertuan Agong's Birthday)
     AllSaintsDay,
     AllSoulsDay,
     AlphabetDay, // Albania
@@ -132,6 +133,7 @@ public enum HolidayNames
     NationalDayOfHungary, // Hungary
     NationalDayOfKuwait, // Kuwait
     NationalDayOfLuxembourg, // Luxembourg
+    NationalDayOfMalaysia, // Malaysia (Malaysia Day, Sep 16)
     NationalDayOfMonaco, // Monaco
     NationalDayOfQatar, // Qatar
     NationalDayOfRomania, // Romania
