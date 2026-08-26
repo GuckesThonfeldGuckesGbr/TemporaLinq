@@ -4,6 +4,7 @@ public enum HolidayNames
 {
     AllSaintsDay,
     AllSoulsDay,
+    AlphabetDay, // Albania
     AnniversaryOfArengo, // San Marino
     AntiFascistStruggleDay, // Croatia
     ArmisticeDay, // French, Serbian
@@ -28,6 +29,7 @@ public enum HolidayNames
     CommerceDay, // Iceland
     ConstitutionDayOfAndorra, // Andorra
     ConstitutionDayOfDenmark, // Denmark
+    ConstitutionDayOfKosovo, // Kosovo
     ConstitutionDayOfNorway, // Norway
     ConstitutionDayOfPoland, // Poland
     ConstitutionDayOfSlovakia, // Slovakia
@@ -39,13 +41,15 @@ public enum HolidayNames
     DayOfMacedonianUprising, // North Macedonia
     DayOfUprisingAgainstOccupation, // Slovenia
     DefendersDay, // Ukraine
+    DemocracyAndNationalUnityDay, // Turkey
     EarlyMayBankHoliday, // UK, Ireland
     EasterMonday,
     EasterSunday,
-    EidAlAdha, // India, Pakistan, Bangladesh, Uzbekistan
-    EidAlFitr, // India, Pakistan, Bangladesh, Uzbekistan
+    EidAlAdha, // India, Pakistan, Bangladesh, Uzbekistan, Albania, Kosovo, Turkey
+    EidAlFitr, // India, Pakistan, Bangladesh, Uzbekistan, Albania, Kosovo, Turkey
     Epiphany,
     EstablishmentDayOfSlovakRepublic, // Slovakia
+    EuropeDay, // Kosovo
     FallOfFascismDay, // San Marino
     FeastOfSaintAgatha, // San Marino
     FeastOfStJanuarius, // Italy
@@ -68,7 +72,7 @@ public enum HolidayNames
     IlindenDay, // North Macedonia
     ImmaculateConception,
     IndependenceAndUnityDayOfSlovenia, // Slovenia
-    IndependenceDay, // USA, Ukraine, Finland, Bulgaria, Estonia, Iceland, Malta, Cyprus, Moldova, Montenegro, North Macedonia, India, Pakistan, Bangladesh, Uzbekistan
+    IndependenceDay, // USA, Ukraine, Finland, Bulgaria, Estonia, Iceland, Malta, Cyprus, Moldova, Montenegro, North Macedonia, India, Pakistan, Bangladesh, Uzbekistan, Albania, Kosovo
     IndependentCzechoslovakStateDay, // Czech Republic
     InternationalWomensDay,
     InvestitureOfCaptainsRegent, // San Marino
@@ -80,7 +84,7 @@ public enum HolidayNames
     KingsDayOfTheNetherlands, // Netherlands
     LabourDay,
     LanguageMovementDay, // Bangladesh
-    LiberationDay, // Italy, Netherlands
+    LiberationDay, // Italy, Netherlands, Albania
     LiberationDayOfBulgaria, // Bulgaria
     LigoDay, // Latvia
     MaundyThursday, // Denmark, Norway, Iceland
@@ -88,6 +92,7 @@ public enum HolidayNames
     MemoryAndHonorDay, // Uzbekistan
     MidsummerDay, // Sweden, Finland, Lithuania, Latvia, Estonia
     MiladUnNabi, // India, Pakistan, Bangladesh
+    MotherTeresaDay, // Albania
     Muharram, // India
     NationalDayOfAustria, // Austria
     NationalDayOfBelgium, // Belgium
@@ -100,7 +105,10 @@ public enum HolidayNames
     NationalDayOfSweden, // Sweden
     NationalDayOfSwitzerland, // Switzerland
     NationalMourningDay, // Bangladesh
+    NationalSovereigntyAndChildrensDay, // Turkey
+    NationalYouthDay, // Albania
     NativityOfMaryDay, // Liechtenstein
+    NevruzDay, // Albania
     NewYearsDay,
     NewYearsEve, // Latvia, San Marino
     NowruzDay, // Uzbekistan
@@ -117,7 +125,7 @@ public enum HolidayNames
     QuaidEAzamDay, // Pakistan
     ReformationDay, // Germany, Slovenia
     RepentanceAndPrayerDay, // Germany
-    RepublicDay, // Italy, Portugal, Malta, India
+    RepublicDay, // Italy, Portugal, Malta, India, Turkey
     RemembranceDayOfCroatia, // Croatia
     RestorationOfIndependenceDay, // Portugal, Lithuania, Latvia
     RestorationOfStateDay, // Lithuania
@@ -147,6 +155,7 @@ public enum HolidayNames
     StStephensDay,
     StruggleForFreedomAndDemocracyDay, // Czech Republic, Slovakia
     SummerBankHoliday, // UK (England, Wales, Northern Ireland)
+    SummerDay, // Albania
     SynaxisOfStJohnTheBaptist, // Romania
     TeachersAndInstructorsDay, // Uzbekistan
     ThanksgivingDay, // USA
@@ -154,8 +163,9 @@ public enum HolidayNames
     UnionDayOfRomania, // Romania
     VeteransDay, // USA
     VictoryAndHomelandThanksgivingDay, // Croatia
-    VictoryDay, // France, Ukraine, Czech Republic, Slovakia, Estonia, Moldova, Bangladesh
+    VictoryDay, // France, Ukraine, Czech Republic, Slovakia, Estonia, Moldova, Bangladesh, Turkey
     WhitMonday,
     WhitSunday,
     WorldChildrensDay,
+    YouthAndSportsDay, // Turkey
 }

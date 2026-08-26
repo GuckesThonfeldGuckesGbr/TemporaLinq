@@ -59,9 +59,9 @@ Ethiopian calendar calculations added by that design.
 - Done: ✅ Ireland, ✅ Denmark, ✅ Norway, ✅ Finland, ✅ Czech Republic, ✅ Romania, ✅ Portugal, ✅ Greece (Tier E2)
 - Done: ✅ Hungary, ✅ Bulgaria, ✅ Serbia, ✅ Croatia, ✅ Slovakia, ✅ Slovenia, ✅ Lithuania, ✅ Latvia (Tier E3)
 - Done: ✅ Estonia, ✅ Iceland, ✅ Luxembourg, ✅ Malta, ✅ Cyprus, ✅ Moldova (Tier E4)
-- Tier E4 remaining: Belarus, Bosnia and Herzegovina (Hijri-computable; entity-fragmentation of holiday law across Federation/Republika Srpska is a separate non-calendar complexity — scope when implemented)
-- Done: ✅ North Macedonia, ✅ Montenegro, ✅ Andorra, ✅ Monaco, ✅ San Marino, ✅ Liechtenstein, ✅ Vatican City (Tier E5)
-- Tier E5 remaining: Albania, Kosovo (Hijri-computable)
+- Done: ✅ Bosnia and Herzegovina (Tier E4 — state-level/BiH-wide holidays only: New Year and Labour Day; entity-specific and community-religious holidays, including the Eids, are out of scope, see `TemporaLinq.Holidays/Europe/BosniaAndHerzegovina/NationalHolidays.cs`)
+- Tier E4 remaining: Belarus
+- Done: ✅ North Macedonia, ✅ Montenegro, ✅ Andorra, ✅ Monaco, ✅ San Marino, ✅ Liechtenstein, ✅ Vatican City, ✅ Albania, ✅ Kosovo (Tier E5)
 
 ### North America
 - Done: ✅ USA
@@ -74,8 +74,8 @@ Ethiopian calendar calculations added by that design.
 - Tier SA2: Peru, Uruguay, Ecuador, Paraguay, Bolivia, 🔴 Venezuela, Guyana, Suriname
 
 ### Asia
-- Done: ✅ India (central Gazetted list only — Republic Day, Independence Day, Gandhi Jayanti, Good Friday, Christmas Day, and Hijri-computable Eid al-Fitr, Eid al-Adha/Bakrid, Muharram, and Milad-un-Nabi; Hindu-calendar holidays and state-specific days remain deferred pending a future Hindu/Buddhist calendar calculation mechanism)
-- Tier AS1 remaining: Israel (Hebrew-computable), Japan, China (Chinese-lunisolar-computable), South Korea (Korean-lunisolar-computable), Singapore (Hijri- and Chinese-lunisolar-computable components only — Hindu/Buddhist components deferred), Turkey (Hijri-computable)
+- Done: ✅ India (central Gazetted list only — Republic Day, Independence Day, Gandhi Jayanti, Good Friday, Christmas Day, and Hijri-computable Eid al-Fitr, Eid al-Adha/Bakrid, Muharram, and Milad-un-Nabi; Hindu-calendar holidays and state-specific days remain deferred pending a future Hindu/Buddhist calendar calculation mechanism), ✅ Turkey (`TemporaLinq.Holidays/Asia/Turkey/NationalHolidays.cs`, establishes the `Asia` folder convention)
+- Tier AS1 remaining: Israel (Hebrew-computable), Japan, China (Chinese-lunisolar-computable), South Korea (Korean-lunisolar-computable), Singapore (Hijri- and Chinese-lunisolar-computable components only — Hindu/Buddhist components deferred)
 - Done: ✅ Pakistan, ✅ Bangladesh (Hijri-based and fixed civil holidays only — Hindu/Buddhist minority holidays (Durga Puja, Buddha Purnima) remain deferred pending a future Hindu/Buddhist calendar calculation mechanism) (Tier AS2)
 - Tier AS2 remaining: Vietnam (Chinese-lunisolar-computable, approximate), Philippines, Indonesia (Hijri- and Easter-computable components only — Nyepi/Vesak deferred), Malaysia (Hijri- and Chinese-lunisolar-computable components only — Hindu/Buddhist components deferred), Saudi Arabia (Hijri-computable), UAE (Hijri-computable)
 - Tier AS3: 🔴 Thailand (Buddhist lunar calendar, still hard), Taiwan (Taiwan-lunisolar-computable), Hong Kong (Chinese-lunisolar-computable), Kazakhstan, Qatar (Hijri-computable), Kuwait (Hijri-computable), Iraq (Hijri-computable, approximate — Sunni/Shia moon-sighting authorities occasionally differ by a day), Iran (Persian- and Hijri-computable)
