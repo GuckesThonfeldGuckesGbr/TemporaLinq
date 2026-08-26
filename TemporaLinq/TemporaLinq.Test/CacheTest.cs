@@ -10,6 +10,13 @@ namespace TemporaLinq.Test;
 public class CacheTest
 {
     private const int YearsToGenerate = 10;
+
+    // Must stay within the valid date range of every calendar system any implemented country
+    // relies on - e.g. System.Globalization.TaiwanLunisolarCalendar only supports Gregorian
+    // dates from 1912-02-18 onward, so an earlier base year would throw
+    // ArgumentOutOfRangeException for Taiwan's holiday computation.
+    private const int BaseYear = 1950;
+
     private const BindingFlags CachedMethodFlags = BindingFlags.NonPublic | BindingFlags.Static;
 
     private class AllHolidayEnumerables : IEnumerable<object[]>
@@ -57,11 +64,11 @@ public class CacheTest
         var holidayEnumerable = Activator.CreateInstance(type);
         type.BaseType
             .GetProperty(nameof(IHolidayEnumerable.StartDate))!
-            .SetValue(holidayEnumerable, new DateOnly(1900, 1, 1));
-        
+            .SetValue(holidayEnumerable, new DateOnly(BaseYear, 1, 1));
+
         type.BaseType
             .GetProperty(nameof(IHolidayEnumerable.EndDate))!
-            .SetValue(holidayEnumerable, new DateOnly(1900 + YearsToGenerate, 1, 1));
+            .SetValue(holidayEnumerable, new DateOnly(BaseYear + YearsToGenerate, 1, 1));
         return (IHolidayEnumerable) holidayEnumerable!;
     }
 }
