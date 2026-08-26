@@ -19,6 +19,13 @@ public static class LunarPhaseCalculation
         0.00004, 0.00004, 0.00003, 0.00003, -0.00003, 0.00003, -0.00002, -0.00002, 0.00002,
     ];
 
+    private static readonly double[] NewMoonPeriodicTerms =
+    [
+        -0.4072, 0.17241, 0.01608, 0.01039, 0.00739, -0.00514, 0.00208, -0.00111, -0.00057,
+        0.00056, -0.00042, 0.00042, 0.00038, -0.00024, -0.00017, -0.00007, 0.00004, 0.00004,
+        0.00003, 0.00003, -0.00003, 0.00003, -0.00002, -0.00002, 0.00002,
+    ];
+
     private static readonly double[] AdditionalCorrectionCoefficients =
     [
         0.000325, 0.000165, 0.000164, 0.000126, 0.00011, 0.000062, 0.00006,
@@ -30,23 +37,34 @@ public static class LunarPhaseCalculation
     /// (typically 12, occasionally 13).
     /// </summary>
     public static IEnumerable<DateOnly> FullMoonsInGregorianYear(int gregorianYear)
+        => PhasesInGregorianYear(gregorianYear, quarter: 0.5, FullMoonPeriodicTerms);
+
+    /// <summary>
+    /// Returns the Gregorian date of every new moon that falls within the given Gregorian year
+    /// (typically 12, occasionally 13).
+    /// </summary>
+    public static IEnumerable<DateOnly> NewMoonsInGregorianYear(int gregorianYear)
+        => PhasesInGregorianYear(gregorianYear, quarter: 0.0, NewMoonPeriodicTerms);
+
+    private static IEnumerable<DateOnly> PhasesInGregorianYear(
+        int gregorianYear, double quarter, double[] periodicTerms)
     {
         // Scan lunation numbers k covering the target year with a one-lunation margin on each
-        // side, since a full moon computed from a "nearest to decimal year" k can land just
-        // outside the target year.
+        // side, since a phase computed from a "nearest to decimal year" k can land just outside
+        // the target year.
         var approximateK = (gregorianYear - 2000) * 12.3685;
         var startK = Math.Floor(approximateK) - 2;
         var endK = Math.Ceiling(approximateK) + 14;
 
-        for (var k = startK + 0.5; k <= endK; k += 1.0)
+        for (var k = startK + quarter; k <= endK; k += 1.0)
         {
-            var date = DateFromJde(FullMoonJde(k));
+            var date = JulianDayConversion.DateFromJde(PhaseJde(k, periodicTerms));
             if (date.Year == gregorianYear)
                 yield return date;
         }
     }
 
-    private static double FullMoonJde(double k)
+    private static double PhaseJde(double k, double[] periodicTerms)
     {
         var t = k / 1236.85;
         var jdeMean = 2451550.09766 + 29.530588861 * k
@@ -65,7 +83,7 @@ public static class LunarPhaseCalculation
             + 0.000000011 * t * t * t * t);
         var omega = Deg(124.7746 - 1.56375588 * k + 0.0020672 * t * t + 0.00000215 * t * t * t);
 
-        var fc = FullMoonPeriodicTerms;
+        var fc = periodicTerms;
         var correction =
             fc[0] * Math.Sin(mPrime) + fc[1] * Math.Sin(m) * e + fc[2] * Math.Sin(2 * mPrime)
             + fc[3] * Math.Sin(2 * f) + fc[4] * Math.Sin(mPrime - m) * e
@@ -103,33 +121,5 @@ public static class LunarPhaseCalculation
             additional += AdditionalCorrectionCoefficients[i] * Math.Sin(a[i]);
 
         return jdeMean + correction + additional;
-    }
-
-    private static DateOnly DateFromJde(double jde)
-    {
-        var jd = jde + 0.5;
-        var z = Math.Floor(jd);
-
-        double aValue;
-        if (z >= 2299161)
-        {
-            var alpha = Math.Floor((z - 1867216.25) / 36524.25);
-            aValue = z + 1 + alpha - Math.Floor(alpha / 4);
-        }
-        else
-        {
-            aValue = z;
-        }
-
-        var b = aValue + 1524;
-        var c = Math.Floor((b - 122.1) / 365.25);
-        var d = Math.Floor(365.25 * c);
-        var e = Math.Floor((b - d) / 30.6001);
-
-        var day = (int) (b - d - Math.Floor(30.6001 * e));
-        var month = (int) (e < 14 ? e - 1 : e - 13);
-        var year = (int) (month > 2 ? c - 4716 : c - 4715);
-
-        return new DateOnly(year, month, day);
     }
 }
