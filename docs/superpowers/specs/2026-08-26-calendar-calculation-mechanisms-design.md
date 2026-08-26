@@ -37,10 +37,15 @@ spirit as noting that `EasterSundayCalculation` is a formula, not a decree.
 
 **Status (2026-08-26):** `HijriCalendarCalculation`, `HebrewCalendarCalculation`,
 `PersianCalendarCalculation`, `ChineseLunisolarCalendarCalculation`,
-`KoreanLunisolarCalendarCalculation`, and `TaiwanLunisolarCalendarCalculation` are implemented and
-tested (the latter two built for, and consumed by, the South Korea and Taiwan country
-implementations). `EthiopianCalendarCalculation` is not yet built — build it when the country
-tier that needs it is reached, per this design's "only build the ones actually needed" guidance.
+`KoreanLunisolarCalendarCalculation`, `TaiwanLunisolarCalendarCalculation`, and
+`EthiopianCalendarCalculation` are all implemented and tested — every calendar system this
+design proposed has now been built. The Korean/Taiwanese lunisolar siblings were built for, and
+consumed by, the South Korea and Taiwan country implementations.
+`EthiopianCalendarCalculation`'s day-number-offset formula and leap-year alignment were
+independently verified against a maintained third-party Ethiopian/Gregorian date converter
+across 36 reference pairs (see `docs/superpowers/plans/2026-08-26-africa-holidays.md`) before
+being written into the repo, per this design's guidance not to ship an unverified epoch
+calculation.
 
 Each calculation lives in `TemporaLinq.Holidays` as a static class, mirroring
 `EasterSundayCalculation`'s shape.

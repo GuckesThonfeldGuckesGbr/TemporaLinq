@@ -2,13 +2,15 @@ namespace TemporaLinq.Holidays;
 
 public enum HolidayNames
 {
+    AdwaVictoryDay, // Ethiopia
     AllSaintsDay,
     AllSoulsDay,
     AlphabetDay, // Albania
     AnniversaryOfArengo, // San Marino
     AntiFascistStruggleDay, // Croatia
-    ArafahDay, // Saudi Arabia, UAE, Kuwait
+    ArafahDay, // Saudi Arabia, UAE, Kuwait, Egypt
     Arbaeen, // Iran (Shia, 20 Safar)
+    ArmedForcesDay, // Egypt
     ArmisticeDay, // French, Serbian
     AscensionDay,
     AshuraDay, // Pakistan, Bangladesh, Kuwait, Iraq, Iran (Shia, 10 Muharram)
@@ -21,11 +23,11 @@ public enum HolidayNames
     BerchtoldsDay, // Liechtenstein
     BirthdayOfMartinLutherKingJr, // USA
     BirthdayOfGeorgeWashington, // USA
-    BoxingDay, // UK, Canada, Australia, NZ, Estonia, Iceland, Cyprus, Hong Kong
+    BoxingDay, // UK, Canada, Australia, NZ, Estonia, Iceland, Cyprus, Hong Kong, Nigeria
     BuddhasBirthday, // Hong Kong, South Korea
     CandlemasDay, // Liechtenstein
     ChildrensDay, // Romania, South Korea, Taiwan
-    ChristmasDay,
+    ChristmasDay, // also Egypt (Coptic Christmas), Ethiopia (Genna)
     ChristmasEve, // Czech Republic, Estonia, San Marino
     ChungYeungFestival, // Hong Kong
     Chuseok, // South Korea
@@ -52,15 +54,17 @@ public enum HolidayNames
     DeathOfKhomeini, // Iran (14 Khordad)
     DefendersDay, // Ukraine
     DemocracyAndNationalUnityDay, // Turkey
+    DemocracyDayOfNigeria, // Nigeria
     DragonBoatFestival, // China, Hong Kong, Taiwan
     EarlyMayBankHoliday, // UK, Ireland
-    EasterMonday,
-    EasterSunday,
-    EidAlAdha, // India, Pakistan, Bangladesh, Uzbekistan, Albania, Kosovo, Turkey, Saudi Arabia, UAE, Qatar, Kuwait, Iraq, Iran (Shia, 10 Dhu al-Hijjah)
-    EidAlFitr, // India, Pakistan, Bangladesh, Uzbekistan, Albania, Kosovo, Turkey, Saudi Arabia, UAE, Qatar, Kuwait, Iraq, Iran (Shia, 1-2 Shawwal)
+    EasterMonday, // also Nigeria, Ethiopia
+    EasterSunday, // also Ethiopia
+    EidAlAdha, // India, Pakistan, Bangladesh, Uzbekistan, Albania, Kosovo, Turkey, Saudi Arabia, UAE, Qatar, Kuwait, Iraq, Iran (Shia, 10 Dhu al-Hijjah), Nigeria, Egypt, Morocco
+    EidAlFitr, // India, Pakistan, Bangladesh, Uzbekistan, Albania, Kosovo, Turkey, Saudi Arabia, UAE, Qatar, Kuwait, Iraq, Iran (Shia, 1-2 Shawwal), Nigeria, Egypt, Morocco
     EidAlGhadir, // Iran (Shia, 18 Dhu al-Hijjah)
-    Epiphany,
+    Epiphany, // also Ethiopia (Timkat)
     EstablishmentDayOfSlovakRepublic, // Slovakia
+    EthiopianNewYear, // Ethiopia
     EuropeDay, // Kosovo
     FallOfFascismDay, // San Marino
     FeastOfSaintAgatha, // San Marino
@@ -69,6 +73,7 @@ public enum HolidayNames
     FeastOfStJoseph, // Malta, Liechtenstein, Vatican City
     FeastOfStPaulsShipwreck, // Malta
     FeastOfStPetronius, // Italy
+    FindingOfTheTrueCross, // Ethiopia (Meskel)
     FirstDayOfSummer, // Iceland
     FlemishCommunityDay, // Belgium
     FoundationOfVaticanCityDay, // Vatican City
@@ -78,8 +83,9 @@ public enum HolidayNames
     FrenchCommunityDay, // Belgium
     GandhiJayanti, // India
     GermanCommunityDay, // Belgium
-    GoodFriday,
+    GoodFriday, // also Nigeria, Ethiopia
     GreekIndependenceDay, // Greece, Cyprus
+    GreenMarchDay, // Morocco
     HangeulDay, // South Korea
     HKSAREstablishmentDay, // Hong Kong
     HolySaturday, // Bulgaria, Serbia, Hong Kong
@@ -87,13 +93,14 @@ public enum HolidayNames
     IlindenDay, // North Macedonia
     ImmaculateConception,
     IndependenceAndUnityDayOfSlovenia, // Slovenia
-    IndependenceDay, // USA, Ukraine, Finland, Bulgaria, Estonia, Iceland, Malta, Cyprus, Moldova, Montenegro, North Macedonia, India, Pakistan, Bangladesh, Uzbekistan, Albania, Kosovo
+    IndependenceDay, // USA, Ukraine, Finland, Bulgaria, Estonia, Iceland, Malta, Cyprus, Moldova, Montenegro, North Macedonia, India, Pakistan, Bangladesh, Uzbekistan, Albania, Kosovo, Nigeria, Morocco
+    IndependenceManifestoDay, // Morocco
     IndependenceMovementDayOfKorea, // South Korea
     IndependentCzechoslovakStateDay, // Czech Republic
     InternationalWomensDay,
     InvestitureOfCaptainsRegent, // San Marino
     IqbalDay, // Pakistan
-    IslamicNewYear, // UAE, Kuwait, Iraq
+    IslamicNewYear, // UAE, Kuwait, Iraq, Egypt, Morocco
     IslamicRepublicDayOfIran, // Iran
     IslamicRevolutionDayOfIran, // Iran
     JanHusDay, // Czech Republic
@@ -102,7 +109,7 @@ public enum HolidayNames
     KashmirSolidarityDay, // Pakistan
     KhordadNationalUprisingDay, // Iran (15 Khordad uprising)
     KingsDayOfTheNetherlands, // Netherlands
-    LabourDay,
+    LabourDay, // also Nigeria (Workers' Day), Egypt, Morocco
     LanguageMovementDay, // Bangladesh
     LiberationDay, // Italy, Netherlands, Albania, Kuwait, South Korea
     LiberationDayOfBulgaria, // Bulgaria
@@ -142,22 +149,24 @@ public enum HolidayNames
     NativityOfMaryDay, // Liechtenstein
     NaturesDayOfIran, // Iran (Sizdah Bedar, 13 Farvardin)
     NevruzDay, // Albania
-    NewYearsDay,
+    NewYearsDay, // also Nigeria, Egypt, Morocco
     NewYearsEve, // Latvia, San Marino
     NowruzDay, // Uzbekistan, Iran (Persian New Year, computed 1-4 Farvardin rather than Uzbekistan's fixed Mar 21)
     OctoberBankHoliday, // Ireland
     OhiDay, // Greece, Cyprus
+    OuedEdDahabDay, // Morocco
     OurLadyOfMeritxellDay, // Andorra
     OurLadyOfSorrowsDay, // Slovakia
     OurLadyOfVictoriesDay, // Malta
     OurLanguageDay, // Moldova
     PakistanDay, // Pakistan
     Passover, // Israel (15 and 21 Nisan)
+    PatriotsVictoryDay, // Ethiopia
     PeaceMemorialDayOfTaiwan, // Taiwan
     PortugalDay, // Portugal
     PresernDay, // Slovenia
     ProclamationDayOfLatvia, // Latvia
-    ProphetsBirthday, // UAE, Kuwait, Iraq
+    ProphetsBirthday, // UAE, Kuwait, Iraq, Egypt, Morocco, Nigeria
     QingmingFestival, // China, Hong Kong
     QuaidEAzamDay, // Pakistan
     ReformationDay, // Germany, Slovenia
@@ -168,7 +177,9 @@ public enum HolidayNames
     RestorationOfStateDay, // Lithuania
     ReunificationDay, // Vietnam
     RevolutionaryStruggleDayOfMacedonia, // North Macedonia
+    RevolutionDayOfEgypt, // Egypt
     RevolutionDayOfHungary, // Hungary
+    RevolutionOfTheKingAndThePeopleDay, // Morocco
     RoshHashanah, // Israel (1-2 Tishrei)
     SaintDevoteDay, // Monaco
     SaintsCyrilAndMethodiusDay, // Czech Republic, Bulgaria, Slovakia, North Macedonia
@@ -176,8 +187,10 @@ public enum HolidayNames
     SecondDayOfLunarNewYear, // Taiwan
     SecondJanuary, // Scotland, Romania, Slovenia
     SetteGiugno, // Malta
+    ShamElNessim, // Egypt
     Shavuot, // Israel (6 Sivan)
     SimchatTorah, // Israel (22 Tishrei, combined with Shmini Atzeret)
+    SinaiLiberationDay, // Egypt
     SlovakNationalUprisingDay, // Slovakia
     SpanishConstitutionDay, // Spain
     SportsDayOfQatar, // Qatar
@@ -205,6 +218,7 @@ public enum HolidayNames
     TeachersAndInstructorsDay, // Uzbekistan
     ThanksgivingDay, // USA
     ThirdDayOfLunarNewYear, // Taiwan
+    ThroneDayOfMorocco, // Morocco
     TombSweepingDay, // Taiwan
     UnificationDayOfBulgaria, // Bulgaria
     UnionDayOfRomania, // Romania
@@ -218,4 +232,5 @@ public enum HolidayNames
     YomHaShoah, // Israel (Holocaust Remembrance Day, 27 Nisan)
     YomKippur, // Israel (10 Tishrei)
     YouthAndSportsDay, // Turkey
+    YouthDayOfMorocco, // Morocco
 }
