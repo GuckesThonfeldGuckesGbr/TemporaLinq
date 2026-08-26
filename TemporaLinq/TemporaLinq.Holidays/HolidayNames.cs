@@ -26,6 +26,8 @@ public enum HolidayNames
     BerchtoldsDay, // Liechtenstein
     BirthdayOfMartinLutherKingJr, // USA
     BirthdayOfGeorgeWashington, // USA
+    BirthdayOfKingNorodomSihamoni, // Cambodia
+    BirthdayOfQueenMotherNorodomMonineath, // Cambodia
     BoxingDay, // UK, Canada, Australia, NZ, Estonia, Iceland, Cyprus, Hong Kong, Nigeria
     BuddhasBirthday, // Hong Kong, South Korea
     CandlemasDay, // Liechtenstein
@@ -39,9 +41,11 @@ public enum HolidayNames
     ChuseokEve, // South Korea
     CleanMonday, // Greece, Cyprus
     ColumbusDay, // USA
+    CommemorationDayOfKingFatherNorodomSihanouk, // Cambodia
     CommemorationDayOfUae, // UAE
     CommerceDay, // Iceland
     ConstitutionDayOfAndorra, // Andorra
+    ConstitutionDayOfCambodia, // Cambodia
     ConstitutionDayOfDenmark, // Denmark
     ConstitutionDayOfKosovo, // Kosovo
     ConstitutionDayOfNorway, // Norway
@@ -50,6 +54,7 @@ public enum HolidayNames
     ConstitutionDayOfThailand, // Thailand
     ConstitutionDayOfUkraine, // Ukraine
     ConstitutionDayOfUzbekistan, // Uzbekistan
+    CoronationDayOfKingNorodomSihamoni, // Cambodia
     CoronationDayOfThailand, // Thailand
     CorpusChristi,
     CzechStatehoodDay, // Czech Republic
@@ -100,7 +105,7 @@ public enum HolidayNames
     IlindenDay, // North Macedonia
     ImmaculateConception,
     IndependenceAndUnityDayOfSlovenia, // Slovenia
-    IndependenceDay, // USA, Ukraine, Finland, Bulgaria, Estonia, Iceland, Malta, Cyprus, Moldova, Montenegro, North Macedonia, India, Pakistan, Bangladesh, Uzbekistan, Albania, Kosovo, Nigeria, Morocco, Sri Lanka, Myanmar
+    IndependenceDay, // USA, Ukraine, Finland, Bulgaria, Estonia, Iceland, Malta, Cyprus, Moldova, Montenegro, North Macedonia, India, Pakistan, Bangladesh, Uzbekistan, Albania, Kosovo, Nigeria, Morocco, Sri Lanka, Myanmar, Cambodia
     IndependenceManifestoDay, // Morocco
     IndependenceMovementDayOfKorea, // South Korea
     IndependentCzechoslovakStateDay, // Czech Republic
@@ -116,12 +121,15 @@ public enum HolidayNames
     KashmirSolidarityDay, // Pakistan
     KasonFullMoonDay, // Myanmar (Buddha's Birthday / Vesak)
     KhaoPhansaDay, // Thailand
+    KhmerNewYear, // Cambodia
     KhordadNationalUprisingDay, // Iran (15 Khordad uprising)
     KingBhumibolMemorialDay, // Thailand
     KingsBirthdayOfThailand, // Thailand
     KingsDayOfTheNetherlands, // Netherlands
-    LabourDay, // also Nigeria (Workers' Day), Egypt, Morocco, Sri Lanka, Thailand, Myanmar
+    LabourDay, // also Nigeria (Workers' Day), Egypt, Morocco, Sri Lanka, Thailand, Myanmar, Cambodia, Laos
     LanguageMovementDay, // Bangladesh
+    LaoNationalDay, // Laos
+    LaoNewYear, // Laos
     LiberationDay, // Italy, Netherlands, Albania, Kuwait, South Korea
     LiberationDayOfBulgaria, // Bulgaria
     LigoDay, // Latvia
@@ -178,6 +186,7 @@ public enum HolidayNames
     PakistanDay, // Pakistan
     Passover, // Israel (15 and 21 Nisan)
     PatriotsVictoryDay, // Ethiopia
+    PeaceDayOfCambodia, // Cambodia
     PeaceMemorialDayOfTaiwan, // Taiwan
     PeasantsDay, // Myanmar
     PortugalDay, // Portugal
@@ -251,6 +260,8 @@ public enum HolidayNames
     VeteransDay, // USA
     VictoryAndHomelandThanksgivingDay, // Croatia
     VictoryDay, // France, Ukraine, Czech Republic, Slovakia, Estonia, Moldova, Bangladesh, Turkey
+    VictoryOverGenocideDay, // Cambodia
+    VisakBocheaDay, // Cambodia
     VisakhaBuchaDay, // Thailand
     WasoFullMoonDay, // Myanmar (Asalha Bucha equivalent)
     WhitMonday,

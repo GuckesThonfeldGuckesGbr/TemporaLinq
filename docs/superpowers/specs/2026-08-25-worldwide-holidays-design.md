@@ -82,8 +82,8 @@ Ethiopian calendar calculations added by that design.
 - Done: ✅ Qatar, ✅ Kuwait, ✅ Iraq (Hijri-computable, approximate — Sunni/Shia moon-sighting authorities occasionally differ by a day), ✅ Iran (Persian- and Hijri-computable), ✅ Hong Kong (Chinese-lunisolar-computable), ✅ Taiwan (Taiwan-lunisolar-computable) (Tier AS3)
 - Done: ✅ Thailand (Buddhist-lunisolar-computable via new `TemporaLinq.Astronomy.SoutheastAsianBuddhistCalendar` for Makha/Visakha/Asalha Bucha) (Tier AS3)
 - Tier AS3 remaining: Kazakhstan
-- Tier AS4 (low priority): 🔴 Nepal, ✅ Myanmar (Buddhist-lunisolar-computable, same mechanism as Thailand), 🔴 Cambodia, 🔴 Laos, 🔴 Mongolia, remaining Central Asia (Hijri-computable)
-- Done: ✅ Uzbekistan, ✅ Sri Lanka (full-moon-computable via new `TemporaLinq.Astronomy.LunarPhaseCalculation`; Maha Sivarathri, a Hindu lunar holiday, remains deferred) (Tier AS4)
+- Tier AS4 (low priority): 🔴 Nepal, ✅ Myanmar (Buddhist-lunisolar-computable, same mechanism as Thailand), 🔴 Mongolia, remaining Central Asia (Hijri-computable)
+- Done: ✅ Uzbekistan, ✅ Sri Lanka (full-moon-computable via new `TemporaLinq.Astronomy.LunarPhaseCalculation`; Maha Sivarathri, a Hindu lunar holiday, remains deferred), ✅ Cambodia (Buddhist-lunisolar-computable via new `TemporaLinq.Astronomy.SoutheastAsianBuddhistCalendar` for Visak Bochea Day; Meak Bochea (removed from Cambodia's statutory list since 2020) and Asalha Bucha (never statutory there) are out of scope, as are Pchum Ben, the Water Festival, and the Royal Ploughing Ceremony — see `TemporaLinq.Holidays/Asia/Cambodia/NationalHolidays.cs`), ✅ Laos (fixed civil holidays only — per Laos's Labour Law (2013, Art. 55), it has no statutory Buddhist-calendar holiday at all; Visakha Bousa/Boun Khao Phansa/Boun Ok Phansa are widely observed culturally but not statutory, and National Teachers' Day is restricted to teachers/education staff — see `TemporaLinq.Holidays/Asia/Laos/NationalHolidays.cs`) (Tier AS4)
 
 ### Africa
 - Done: ✅ Nigeria, ✅ Egypt, ✅ Morocco (Tier AF1, partial)
@@ -102,6 +102,7 @@ following the continent groupings and priority order shown. As of
 2026-08-26, the calendar-calculation mechanisms design has unblocked most
 previously-🔴 countries (see that design's reclassification table) — tiers
 are no longer gated on it except for the small residual list of countries
+<<<<<<< HEAD
 whose calendars remain genuinely irreducible to formula (Nepal, Cambodia,
 Laos, Mongolia, Haiti, Venezuela, and the Hindu-calendar components of
 India/Indonesia/Malaysia/Singapore/Bangladesh, plus Indonesia's
@@ -110,6 +111,12 @@ previously flagged 🔴 here, are now done: Sri Lanka via
 `LunarPhaseCalculation` (2026-08-26), and Thailand/Myanmar plus the
 Buddhist-calendar Vesak component of Indonesia/Malaysia/Singapore via the
 follow-up `SoutheastAsianBuddhistCalendar` mechanism (2026-08-26).
+=======
+whose calendars remain genuinely irreducible to formula (Thailand, Sri
+Lanka, Nepal, Myanmar, Mongolia, Haiti, Venezuela, and the
+Hindu/Buddhist-calendar components of India/Indonesia/Malaysia/Singapore/
+Bangladesh).
+>>>>>>> tier-buddhist-cambodia-laos
 
 **First batch: Tier E1** — United Kingdom, Poland, Netherlands, Ukraine,
 Sweden, Switzerland, Belgium, Austria. All computable via the existing
