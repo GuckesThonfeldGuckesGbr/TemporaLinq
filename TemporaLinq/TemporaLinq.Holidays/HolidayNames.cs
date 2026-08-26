@@ -21,11 +21,13 @@ public enum HolidayNames
     BerchtoldsDay, // Liechtenstein
     BirthdayOfMartinLutherKingJr, // USA
     BirthdayOfGeorgeWashington, // USA
-    BoxingDay, // UK, Canada, Australia, NZ, Estonia, Iceland, Cyprus
+    BoxingDay, // UK, Canada, Australia, NZ, Estonia, Iceland, Cyprus, Hong Kong
+    BuddhasBirthday, // Hong Kong
     CandlemasDay, // Liechtenstein
     ChildrensDay, // Romania
     ChristmasDay,
     ChristmasEve, // Czech Republic, Estonia, San Marino
+    ChungYeungFestival, // Hong Kong
     CleanMonday, // Greece, Cyprus
     ColumbusDay, // USA
     CommemorationDayOfUae, // UAE
@@ -46,6 +48,7 @@ public enum HolidayNames
     DeathOfKhomeini, // Iran (14 Khordad)
     DefendersDay, // Ukraine
     DemocracyAndNationalUnityDay, // Turkey
+    DragonBoatFestival, // China, Hong Kong
     EarlyMayBankHoliday, // UK, Ireland
     EasterMonday,
     EasterSunday,
@@ -73,7 +76,9 @@ public enum HolidayNames
     GermanCommunityDay, // Belgium
     GoodFriday,
     GreekIndependenceDay, // Greece, Cyprus
-    HolySaturday, // Bulgaria, Serbia
+    HKSAREstablishmentDay, // Hong Kong
+    HolySaturday, // Bulgaria, Serbia, Hong Kong
+    HungKingsCommemorationDay, // Vietnam
     IlindenDay, // North Macedonia
     ImmaculateConception,
     IndependenceAndUnityDayOfSlovenia, // Slovenia
@@ -96,16 +101,19 @@ public enum HolidayNames
     LiberationDay, // Italy, Netherlands, Albania, Kuwait
     LiberationDayOfBulgaria, // Bulgaria
     LigoDay, // Latvia
+    LunarNewYearsDay, // China, Hong Kong, Vietnam
     MaundyThursday, // Denmark, Norway, Iceland
     MawlidAlNabi, // Iran (Shia observance, 17 Rabi' al-awwal)
     MemorialDay, // USA, Moldova
     MemoryAndHonorDay, // Uzbekistan
+    MidAutumnFestival, // China, Hong Kong
     MidsummerDay, // Sweden, Finland, Lithuania, Latvia, Estonia
     MiladUnNabi, // India, Pakistan, Bangladesh
     MotherTeresaDay, // Albania
     Muharram, // India
     NationalDayOfAustria, // Austria
     NationalDayOfBelgium, // Belgium
+    NationalDayOfChina, // China, Hong Kong
     NationalDayOfCyprus, // Cyprus
     NationalDayOfHungary, // Hungary
     NationalDayOfKuwait, // Kuwait
@@ -118,6 +126,7 @@ public enum HolidayNames
     NationalDayOfSweden, // Sweden
     NationalDayOfSwitzerland, // Switzerland
     NationalDayOfUae, // UAE
+    NationalDayOfVietnam, // Vietnam
     NationalMourningDay, // Bangladesh
     NationalSovereigntyAndChildrensDay, // Turkey
     NationalYouthDay, // Albania
@@ -139,6 +148,7 @@ public enum HolidayNames
     PresernDay, // Slovenia
     ProclamationDayOfLatvia, // Latvia
     ProphetsBirthday, // UAE, Kuwait, Iraq
+    QingmingFestival, // China, Hong Kong
     QuaidEAzamDay, // Pakistan
     ReformationDay, // Germany, Slovenia
     RepentanceAndPrayerDay, // Germany
@@ -146,6 +156,7 @@ public enum HolidayNames
     RemembranceDayOfCroatia, // Croatia
     RestorationOfIndependenceDay, // Portugal, Lithuania, Latvia
     RestorationOfStateDay, // Lithuania
+    ReunificationDay, // Vietnam
     RevolutionaryStruggleDayOfMacedonia, // North Macedonia
     RevolutionDayOfHungary, // Hungary
     RoshHashanah, // Israel (1-2 Tishrei)
