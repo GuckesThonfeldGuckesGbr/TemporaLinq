@@ -8,6 +8,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\TemporaLinq\TemporaLinq.csproj" />
+      <ProjectReference Include="..\TemporaLinq.Astronomy\TemporaLinq.Astronomy.csproj" />
     </ItemGroup>
 
     <ItemGroup>
