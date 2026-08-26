@@ -42,7 +42,7 @@
 | Dec 25 | `ChristmasDay` |
 | Dec 26 | `BoxingDay` |
 
-### Egypt (`EasterSundayCalculation.ChristianOrthodox` + Hijri) — 17 dates
+### Egypt (`EasterSundayCalculation.ChristianOrthodox` + Hijri) — 16 dates
 | Date | HolidayNames member |
 |---|---|
 | Jan 7 | `ChristmasDay` (reuse — Coptic Christmas) |
