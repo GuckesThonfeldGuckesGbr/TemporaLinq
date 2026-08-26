@@ -77,7 +77,7 @@
 | Feb 25 | `NationalDayOfKuwait` (new) |
 | Feb 26 | `LiberationDay` (reuse — broaden comment) |
 
-### Iraq — 13 holidays
+### Iraq — 12 holidays
 | Date(s) | HolidayNames member |
 |---|---|
 | Jan 1 | `NewYearsDay` |
@@ -677,7 +677,7 @@ public class IraqTest
     {
         var holidays = NationalHolidays.Create().From(new DateOnly(2026, 1, 1)).To(new DateOnly(2026, 12, 31));
 
-        holidays.Should().HaveCount(13);
+        holidays.Should().HaveCount(12);
     }
 
     [Fact]
