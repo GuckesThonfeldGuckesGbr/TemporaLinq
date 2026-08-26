@@ -79,8 +79,9 @@ Ethiopian calendar calculations added by that design.
 - Done: ✅ Pakistan, ✅ Bangladesh (Hijri-based and fixed civil holidays only — Hindu/Buddhist minority holidays (Durga Puja, Buddha Purnima) remain deferred pending a future Hindu/Buddhist calendar calculation mechanism), ✅ Saudi Arabia, ✅ UAE, ✅ Vietnam (Chinese-lunisolar-computable, approximate) (Tier AS2)
 - Tier AS2 remaining: Philippines, Indonesia (Hijri- and Easter-computable components only — Nyepi/Vesak deferred), Malaysia (Hijri- and Chinese-lunisolar-computable components only — Hindu/Buddhist components deferred)
 - Done: ✅ Qatar, ✅ Kuwait, ✅ Iraq (Hijri-computable, approximate — Sunni/Shia moon-sighting authorities occasionally differ by a day), ✅ Iran (Persian- and Hijri-computable), ✅ Hong Kong (Chinese-lunisolar-computable), ✅ Taiwan (Taiwan-lunisolar-computable) (Tier AS3)
-- Tier AS3 remaining: 🔴 Thailand (Buddhist lunar calendar, still hard), Kazakhstan
-- Tier AS4 (low priority): 🔴 Nepal, 🔴 Myanmar, 🔴 Cambodia, 🔴 Laos, 🔴 Mongolia, remaining Central Asia (Hijri-computable)
+- Done: ✅ Thailand (Buddhist-lunisolar-computable via new `TemporaLinq.Astronomy.SoutheastAsianBuddhistCalendar` for Makha/Visakha/Asalha Bucha) (Tier AS3)
+- Tier AS3 remaining: Kazakhstan
+- Tier AS4 (low priority): 🔴 Nepal, ✅ Myanmar (Buddhist-lunisolar-computable, same mechanism as Thailand), 🔴 Cambodia, 🔴 Laos, 🔴 Mongolia, remaining Central Asia (Hijri-computable)
 - Done: ✅ Uzbekistan, ✅ Sri Lanka (full-moon-computable via new `TemporaLinq.Astronomy.LunarPhaseCalculation`; Maha Sivarathri, a Hindu lunar holiday, remains deferred) (Tier AS4)
 
 ### Africa
@@ -100,10 +101,12 @@ following the continent groupings and priority order shown. As of
 2026-08-26, the calendar-calculation mechanisms design has unblocked most
 previously-🔴 countries (see that design's reclassification table) — tiers
 are no longer gated on it except for the small residual list of countries
-whose calendars remain genuinely irreducible to formula (Thailand, Sri
-Lanka, Nepal, Myanmar, Cambodia, Laos, Mongolia, Haiti, Venezuela, and the
-Hindu/Buddhist-calendar components of India/Indonesia/Malaysia/Singapore/
-Bangladesh).
+whose calendars remain genuinely irreducible to formula (Sri Lanka [now
+done via `LunarPhaseCalculation`], Nepal, Cambodia, Laos, Mongolia, Haiti,
+Venezuela, and the Hindu/Buddhist-calendar components of
+India/Indonesia/Malaysia/Singapore/Bangladesh). Thailand and Myanmar,
+also previously flagged 🔴 here, were unblocked by the follow-up
+`SoutheastAsianBuddhistCalendar` mechanism (2026-08-26) and are now done.
 
 **First batch: Tier E1** — United Kingdom, Poland, Netherlands, Ukraine,
 Sweden, Switzerland, Belgium, Austria. All computable via the existing
