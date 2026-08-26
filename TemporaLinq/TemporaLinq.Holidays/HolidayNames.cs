@@ -8,9 +8,10 @@ public enum HolidayNames
     AnniversaryOfArengo, // San Marino
     AntiFascistStruggleDay, // Croatia
     ArafahDay, // Saudi Arabia, UAE, Kuwait
+    Arbaeen, // Iran (Shia, 20 Safar)
     ArmisticeDay, // French, Serbian
     AscensionDay,
-    AshuraDay, // Pakistan, Bangladesh, Kuwait, Iraq
+    AshuraDay, // Pakistan, Bangladesh, Kuwait, Iraq, Iran (Shia, 10 Muharram)
     AssumptionDay,
     AugsburgPeaceFestival, // Germany
     AugustBankHoliday, // Ireland
@@ -42,13 +43,15 @@ public enum HolidayNames
     DayOfGermanUnity, // Germany
     DayOfMacedonianUprising, // North Macedonia
     DayOfUprisingAgainstOccupation, // Slovenia
+    DeathOfKhomeini, // Iran (14 Khordad)
     DefendersDay, // Ukraine
     DemocracyAndNationalUnityDay, // Turkey
     EarlyMayBankHoliday, // UK, Ireland
     EasterMonday,
     EasterSunday,
-    EidAlAdha, // India, Pakistan, Bangladesh, Uzbekistan, Albania, Kosovo, Turkey, Saudi Arabia, UAE, Qatar, Kuwait, Iraq
-    EidAlFitr, // India, Pakistan, Bangladesh, Uzbekistan, Albania, Kosovo, Turkey, Saudi Arabia, UAE, Qatar, Kuwait, Iraq
+    EidAlAdha, // India, Pakistan, Bangladesh, Uzbekistan, Albania, Kosovo, Turkey, Saudi Arabia, UAE, Qatar, Kuwait, Iraq, Iran (Shia, 10 Dhu al-Hijjah)
+    EidAlFitr, // India, Pakistan, Bangladesh, Uzbekistan, Albania, Kosovo, Turkey, Saudi Arabia, UAE, Qatar, Kuwait, Iraq, Iran (Shia, 1-2 Shawwal)
+    EidAlGhadir, // Iran (Shia, 18 Dhu al-Hijjah)
     Epiphany,
     EstablishmentDayOfSlovakRepublic, // Slovakia
     EuropeDay, // Kosovo
@@ -80,10 +83,13 @@ public enum HolidayNames
     InvestitureOfCaptainsRegent, // San Marino
     IqbalDay, // Pakistan
     IslamicNewYear, // UAE, Kuwait, Iraq
+    IslamicRepublicDayOfIran, // Iran
+    IslamicRevolutionDayOfIran, // Iran
     JanHusDay, // Czech Republic
     JuneBankHoliday, // Ireland
     Juneteenth, // USA
     KashmirSolidarityDay, // Pakistan
+    KhordadNationalUprisingDay, // Iran (15 Khordad uprising)
     KingsDayOfTheNetherlands, // Netherlands
     LabourDay,
     LanguageMovementDay, // Bangladesh
@@ -91,6 +97,7 @@ public enum HolidayNames
     LiberationDayOfBulgaria, // Bulgaria
     LigoDay, // Latvia
     MaundyThursday, // Denmark, Norway, Iceland
+    MawlidAlNabi, // Iran (Shia observance, 17 Rabi' al-awwal)
     MemorialDay, // USA, Moldova
     MemoryAndHonorDay, // Uzbekistan
     MidsummerDay, // Sweden, Finland, Lithuania, Latvia, Estonia
@@ -115,10 +122,11 @@ public enum HolidayNames
     NationalSovereigntyAndChildrensDay, // Turkey
     NationalYouthDay, // Albania
     NativityOfMaryDay, // Liechtenstein
+    NaturesDayOfIran, // Iran (Sizdah Bedar, 13 Farvardin)
     NevruzDay, // Albania
     NewYearsDay,
     NewYearsEve, // Latvia, San Marino
-    NowruzDay, // Uzbekistan
+    NowruzDay, // Uzbekistan, Iran (Persian New Year, computed 1-4 Farvardin rather than Uzbekistan's fixed Mar 21)
     OctoberBankHoliday, // Ireland
     OhiDay, // Greece, Cyprus
     OurLadyOfMeritxellDay, // Andorra
@@ -126,6 +134,7 @@ public enum HolidayNames
     OurLadyOfVictoriesDay, // Malta
     OurLanguageDay, // Moldova
     PakistanDay, // Pakistan
+    Passover, // Israel (15 and 21 Nisan)
     PortugalDay, // Portugal
     PresernDay, // Slovenia
     ProclamationDayOfLatvia, // Latvia
@@ -139,11 +148,14 @@ public enum HolidayNames
     RestorationOfStateDay, // Lithuania
     RevolutionaryStruggleDayOfMacedonia, // North Macedonia
     RevolutionDayOfHungary, // Hungary
+    RoshHashanah, // Israel (1-2 Tishrei)
     SaintDevoteDay, // Monaco
     SaintsCyrilAndMethodiusDay, // Czech Republic, Bulgaria, Slovakia, North Macedonia
     SanMarco, // Italy
     SecondJanuary, // Scotland, Romania, Slovenia
     SetteGiugno, // Malta
+    Shavuot, // Israel (6 Sivan)
+    SimchatTorah, // Israel (22 Tishrei, combined with Shmini Atzeret)
     SlovakNationalUprisingDay, // Slovakia
     SpanishConstitutionDay, // Spain
     SportsDayOfQatar, // Qatar
@@ -163,9 +175,11 @@ public enum HolidayNames
     StPeterAndPaul, // Italy, Malta, Vatican City
     StStephensDay,
     StruggleForFreedomAndDemocracyDay, // Czech Republic, Slovakia
+    Sukkot, // Israel (15 Tishrei)
     SummerBankHoliday, // UK (England, Wales, Northern Ireland)
     SummerDay, // Albania
     SynaxisOfStJohnTheBaptist, // Romania
+    Tasua, // Iran (Shia, 9 Muharram)
     TeachersAndInstructorsDay, // Uzbekistan
     ThanksgivingDay, // USA
     UnificationDayOfBulgaria, // Bulgaria
@@ -176,5 +190,8 @@ public enum HolidayNames
     WhitMonday,
     WhitSunday,
     WorldChildrensDay,
+    YomHaAtzmaut, // Israel (Independence Day, 5 Iyar)
+    YomHaShoah, // Israel (Holocaust Remembrance Day, 27 Nisan)
+    YomKippur, // Israel (10 Tishrei)
     YouthAndSportsDay, // Turkey
 }
