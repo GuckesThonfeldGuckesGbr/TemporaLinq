@@ -4,6 +4,7 @@ public enum HolidayNames
 {
     AllSaintsDay,
     AllSoulsDay,
+    AnniversaryOfArengo, // San Marino
     AntiFascistStruggleDay, // Croatia
     ArmisticeDay, // French, Serbian
     AscensionDay,
@@ -12,15 +13,18 @@ public enum HolidayNames
     AugustBankHoliday, // Ireland
     BastilleDay, // France
     BattleOfTheBoyneDay, // Northern Ireland
+    BerchtoldsDay, // Liechtenstein
     BirthdayOfMartinLutherKingJr, // USA
     BirthdayOfGeorgeWashington, // USA
     BoxingDay, // UK, Canada, Australia, NZ, Estonia, Iceland, Cyprus
+    CandlemasDay, // Liechtenstein
     ChildrensDay, // Romania
     ChristmasDay,
-    ChristmasEve, // Czech Republic, Estonia
+    ChristmasEve, // Czech Republic, Estonia, San Marino
     CleanMonday, // Greece, Cyprus
     ColumbusDay, // USA
     CommerceDay, // Iceland
+    ConstitutionDayOfAndorra, // Andorra
     ConstitutionDayOfDenmark, // Denmark
     ConstitutionDayOfNorway, // Norway
     ConstitutionDayOfPoland, // Poland
@@ -29,6 +33,7 @@ public enum HolidayNames
     CorpusChristi,
     CzechStatehoodDay, // Czech Republic
     DayOfGermanUnity, // Germany
+    DayOfMacedonianUprising, // North Macedonia
     DayOfUprisingAgainstOccupation, // Slovenia
     DefendersDay, // Ukraine
     EarlyMayBankHoliday, // UK, Ireland
@@ -36,13 +41,17 @@ public enum HolidayNames
     EasterSunday,
     Epiphany,
     EstablishmentDayOfSlovakRepublic, // Slovakia
+    FallOfFascismDay, // San Marino
+    FeastOfSaintAgatha, // San Marino
     FeastOfStJanuarius, // Italy
     FeastOfStJohnTheBaptist, // Italy
-    FeastOfStJoseph, // Malta
+    FeastOfStJoseph, // Malta, Liechtenstein, Vatican City
     FeastOfStPaulsShipwreck, // Malta
     FeastOfStPetronius, // Italy
     FirstDayOfSummer, // Iceland
     FlemishCommunityDay, // Belgium
+    FoundationOfVaticanCityDay, // Vatican City
+    FoundingOfTheRepublicDay, // San Marino
     FreedomDayOfMalta, // Malta
     FreedomDayOfPortugal, // Portugal
     FrenchCommunityDay, // Belgium
@@ -50,11 +59,13 @@ public enum HolidayNames
     GoodFriday,
     GreekIndependenceDay, // Greece, Cyprus
     HolySaturday, // Bulgaria, Serbia
+    IlindenDay, // North Macedonia
     ImmaculateConception,
     IndependenceAndUnityDayOfSlovenia, // Slovenia
-    IndependenceDay, // USA, Ukraine, Finland, Bulgaria, Estonia, Iceland, Malta, Cyprus, Moldova
+    IndependenceDay, // USA, Ukraine, Finland, Bulgaria, Estonia, Iceland, Malta, Cyprus, Moldova, Montenegro, North Macedonia
     IndependentCzechoslovakStateDay, // Czech Republic
     InternationalWomensDay,
+    InvestitureOfCaptainsRegent, // San Marino
     JanHusDay, // Czech Republic
     JuneBankHoliday, // Ireland
     Juneteenth, // USA
@@ -71,14 +82,17 @@ public enum HolidayNames
     NationalDayOfCyprus, // Cyprus
     NationalDayOfHungary, // Hungary
     NationalDayOfLuxembourg, // Luxembourg
+    NationalDayOfMonaco, // Monaco
     NationalDayOfRomania, // Romania
     NationalDayOfSpain, // Spain
     NationalDayOfSweden, // Sweden
     NationalDayOfSwitzerland, // Switzerland
+    NativityOfMaryDay, // Liechtenstein
     NewYearsDay,
-    NewYearsEve, // Latvia
+    NewYearsEve, // Latvia, San Marino
     OctoberBankHoliday, // Ireland
     OhiDay, // Greece, Cyprus
+    OurLadyOfMeritxellDay, // Andorra
     OurLadyOfSorrowsDay, // Slovakia
     OurLadyOfVictoriesDay, // Malta
     OurLanguageDay, // Moldova
@@ -91,8 +105,10 @@ public enum HolidayNames
     RemembranceDayOfCroatia, // Croatia
     RestorationOfIndependenceDay, // Portugal, Lithuania, Latvia
     RestorationOfStateDay, // Lithuania
+    RevolutionaryStruggleDayOfMacedonia, // North Macedonia
     RevolutionDayOfHungary, // Hungary
-    SaintsCyrilAndMethodiusDay, // Czech Republic, Bulgaria, Slovakia
+    SaintDevoteDay, // Monaco
+    SaintsCyrilAndMethodiusDay, // Czech Republic, Bulgaria, Slovakia, North Macedonia
     SanMarco, // Italy
     SecondJanuary, // Scotland, Romania, Slovenia
     SetteGiugno, // Malta
@@ -102,14 +118,16 @@ public enum HolidayNames
     StateFoundationDayOfHungary, // Hungary
     StatehoodDayOfCroatia, // Croatia
     StatehoodDayOfLithuania, // Lithuania
+    StatehoodDayOfMontenegro, // Montenegro
     StatehoodDayOfSerbia, // Serbia
     StatehoodDayOfSlovenia, // Slovenia
     StAmbrose, // Italy
     StAndrewsDay, // Scotland, Romania
     StBrigidsDay, // Ireland
+    StClementOfOhridDay, // North Macedonia
     StGeorgesDay, // Bulgaria
     StPatricksDay, // Northern Ireland
-    StPeterAndPaul, // Italy, Malta
+    StPeterAndPaul, // Italy, Malta, Vatican City
     StStephensDay,
     StruggleForFreedomAndDemocracyDay, // Czech Republic, Slovakia
     SummerBankHoliday, // UK (England, Wales, Northern Ireland)
