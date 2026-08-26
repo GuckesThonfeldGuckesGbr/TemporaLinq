@@ -67,11 +67,13 @@ Ethiopian calendar calculations added by that design.
 - Done: ✅ USA
 - Tier NA1: Canada, Mexico
 - Tier NA2: Costa Rica, Panama, Guatemala, Dominican Republic, Jamaica, Cuba, Honduras, El Salvador
-- Tier NA3: Nicaragua, Belize, Bahamas, Trinidad and Tobago, Barbados, 🔴 Haiti, remaining Caribbean micro-states
+- Done: ✅ Haiti (fixed civil/religious days plus Easter-relative Carnival Monday/Tuesday and Good Friday; government-decreed holiday shifts and one-off commemorative days are out of scope, see `TemporaLinq.Holidays/NorthAmerica/Haiti/NationalHolidays.cs`) (Tier NA3)
+- Tier NA3 remaining: Nicaragua, Belize, Bahamas, Trinidad and Tobago, Barbados, remaining Caribbean micro-states
 
 ### South America
 - Tier SA1: Brazil, Argentina, Chile, Colombia
-- Tier SA2: Peru, Uruguay, Ecuador, Paraguay, Bolivia, 🔴 Venezuela, Guyana, Suriname
+- Done: ✅ Venezuela (fixed civil/religious days plus Easter-relative Carnival Monday/Tuesday, Maundy Thursday, and Good Friday; "puente" decree-based holiday shifts are out of scope, see `TemporaLinq.Holidays/SouthAmerica/Venezuela/NationalHolidays.cs`) (Tier SA2)
+- Tier SA2 remaining: Peru, Uruguay, Ecuador, Paraguay, Bolivia, Guyana, Suriname
 
 ### Asia
 - Done: ✅ India (central Gazetted list only — Republic Day, Independence Day, Gandhi Jayanti, Good Friday, Christmas Day, and Hijri-computable Eid al-Fitr, Eid al-Adha/Bakrid, Muharram, and Milad-un-Nabi; Hindu-calendar holidays and state-specific days remain deferred pending a future Hindu/Buddhist calendar calculation mechanism), ✅ Turkey (`TemporaLinq.Holidays/Asia/Turkey/NationalHolidays.cs`, establishes the `Asia` folder convention), ✅ Israel (Hebrew-computable), ✅ China (Chinese-lunisolar-computable), ✅ South Korea (Korean-lunisolar-computable)
@@ -102,21 +104,20 @@ following the continent groupings and priority order shown. As of
 2026-08-26, the calendar-calculation mechanisms design has unblocked most
 previously-🔴 countries (see that design's reclassification table) — tiers
 are no longer gated on it except for the small residual list of countries
-<<<<<<< HEAD
-whose calendars remain genuinely irreducible to formula (Nepal, Cambodia,
-Laos, Mongolia, Haiti, Venezuela, and the Hindu-calendar components of
-India/Indonesia/Malaysia/Singapore/Bangladesh, plus Indonesia's
-Balinese-Saka-calendar Nyepi). Sri Lanka, Thailand, and Myanmar, all
-previously flagged 🔴 here, are now done: Sri Lanka via
-`LunarPhaseCalculation` (2026-08-26), and Thailand/Myanmar plus the
-Buddhist-calendar Vesak component of Indonesia/Malaysia/Singapore via the
-follow-up `SoutheastAsianBuddhistCalendar` mechanism (2026-08-26).
-=======
-whose calendars remain genuinely irreducible to formula (Thailand, Sri
-Lanka, Nepal, Myanmar, Mongolia, Haiti, Venezuela, and the
-Hindu/Buddhist-calendar components of India/Indonesia/Malaysia/Singapore/
-Bangladesh).
->>>>>>> tier-buddhist-cambodia-laos
+whose calendars remain genuinely irreducible to formula (Nepal, Mongolia,
+and the Hindu-calendar components of India/Indonesia/Malaysia/Singapore/
+Bangladesh, plus Indonesia's Balinese-Saka-calendar Nyepi). Sri Lanka,
+Thailand, Myanmar, Cambodia, and Laos, all previously flagged 🔴 here, are
+now done: Sri Lanka via `LunarPhaseCalculation` (2026-08-26), and
+Thailand/Myanmar/Cambodia plus the Buddhist-calendar Vesak component of
+Indonesia/Malaysia/Singapore via the follow-up
+`SoutheastAsianBuddhistCalendar` mechanism (2026-08-26) — Laos has no
+statutory Buddhist-calendar holiday at all, so it needed only the fixed
+civil-holiday pattern. Haiti and Venezuela, also previously flagged 🔴, are
+now done as well (2026-08-27) — both run on the standard Gregorian/
+Christian-Easter calendar; they were flagged for decree-based political
+volatility, not calendar complexity, so this ships the stable annual
+subset with that caveat documented.
 
 **First batch: Tier E1** — United Kingdom, Poland, Netherlands, Ukraine,
 Sweden, Switzerland, Belgium, Austria. All computable via the existing
