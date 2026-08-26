@@ -21,6 +21,20 @@ reference implementation to port, unlike Phase 1's moon-phase algorithm.
 
 ## Algorithm
 
+**Status (2026-08-26): implemented and verified.** `LunarPhaseCalculation.NewMoonsInGregorianYear`,
+`DecemberSolsticeCalculation`, and `SoutheastAsianBuddhistCalendar` are all implemented and tested
+against independently-published Makha/Visakha/Asalha Bucha reference dates for 2024, 2025, and
+2026 (a confirmed 13-full-moon leap-month year). The month-numbering approach turned out simpler
+than this design originally anticipated: month 1 is anchored fresh every year at the most recent
+new moon on or before the preceding Gregorian year's December solstice, and months 3/6/8 are
+found by walking forward from that anchor. Because the leap-month insertion always happens after
+month 8, re-anchoring fresh each year automatically absorbs any prior year's leap-month drift —
+**no explicit leap-year test (the solstice-relative new-moon-within-11-days rule described below)
+turned out to be necessary** for computing these three holidays specifically. That rule is left
+documented below since it's still the correct account of *why* the calendar has 12 vs. 13 months
+in a given lunar year, and would be needed if this class were ever extended to compute later
+months (9-13).
+
 ### Building blocks (both extend `TemporaLinq.Astronomy`, both directly ported from the same
 ### verified source as Phase 1's full-moon calculation — `soniakeys/meeus`, MIT licensed, page-cited
 ### against Meeus' *Astronomical Algorithms*)
