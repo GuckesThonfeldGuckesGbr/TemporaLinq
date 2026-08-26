@@ -2,10 +2,13 @@ namespace TemporaLinq.Holidays;
 
 public enum HolidayNames
 {
+    AdwaVictoryDay, // Ethiopia
     AllSaintsDay,
     AllSoulsDay,
     AnniversaryOfArengo, // San Marino
     AntiFascistStruggleDay, // Croatia
+    ArafatDay, // Egypt
+    ArmedForcesDay, // Egypt
     ArmisticeDay, // French, Serbian
     AscensionDay,
     AssumptionDay,
@@ -16,10 +19,10 @@ public enum HolidayNames
     BerchtoldsDay, // Liechtenstein
     BirthdayOfMartinLutherKingJr, // USA
     BirthdayOfGeorgeWashington, // USA
-    BoxingDay, // UK, Canada, Australia, NZ, Estonia, Iceland, Cyprus
+    BoxingDay, // UK, Canada, Australia, NZ, Estonia, Iceland, Cyprus, Nigeria
     CandlemasDay, // Liechtenstein
     ChildrensDay, // Romania
-    ChristmasDay,
+    ChristmasDay, // also Egypt (Coptic Christmas), Ethiopia (Genna)
     ChristmasEve, // Czech Republic, Estonia, San Marino
     CleanMonday, // Greece, Cyprus
     ColumbusDay, // USA
@@ -36,11 +39,15 @@ public enum HolidayNames
     DayOfMacedonianUprising, // North Macedonia
     DayOfUprisingAgainstOccupation, // Slovenia
     DefendersDay, // Ukraine
+    DemocracyDayOfNigeria, // Nigeria
     EarlyMayBankHoliday, // UK, Ireland
-    EasterMonday,
-    EasterSunday,
-    Epiphany,
+    EasterMonday, // also Nigeria, Ethiopia
+    EasterSunday, // also Ethiopia
+    EidAlAdha, // Nigeria, Egypt, Morocco
+    EidAlFitr, // Nigeria, Egypt, Morocco
+    Epiphany, // also Ethiopia (Timkat)
     EstablishmentDayOfSlovakRepublic, // Slovakia
+    EthiopianNewYear, // Ethiopia
     FallOfFascismDay, // San Marino
     FeastOfSaintAgatha, // San Marino
     FeastOfStJanuarius, // Italy
@@ -48,6 +55,7 @@ public enum HolidayNames
     FeastOfStJoseph, // Malta, Liechtenstein, Vatican City
     FeastOfStPaulsShipwreck, // Malta
     FeastOfStPetronius, // Italy
+    FindingOfTheTrueCross, // Ethiopia (Meskel)
     FirstDayOfSummer, // Iceland
     FlemishCommunityDay, // Belgium
     FoundationOfVaticanCityDay, // Vatican City
@@ -56,21 +64,24 @@ public enum HolidayNames
     FreedomDayOfPortugal, // Portugal
     FrenchCommunityDay, // Belgium
     GermanCommunityDay, // Belgium
-    GoodFriday,
+    GoodFriday, // also Nigeria, Ethiopia
     GreekIndependenceDay, // Greece, Cyprus
+    GreenMarchDay, // Morocco
     HolySaturday, // Bulgaria, Serbia
     IlindenDay, // North Macedonia
     ImmaculateConception,
     IndependenceAndUnityDayOfSlovenia, // Slovenia
-    IndependenceDay, // USA, Ukraine, Finland, Bulgaria, Estonia, Iceland, Malta, Cyprus, Moldova, Montenegro, North Macedonia
+    IndependenceDay, // USA, Ukraine, Finland, Bulgaria, Estonia, Iceland, Malta, Cyprus, Moldova, Montenegro, North Macedonia, Nigeria, Morocco
+    IndependenceManifestoDay, // Morocco
     IndependentCzechoslovakStateDay, // Czech Republic
     InternationalWomensDay,
     InvestitureOfCaptainsRegent, // San Marino
+    IslamicNewYear, // Egypt, Morocco
     JanHusDay, // Czech Republic
     JuneBankHoliday, // Ireland
     Juneteenth, // USA
     KingsDayOfTheNetherlands, // Netherlands
-    LabourDay,
+    LabourDay, // also Nigeria (Workers' Day), Egypt, Morocco
     LiberationDay, // Italy, Netherlands
     LiberationDayOfBulgaria, // Bulgaria
     LigoDay, // Latvia
@@ -88,17 +99,20 @@ public enum HolidayNames
     NationalDayOfSweden, // Sweden
     NationalDayOfSwitzerland, // Switzerland
     NativityOfMaryDay, // Liechtenstein
-    NewYearsDay,
+    NewYearsDay, // also Nigeria, Egypt, Morocco
     NewYearsEve, // Latvia, San Marino
     OctoberBankHoliday, // Ireland
     OhiDay, // Greece, Cyprus
+    OuedEdDahabDay, // Morocco
     OurLadyOfMeritxellDay, // Andorra
     OurLadyOfSorrowsDay, // Slovakia
     OurLadyOfVictoriesDay, // Malta
     OurLanguageDay, // Moldova
+    PatriotsVictoryDay, // Ethiopia
     PortugalDay, // Portugal
     PresernDay, // Slovenia
     ProclamationDayOfLatvia, // Latvia
+    ProphetsBirthday, // Egypt, Morocco, Nigeria
     ReformationDay, // Germany, Slovenia
     RepentanceAndPrayerDay, // Germany
     RepublicDay, // Italy, Portugal, Malta
@@ -106,12 +120,16 @@ public enum HolidayNames
     RestorationOfIndependenceDay, // Portugal, Lithuania, Latvia
     RestorationOfStateDay, // Lithuania
     RevolutionaryStruggleDayOfMacedonia, // North Macedonia
+    RevolutionDayOfEgypt, // Egypt
     RevolutionDayOfHungary, // Hungary
+    RevolutionOfTheKingAndThePeopleDay, // Morocco
     SaintDevoteDay, // Monaco
     SaintsCyrilAndMethodiusDay, // Czech Republic, Bulgaria, Slovakia, North Macedonia
     SanMarco, // Italy
     SecondJanuary, // Scotland, Romania, Slovenia
     SetteGiugno, // Malta
+    ShamElNessim, // Egypt
+    SinaiLiberationDay, // Egypt
     SlovakNationalUprisingDay, // Slovakia
     SpanishConstitutionDay, // Spain
     SpringBankHoliday, // UK
@@ -133,6 +151,7 @@ public enum HolidayNames
     SummerBankHoliday, // UK (England, Wales, Northern Ireland)
     SynaxisOfStJohnTheBaptist, // Romania
     ThanksgivingDay, // USA
+    ThroneDayOfMorocco, // Morocco
     UnificationDayOfBulgaria, // Bulgaria
     UnionDayOfRomania, // Romania
     VeteransDay, // USA
@@ -141,4 +160,5 @@ public enum HolidayNames
     WhitMonday,
     WhitSunday,
     WorldChildrensDay,
+    YouthDayOfMorocco, // Morocco
 }
