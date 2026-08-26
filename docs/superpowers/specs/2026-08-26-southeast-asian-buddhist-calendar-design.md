@@ -5,9 +5,14 @@
 Phase 2 of the remaining-gaps roadmap (`docs/superpowers/specs/2026-08-25-worldwide-holidays-design.md`).
 Thailand, Myanmar, Cambodia, and Laos share a Buddhist lunisolar calendar tradition whose holy
 days — Makha Bucha, Visakha Bucha (Vesak), Asalha Bucha — are each "the full moon of a specific
-traditional lunar month." Singapore, Malaysia, and Indonesia observe the same Vesak (their Hijri,
-Chinese-lunisolar, and Christian components are already implemented; Vesak was their remaining
-Buddhist-calendar gap).
+traditional lunar month." Singapore, Malaysia, and Indonesia observe the same Vesak.
+
+**Correction (2026-08-26):** this design originally assumed Singapore, Malaysia, and Indonesia
+already had Hijri/Chinese-lunisolar/Christian components implemented from an earlier tier, and
+that only Vesak remained. That assumption was wrong — checking the actual checklist doc, all
+three were still listed as fully unimplemented ("remaining"), not partially done. All three
+needed full `NationalHolidays.cs` builds (Hijri + Chinese-lunisolar + Christian + Vesak), a larger
+task than originally scoped here.
 
 An initial hypothesis — that these holidays are simply "the full moon nearest a target Gregorian
 month," directly reusable from Phase 1's `LunarPhaseCalculation` — turned out to be wrong. Verified
