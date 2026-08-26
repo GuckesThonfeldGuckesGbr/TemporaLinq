@@ -17,10 +17,13 @@ public enum HolidayNames
     BirthdayOfMartinLutherKingJr, // USA
     BirthdayOfGeorgeWashington, // USA
     BoxingDay, // UK, Canada, Australia, NZ, Estonia, Iceland, Cyprus
+    BuddhasBirthday, // South Korea
     CandlemasDay, // Liechtenstein
-    ChildrensDay, // Romania
+    ChildrensDay, // Romania, South Korea, Taiwan
     ChristmasDay,
     ChristmasEve, // Czech Republic, Estonia, San Marino
+    Chuseok, // South Korea
+    ChuseokEve, // South Korea
     CleanMonday, // Greece, Cyprus
     ColumbusDay, // USA
     CommerceDay, // Iceland
@@ -32,10 +35,13 @@ public enum HolidayNames
     ConstitutionDayOfUkraine, // Ukraine
     CorpusChristi,
     CzechStatehoodDay, // Czech Republic
+    DayAfterChuseok, // South Korea
+    DayAfterLunarNewYear, // South Korea
     DayOfGermanUnity, // Germany
     DayOfMacedonianUprising, // North Macedonia
     DayOfUprisingAgainstOccupation, // Slovenia
     DefendersDay, // Ukraine
+    DragonBoatFestival, // Taiwan
     EarlyMayBankHoliday, // UK, Ireland
     EasterMonday,
     EasterSunday,
@@ -58,11 +64,13 @@ public enum HolidayNames
     GermanCommunityDay, // Belgium
     GoodFriday,
     GreekIndependenceDay, // Greece, Cyprus
+    HangeulDay, // South Korea
     HolySaturday, // Bulgaria, Serbia
     IlindenDay, // North Macedonia
     ImmaculateConception,
     IndependenceAndUnityDayOfSlovenia, // Slovenia
     IndependenceDay, // USA, Ukraine, Finland, Bulgaria, Estonia, Iceland, Malta, Cyprus, Moldova, Montenegro, North Macedonia
+    IndependenceMovementDayOfKorea, // South Korea
     IndependentCzechoslovakStateDay, // Czech Republic
     InternationalWomensDay,
     InvestitureOfCaptainsRegent, // San Marino
@@ -71,11 +79,14 @@ public enum HolidayNames
     Juneteenth, // USA
     KingsDayOfTheNetherlands, // Netherlands
     LabourDay,
-    LiberationDay, // Italy, Netherlands
+    LiberationDay, // Italy, Netherlands, South Korea
     LiberationDayOfBulgaria, // Bulgaria
     LigoDay, // Latvia
+    LunarNewYearsDay, // South Korea, Taiwan
+    LunarNewYearsEve, // South Korea, Taiwan
     MaundyThursday, // Denmark, Norway, Iceland
-    MemorialDay, // USA, Moldova
+    MemorialDay, // USA, Moldova, South Korea
+    MidAutumnFestival, // Taiwan
     MidsummerDay, // Sweden, Finland, Lithuania, Latvia, Estonia
     NationalDayOfAustria, // Austria
     NationalDayOfBelgium, // Belgium
@@ -87,6 +98,8 @@ public enum HolidayNames
     NationalDayOfSpain, // Spain
     NationalDayOfSweden, // Sweden
     NationalDayOfSwitzerland, // Switzerland
+    NationalDayOfTaiwan, // Taiwan
+    NationalFoundationDayOfKorea, // South Korea
     NativityOfMaryDay, // Liechtenstein
     NewYearsDay,
     NewYearsEve, // Latvia, San Marino
@@ -96,6 +109,7 @@ public enum HolidayNames
     OurLadyOfSorrowsDay, // Slovakia
     OurLadyOfVictoriesDay, // Malta
     OurLanguageDay, // Moldova
+    PeaceMemorialDayOfTaiwan, // Taiwan
     PortugalDay, // Portugal
     PresernDay, // Slovenia
     ProclamationDayOfLatvia, // Latvia
@@ -110,6 +124,7 @@ public enum HolidayNames
     SaintDevoteDay, // Monaco
     SaintsCyrilAndMethodiusDay, // Czech Republic, Bulgaria, Slovakia, North Macedonia
     SanMarco, // Italy
+    SecondDayOfLunarNewYear, // Taiwan
     SecondJanuary, // Scotland, Romania, Slovenia
     SetteGiugno, // Malta
     SlovakNationalUprisingDay, // Slovakia
@@ -133,6 +148,8 @@ public enum HolidayNames
     SummerBankHoliday, // UK (England, Wales, Northern Ireland)
     SynaxisOfStJohnTheBaptist, // Romania
     ThanksgivingDay, // USA
+    ThirdDayOfLunarNewYear, // Taiwan
+    TombSweepingDay, // Taiwan
     UnificationDayOfBulgaria, // Bulgaria
     UnionDayOfRomania, // Romania
     VeteransDay, // USA
