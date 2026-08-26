@@ -80,8 +80,8 @@ Ethiopian calendar calculations added by that design.
 - Tier AS2 remaining: Philippines, Indonesia (Hijri- and Easter-computable components only — Nyepi/Vesak deferred), Malaysia (Hijri- and Chinese-lunisolar-computable components only — Hindu/Buddhist components deferred)
 - Done: ✅ Qatar, ✅ Kuwait, ✅ Iraq (Hijri-computable, approximate — Sunni/Shia moon-sighting authorities occasionally differ by a day), ✅ Iran (Persian- and Hijri-computable), ✅ Hong Kong (Chinese-lunisolar-computable), ✅ Taiwan (Taiwan-lunisolar-computable) (Tier AS3)
 - Tier AS3 remaining: 🔴 Thailand (Buddhist lunar calendar, still hard), Kazakhstan
-- Tier AS4 (low priority): 🔴 Sri Lanka, 🔴 Nepal, 🔴 Myanmar, 🔴 Cambodia, 🔴 Laos, 🔴 Mongolia, remaining Central Asia (Hijri-computable)
-- Done: ✅ Uzbekistan (Tier AS4)
+- Tier AS4 (low priority): 🔴 Nepal, 🔴 Myanmar, 🔴 Cambodia, 🔴 Laos, 🔴 Mongolia, remaining Central Asia (Hijri-computable)
+- Done: ✅ Uzbekistan, ✅ Sri Lanka (full-moon-computable via new `TemporaLinq.Astronomy.LunarPhaseCalculation`; Maha Sivarathri, a Hindu lunar holiday, remains deferred) (Tier AS4)
 
 ### Africa
 - Done: ✅ Nigeria, ✅ Egypt, ✅ Morocco (Tier AF1, partial)
