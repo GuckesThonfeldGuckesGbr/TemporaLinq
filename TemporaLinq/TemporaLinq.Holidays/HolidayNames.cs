@@ -6,8 +6,10 @@ public enum HolidayNames
     AllSoulsDay,
     AnniversaryOfArengo, // San Marino
     AntiFascistStruggleDay, // Croatia
+    ArafahDay, // Saudi Arabia, UAE, Kuwait
     ArmisticeDay, // French, Serbian
     AscensionDay,
+    AshuraDay, // Kuwait, Iraq
     AssumptionDay,
     AugsburgPeaceFestival, // Germany
     AugustBankHoliday, // Ireland
@@ -23,6 +25,7 @@ public enum HolidayNames
     ChristmasEve, // Czech Republic, Estonia, San Marino
     CleanMonday, // Greece, Cyprus
     ColumbusDay, // USA
+    CommemorationDayOfUae, // UAE
     CommerceDay, // Iceland
     ConstitutionDayOfAndorra, // Andorra
     ConstitutionDayOfDenmark, // Denmark
@@ -39,6 +42,8 @@ public enum HolidayNames
     EarlyMayBankHoliday, // UK, Ireland
     EasterMonday,
     EasterSunday,
+    EidAlAdha, // Saudi Arabia, UAE, Qatar, Kuwait, Iraq
+    EidAlFitr, // Saudi Arabia, UAE, Qatar, Kuwait, Iraq
     Epiphany,
     EstablishmentDayOfSlovakRepublic, // Slovakia
     FallOfFascismDay, // San Marino
@@ -66,12 +71,13 @@ public enum HolidayNames
     IndependentCzechoslovakStateDay, // Czech Republic
     InternationalWomensDay,
     InvestitureOfCaptainsRegent, // San Marino
+    IslamicNewYear, // UAE, Kuwait, Iraq
     JanHusDay, // Czech Republic
     JuneBankHoliday, // Ireland
     Juneteenth, // USA
     KingsDayOfTheNetherlands, // Netherlands
     LabourDay,
-    LiberationDay, // Italy, Netherlands
+    LiberationDay, // Italy, Netherlands, Kuwait
     LiberationDayOfBulgaria, // Bulgaria
     LigoDay, // Latvia
     MaundyThursday, // Denmark, Norway, Iceland
@@ -81,12 +87,16 @@ public enum HolidayNames
     NationalDayOfBelgium, // Belgium
     NationalDayOfCyprus, // Cyprus
     NationalDayOfHungary, // Hungary
+    NationalDayOfKuwait, // Kuwait
     NationalDayOfLuxembourg, // Luxembourg
     NationalDayOfMonaco, // Monaco
+    NationalDayOfQatar, // Qatar
     NationalDayOfRomania, // Romania
+    NationalDayOfSaudiArabia, // Saudi Arabia
     NationalDayOfSpain, // Spain
     NationalDayOfSweden, // Sweden
     NationalDayOfSwitzerland, // Switzerland
+    NationalDayOfUae, // UAE
     NativityOfMaryDay, // Liechtenstein
     NewYearsDay,
     NewYearsEve, // Latvia, San Marino
@@ -99,9 +109,10 @@ public enum HolidayNames
     PortugalDay, // Portugal
     PresernDay, // Slovenia
     ProclamationDayOfLatvia, // Latvia
+    ProphetsBirthday, // UAE, Kuwait, Iraq
     ReformationDay, // Germany, Slovenia
     RepentanceAndPrayerDay, // Germany
-    RepublicDay, // Italy, Portugal, Malta
+    RepublicDay, // Italy, Portugal, Malta, Iraq
     RemembranceDayOfCroatia, // Croatia
     RestorationOfIndependenceDay, // Portugal, Lithuania, Latvia
     RestorationOfStateDay, // Lithuania
@@ -114,6 +125,7 @@ public enum HolidayNames
     SetteGiugno, // Malta
     SlovakNationalUprisingDay, // Slovakia
     SpanishConstitutionDay, // Spain
+    SportsDayOfQatar, // Qatar
     SpringBankHoliday, // UK
     StateFoundationDayOfHungary, // Hungary
     StatehoodDayOfCroatia, // Croatia
