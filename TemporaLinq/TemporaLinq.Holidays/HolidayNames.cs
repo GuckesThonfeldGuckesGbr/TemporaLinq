@@ -39,6 +39,8 @@ public enum HolidayNames
     EarlyMayBankHoliday, // UK, Ireland
     EasterMonday,
     EasterSunday,
+    EidAlAdha, // India
+    EidAlFitr, // India
     Epiphany,
     EstablishmentDayOfSlovakRepublic, // Slovakia
     FallOfFascismDay, // San Marino
@@ -55,6 +57,7 @@ public enum HolidayNames
     FreedomDayOfMalta, // Malta
     FreedomDayOfPortugal, // Portugal
     FrenchCommunityDay, // Belgium
+    GandhiJayanti, // India
     GermanCommunityDay, // Belgium
     GoodFriday,
     GreekIndependenceDay, // Greece, Cyprus
@@ -62,7 +65,7 @@ public enum HolidayNames
     IlindenDay, // North Macedonia
     ImmaculateConception,
     IndependenceAndUnityDayOfSlovenia, // Slovenia
-    IndependenceDay, // USA, Ukraine, Finland, Bulgaria, Estonia, Iceland, Malta, Cyprus, Moldova, Montenegro, North Macedonia
+    IndependenceDay, // USA, Ukraine, Finland, Bulgaria, Estonia, Iceland, Malta, Cyprus, Moldova, Montenegro, North Macedonia, India
     IndependentCzechoslovakStateDay, // Czech Republic
     InternationalWomensDay,
     InvestitureOfCaptainsRegent, // San Marino
@@ -77,6 +80,8 @@ public enum HolidayNames
     MaundyThursday, // Denmark, Norway, Iceland
     MemorialDay, // USA, Moldova
     MidsummerDay, // Sweden, Finland, Lithuania, Latvia, Estonia
+    MiladUnNabi, // India
+    Muharram, // India
     NationalDayOfAustria, // Austria
     NationalDayOfBelgium, // Belgium
     NationalDayOfCyprus, // Cyprus
@@ -101,7 +106,7 @@ public enum HolidayNames
     ProclamationDayOfLatvia, // Latvia
     ReformationDay, // Germany, Slovenia
     RepentanceAndPrayerDay, // Germany
-    RepublicDay, // Italy, Portugal, Malta
+    RepublicDay, // Italy, Portugal, Malta, India
     RemembranceDayOfCroatia, // Croatia
     RestorationOfIndependenceDay, // Portugal, Lithuania, Latvia
     RestorationOfStateDay, // Lithuania
