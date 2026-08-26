@@ -7,6 +7,7 @@ public enum HolidayNames
     AllSaintsDay,
     AllSoulsDay,
     AlphabetDay, // Albania
+    AncestryDay, // Haiti
     AnniversaryOfArengo, // San Marino
     AntiFascistStruggleDay, // Croatia
     ArafahDay, // Saudi Arabia, UAE, Kuwait, Egypt
@@ -21,6 +22,7 @@ public enum HolidayNames
     AugsburgPeaceFestival, // Germany
     AugustBankHoliday, // Ireland
     BastilleDay, // France
+    BattleOfCarababoDay, // Venezuela
     BattleOfTheBoyneDay, // Northern Ireland
     BengaliNewYear, // Bangladesh
     BerchtoldsDay, // Liechtenstein
@@ -28,13 +30,16 @@ public enum HolidayNames
     BirthdayOfGeorgeWashington, // USA
     BirthdayOfKingNorodomSihamoni, // Cambodia
     BirthdayOfQueenMotherNorodomMonineath, // Cambodia
+    BolivarsBirthday, // Venezuela
     BoxingDay, // UK, Canada, Australia, NZ, Estonia, Iceland, Cyprus, Hong Kong, Nigeria
     BuddhasBirthday, // Hong Kong, South Korea
     CandlemasDay, // Liechtenstein
+    CarnivalMonday, // Haiti, Venezuela
+    CarnivalTuesday, // Haiti, Venezuela
     ChakriMemorialDay, // Thailand
     ChildrensDay, // Romania, South Korea, Taiwan
     ChristmasDay, // also Egypt (Coptic Christmas), Ethiopia (Genna), Myanmar
-    ChristmasEve, // Czech Republic, Estonia, San Marino
+    ChristmasEve, // Czech Republic, Estonia, San Marino, Venezuela
     ChulalongkornDay, // Thailand
     ChungYeungFestival, // Hong Kong
     Chuseok, // South Korea
@@ -67,6 +72,7 @@ public enum HolidayNames
     DefendersDay, // Ukraine
     DemocracyAndNationalUnityDay, // Turkey
     DemocracyDayOfNigeria, // Nigeria
+    DessalinesMemorialDay, // Haiti
     DragonBoatFestival, // China, Hong Kong, Taiwan
     EarlyMayBankHoliday, // UK, Ireland
     EasterMonday, // also Nigeria, Ethiopia
@@ -87,6 +93,7 @@ public enum HolidayNames
     FeastOfStPetronius, // Italy
     FindingOfTheTrueCross, // Ethiopia (Meskel)
     FirstDayOfSummer, // Iceland
+    FlagAndUniversitiesDay, // Haiti
     FlemishCommunityDay, // Belgium
     FoundationOfVaticanCityDay, // Vatican City
     FoundingOfTheRepublicDay, // San Marino
@@ -105,10 +112,11 @@ public enum HolidayNames
     IlindenDay, // North Macedonia
     ImmaculateConception,
     IndependenceAndUnityDayOfSlovenia, // Slovenia
-    IndependenceDay, // USA, Ukraine, Finland, Bulgaria, Estonia, Iceland, Malta, Cyprus, Moldova, Montenegro, North Macedonia, India, Pakistan, Bangladesh, Uzbekistan, Albania, Kosovo, Nigeria, Morocco, Sri Lanka, Myanmar, Cambodia
+    IndependenceDay, // USA, Ukraine, Finland, Bulgaria, Estonia, Iceland, Malta, Cyprus, Moldova, Montenegro, North Macedonia, India, Pakistan, Bangladesh, Uzbekistan, Albania, Kosovo, Nigeria, Morocco, Sri Lanka, Myanmar, Cambodia, Haiti, Venezuela
     IndependenceManifestoDay, // Morocco
     IndependenceMovementDayOfKorea, // South Korea
     IndependentCzechoslovakStateDay, // Czech Republic
+    IndigenousResistanceDay, // Venezuela
     InternationalWomensDay,
     InvestitureOfCaptainsRegent, // San Marino
     IqbalDay, // Pakistan
@@ -174,7 +182,7 @@ public enum HolidayNames
     NaturesDayOfIran, // Iran (Sizdah Bedar, 13 Farvardin)
     NevruzDay, // Albania
     NewYearsDay, // also Nigeria, Egypt, Morocco, Thailand, Myanmar
-    NewYearsEve, // Latvia, San Marino, Thailand
+    NewYearsEve, // Latvia, San Marino, Thailand, Venezuela
     NowruzDay, // Uzbekistan, Iran (Persian New Year, computed 1-4 Farvardin rather than Uzbekistan's fixed Mar 21)
     OctoberBankHoliday, // Ireland
     OhiDay, // Greece, Cyprus
