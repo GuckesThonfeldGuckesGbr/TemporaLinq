@@ -80,8 +80,10 @@ Ethiopian calendar calculations added by that design.
 - Tier AS4 (low priority): 🔴 Sri Lanka, 🔴 Nepal, 🔴 Myanmar, 🔴 Cambodia, 🔴 Laos, 🔴 Mongolia, Uzbekistan (Hijri-computable), remaining Central Asia (Hijri-computable)
 
 ### Africa
-- Tier AF1: South Africa, Nigeria (Hijri- and Easter-computable), Egypt (Hijri- and Coptic-Easter-computable), Kenya, Morocco (Hijri-computable), Ghana
-- Tier AF2 (low priority): remaining African nations, Ethiopia (Ethiopian-calendar-computable)
+- Done: ✅ Nigeria, ✅ Egypt, ✅ Morocco (Tier AF1, partial)
+- Tier AF1 remaining: South Africa, Kenya, Ghana
+- Done: ✅ Ethiopia (Ethiopian-calendar-computable; moved up from Tier AF2 once `EthiopianCalendarCalculation` was built and verified)
+- Tier AF2 (low priority): remaining African nations
 
 ### Oceania
 - Tier OC1: Australia, New Zealand
