@@ -6,8 +6,10 @@ public enum HolidayNames
     AllSoulsDay,
     AnniversaryOfArengo, // San Marino
     AntiFascistStruggleDay, // Croatia
+    Arbaeen, // Iran (Shia, 20 Safar)
     ArmisticeDay, // French, Serbian
     AscensionDay,
+    Ashura, // Iran (Shia, 10 Muharram)
     AssumptionDay,
     AugsburgPeaceFestival, // Germany
     AugustBankHoliday, // Ireland
@@ -35,10 +37,14 @@ public enum HolidayNames
     DayOfGermanUnity, // Germany
     DayOfMacedonianUprising, // North Macedonia
     DayOfUprisingAgainstOccupation, // Slovenia
+    DeathOfKhomeini, // Iran (14 Khordad)
     DefendersDay, // Ukraine
     EarlyMayBankHoliday, // UK, Ireland
     EasterMonday,
     EasterSunday,
+    EidAlAdha, // Iran (Shia, 10 Dhu al-Hijjah)
+    EidAlFitr, // Iran (Shia, 1-2 Shawwal)
+    EidAlGhadir, // Iran (Shia, 18 Dhu al-Hijjah)
     Epiphany,
     EstablishmentDayOfSlovakRepublic, // Slovakia
     FallOfFascismDay, // San Marino
@@ -66,15 +72,19 @@ public enum HolidayNames
     IndependentCzechoslovakStateDay, // Czech Republic
     InternationalWomensDay,
     InvestitureOfCaptainsRegent, // San Marino
+    IslamicRepublicDayOfIran, // Iran
+    IslamicRevolutionDayOfIran, // Iran
     JanHusDay, // Czech Republic
     JuneBankHoliday, // Ireland
     Juneteenth, // USA
+    KhordadNationalUprisingDay, // Iran (15 Khordad uprising)
     KingsDayOfTheNetherlands, // Netherlands
     LabourDay,
     LiberationDay, // Italy, Netherlands
     LiberationDayOfBulgaria, // Bulgaria
     LigoDay, // Latvia
     MaundyThursday, // Denmark, Norway, Iceland
+    MawlidAlNabi, // Iran (Shia observance, 17 Rabi' al-awwal)
     MemorialDay, // USA, Moldova
     MidsummerDay, // Sweden, Finland, Lithuania, Latvia, Estonia
     NationalDayOfAustria, // Austria
@@ -88,14 +98,17 @@ public enum HolidayNames
     NationalDayOfSweden, // Sweden
     NationalDayOfSwitzerland, // Switzerland
     NativityOfMaryDay, // Liechtenstein
+    NaturesDayOfIran, // Iran (Sizdah Bedar, 13 Farvardin)
     NewYearsDay,
     NewYearsEve, // Latvia, San Marino
+    Nowruz, // Iran (Persian New Year, 1-4 Farvardin)
     OctoberBankHoliday, // Ireland
     OhiDay, // Greece, Cyprus
     OurLadyOfMeritxellDay, // Andorra
     OurLadyOfSorrowsDay, // Slovakia
     OurLadyOfVictoriesDay, // Malta
     OurLanguageDay, // Moldova
+    Passover, // Israel (15 and 21 Nisan)
     PortugalDay, // Portugal
     PresernDay, // Slovenia
     ProclamationDayOfLatvia, // Latvia
@@ -107,11 +120,14 @@ public enum HolidayNames
     RestorationOfStateDay, // Lithuania
     RevolutionaryStruggleDayOfMacedonia, // North Macedonia
     RevolutionDayOfHungary, // Hungary
+    RoshHashanah, // Israel (1-2 Tishrei)
     SaintDevoteDay, // Monaco
     SaintsCyrilAndMethodiusDay, // Czech Republic, Bulgaria, Slovakia, North Macedonia
     SanMarco, // Italy
     SecondJanuary, // Scotland, Romania, Slovenia
     SetteGiugno, // Malta
+    Shavuot, // Israel (6 Sivan)
+    SimchatTorah, // Israel (22 Tishrei, combined with Shmini Atzeret)
     SlovakNationalUprisingDay, // Slovakia
     SpanishConstitutionDay, // Spain
     SpringBankHoliday, // UK
@@ -130,8 +146,10 @@ public enum HolidayNames
     StPeterAndPaul, // Italy, Malta, Vatican City
     StStephensDay,
     StruggleForFreedomAndDemocracyDay, // Czech Republic, Slovakia
+    Sukkot, // Israel (15 Tishrei)
     SummerBankHoliday, // UK (England, Wales, Northern Ireland)
     SynaxisOfStJohnTheBaptist, // Romania
+    Tasua, // Iran (Shia, 9 Muharram)
     ThanksgivingDay, // USA
     UnificationDayOfBulgaria, // Bulgaria
     UnionDayOfRomania, // Romania
@@ -141,4 +159,7 @@ public enum HolidayNames
     WhitMonday,
     WhitSunday,
     WorldChildrensDay,
+    YomHaAtzmaut, // Israel (Independence Day, 5 Iyar)
+    YomHaShoah, // Israel (Holocaust Remembrance Day, 27 Nisan)
+    YomKippur, // Israel (10 Tishrei)
 }
