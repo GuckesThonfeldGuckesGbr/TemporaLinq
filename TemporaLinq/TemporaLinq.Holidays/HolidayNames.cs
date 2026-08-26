@@ -12,7 +12,9 @@ public enum HolidayNames
     ArafahDay, // Saudi Arabia, UAE, Kuwait, Egypt
     Arbaeen, // Iran (Shia, 20 Safar)
     ArmedForcesDay, // Egypt
+    ArmedForcesDayOfMyanmar, // Myanmar
     ArmisticeDay, // French, Serbian
+    AsalhaBuchaDay, // Thailand
     AscensionDay,
     AshuraDay, // Pakistan, Bangladesh, Kuwait, Iraq, Iran (Shia, 10 Muharram)
     AssumptionDay,
@@ -27,9 +29,11 @@ public enum HolidayNames
     BoxingDay, // UK, Canada, Australia, NZ, Estonia, Iceland, Cyprus, Hong Kong, Nigeria
     BuddhasBirthday, // Hong Kong, South Korea
     CandlemasDay, // Liechtenstein
+    ChakriMemorialDay, // Thailand
     ChildrensDay, // Romania, South Korea, Taiwan
-    ChristmasDay, // also Egypt (Coptic Christmas), Ethiopia (Genna)
+    ChristmasDay, // also Egypt (Coptic Christmas), Ethiopia (Genna), Myanmar
     ChristmasEve, // Czech Republic, Estonia, San Marino
+    ChulalongkornDay, // Thailand
     ChungYeungFestival, // Hong Kong
     Chuseok, // South Korea
     ChuseokEve, // South Korea
@@ -43,8 +47,10 @@ public enum HolidayNames
     ConstitutionDayOfNorway, // Norway
     ConstitutionDayOfPoland, // Poland
     ConstitutionDayOfSlovakia, // Slovakia
+    ConstitutionDayOfThailand, // Thailand
     ConstitutionDayOfUkraine, // Ukraine
     ConstitutionDayOfUzbekistan, // Uzbekistan
+    CoronationDayOfThailand, // Thailand
     CorpusChristi,
     CzechStatehoodDay, // Czech Republic
     DayAfterChuseok, // South Korea
@@ -94,7 +100,7 @@ public enum HolidayNames
     IlindenDay, // North Macedonia
     ImmaculateConception,
     IndependenceAndUnityDayOfSlovenia, // Slovenia
-    IndependenceDay, // USA, Ukraine, Finland, Bulgaria, Estonia, Iceland, Malta, Cyprus, Moldova, Montenegro, North Macedonia, India, Pakistan, Bangladesh, Uzbekistan, Albania, Kosovo, Nigeria, Morocco, Sri Lanka
+    IndependenceDay, // USA, Ukraine, Finland, Bulgaria, Estonia, Iceland, Malta, Cyprus, Moldova, Montenegro, North Macedonia, India, Pakistan, Bangladesh, Uzbekistan, Albania, Kosovo, Nigeria, Morocco, Sri Lanka, Myanmar
     IndependenceManifestoDay, // Morocco
     IndependenceMovementDayOfKorea, // South Korea
     IndependentCzechoslovakStateDay, // Czech Republic
@@ -108,15 +114,21 @@ public enum HolidayNames
     JuneBankHoliday, // Ireland
     Juneteenth, // USA
     KashmirSolidarityDay, // Pakistan
+    KasonFullMoonDay, // Myanmar (Buddha's Birthday / Vesak)
+    KhaoPhansaDay, // Thailand
     KhordadNationalUprisingDay, // Iran (15 Khordad uprising)
+    KingBhumibolMemorialDay, // Thailand
+    KingsBirthdayOfThailand, // Thailand
     KingsDayOfTheNetherlands, // Netherlands
-    LabourDay, // also Nigeria (Workers' Day), Egypt, Morocco, Sri Lanka
+    LabourDay, // also Nigeria (Workers' Day), Egypt, Morocco, Sri Lanka, Thailand, Myanmar
     LanguageMovementDay, // Bangladesh
     LiberationDay, // Italy, Netherlands, Albania, Kuwait, South Korea
     LiberationDayOfBulgaria, // Bulgaria
     LigoDay, // Latvia
     LunarNewYearsDay, // China, Hong Kong, Vietnam, South Korea, Taiwan
     LunarNewYearsEve, // South Korea, Taiwan
+    MakhaBuchaDay, // Thailand
+    MartyrsDayOfMyanmar, // Myanmar
     MaundyThursday, // Denmark, Norway, Iceland
     MawlidAlNabi, // Iran (Shia observance, 17 Rabi' al-awwal)
     MemorialDay, // USA, Moldova, South Korea
@@ -125,6 +137,7 @@ public enum HolidayNames
     MidsummerDay, // Sweden, Finland, Lithuania, Latvia, Estonia
     MiladUnNabi, // India, Pakistan, Bangladesh
     MotherTeresaDay, // Albania
+    MothersDayOfThailand, // Thailand
     Muharram, // India
     NationalDayOfAustria, // Austria
     NationalDayOfBelgium, // Belgium
@@ -142,6 +155,7 @@ public enum HolidayNames
     NationalDayOfSweden, // Sweden
     NationalDayOfSwitzerland, // Switzerland
     NationalDayOfTaiwan, // Taiwan
+    NationalDayOfThailand, // Thailand
     NationalDayOfUae, // UAE
     NationalDayOfVietnam, // Vietnam
     NationalFoundationDayOfKorea, // South Korea
@@ -151,8 +165,8 @@ public enum HolidayNames
     NativityOfMaryDay, // Liechtenstein
     NaturesDayOfIran, // Iran (Sizdah Bedar, 13 Farvardin)
     NevruzDay, // Albania
-    NewYearsDay, // also Nigeria, Egypt, Morocco
-    NewYearsEve, // Latvia, San Marino
+    NewYearsDay, // also Nigeria, Egypt, Morocco, Thailand, Myanmar
+    NewYearsEve, // Latvia, San Marino, Thailand
     NowruzDay, // Uzbekistan, Iran (Persian New Year, computed 1-4 Farvardin rather than Uzbekistan's fixed Mar 21)
     OctoberBankHoliday, // Ireland
     OhiDay, // Greece, Cyprus
@@ -165,6 +179,7 @@ public enum HolidayNames
     Passover, // Israel (15 and 21 Nisan)
     PatriotsVictoryDay, // Ethiopia
     PeaceMemorialDayOfTaiwan, // Taiwan
+    PeasantsDay, // Myanmar
     PortugalDay, // Portugal
     PoyaDay, // Sri Lanka
     PresernDay, // Slovenia
@@ -172,6 +187,7 @@ public enum HolidayNames
     ProphetsBirthday, // UAE, Kuwait, Iraq, Egypt, Morocco, Nigeria
     QingmingFestival, // China, Hong Kong
     QuaidEAzamDay, // Pakistan
+    QueensBirthdayOfThailand, // Thailand
     ReformationDay, // Germany, Slovenia
     RepentanceAndPrayerDay, // Germany
     RepublicDay, // Italy, Portugal, Malta, India, Turkey, Iraq
@@ -196,6 +212,7 @@ public enum HolidayNames
     SinaiLiberationDay, // Egypt
     SinhalaAndTamilNewYearDay, // Sri Lanka
     SlovakNationalUprisingDay, // Slovakia
+    SongkranDay, // Thailand
     SpanishConstitutionDay, // Spain
     SportsDayOfQatar, // Qatar
     SpringBankHoliday, // UK
@@ -218,19 +235,24 @@ public enum HolidayNames
     SummerBankHoliday, // UK (England, Wales, Northern Ireland)
     SummerDay, // Albania
     SynaxisOfStJohnTheBaptist, // Romania
+    TabaungFullMoonDay, // Myanmar (Makha Bucha equivalent)
     TamilThaiPongalDay, // Sri Lanka
     Tasua, // Iran (Shia, 9 Muharram)
     TeachersAndInstructorsDay, // Uzbekistan
     ThanksgivingDay, // USA
+    ThingyanDay, // Myanmar
     ThirdDayOfLunarNewYear, // Taiwan
     ThroneDayOfMorocco, // Morocco
     TombSweepingDay, // Taiwan
     UnificationDayOfBulgaria, // Bulgaria
+    UnionDayOfMyanmar, // Myanmar
     UnionDayOfRomania, // Romania
     VesakDay, // Singapore, Malaysia, Indonesia
     VeteransDay, // USA
     VictoryAndHomelandThanksgivingDay, // Croatia
     VictoryDay, // France, Ukraine, Czech Republic, Slovakia, Estonia, Moldova, Bangladesh, Turkey
+    VisakhaBuchaDay, // Thailand
+    WasoFullMoonDay, // Myanmar (Asalha Bucha equivalent)
     WhitMonday,
     WhitSunday,
     WorldChildrensDay,
