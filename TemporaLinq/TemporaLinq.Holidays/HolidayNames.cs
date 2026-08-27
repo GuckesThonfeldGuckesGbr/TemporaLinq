@@ -37,7 +37,7 @@ public enum HolidayNames
     CarnivalMonday, // Haiti, Venezuela
     CarnivalTuesday, // Haiti, Venezuela
     ChakriMemorialDay, // Thailand
-    ChildrensDay, // Romania, South Korea, Taiwan
+    ChildrensDay, // Romania, South Korea, Taiwan, Mongolia
     ChristmasDay, // also Egypt (Coptic Christmas), Ethiopia (Genna), Myanmar
     ChristmasEve, // Czech Republic, Estonia, San Marino, Venezuela
     ChulalongkornDay, // Thailand
@@ -109,15 +109,16 @@ public enum HolidayNames
     HKSAREstablishmentDay, // Hong Kong
     HolySaturday, // Bulgaria, Serbia, Hong Kong
     HungKingsCommemorationDay, // Vietnam
+    IkhDuichen, // Mongolia (Buddha Day)
     IlindenDay, // North Macedonia
     ImmaculateConception,
     IndependenceAndUnityDayOfSlovenia, // Slovenia
-    IndependenceDay, // USA, Ukraine, Finland, Bulgaria, Estonia, Iceland, Malta, Cyprus, Moldova, Montenegro, North Macedonia, India, Pakistan, Bangladesh, Uzbekistan, Albania, Kosovo, Nigeria, Morocco, Sri Lanka, Myanmar, Cambodia, Haiti, Venezuela
+    IndependenceDay, // USA, Ukraine, Finland, Bulgaria, Estonia, Iceland, Malta, Cyprus, Moldova, Montenegro, North Macedonia, India, Pakistan, Bangladesh, Uzbekistan, Albania, Kosovo, Nigeria, Morocco, Sri Lanka, Myanmar, Cambodia, Haiti, Venezuela, Mongolia
     IndependenceManifestoDay, // Morocco
     IndependenceMovementDayOfKorea, // South Korea
     IndependentCzechoslovakStateDay, // Czech Republic
     IndigenousResistanceDay, // Venezuela
-    InternationalWomensDay,
+    InternationalWomensDay, // also Mongolia
     InvestitureOfCaptainsRegent, // San Marino
     IqbalDay, // Pakistan
     IslamicNewYear, // UAE, Kuwait, Iraq, Egypt, Morocco
@@ -155,6 +156,7 @@ public enum HolidayNames
     MotherTeresaDay, // Albania
     MothersDayOfThailand, // Thailand
     Muharram, // India
+    NaadamFestival, // Mongolia
     NationalDayOfAustria, // Austria
     NationalDayOfBelgium, // Belgium
     NationalDayOfChina, // China, Hong Kong
@@ -181,7 +183,7 @@ public enum HolidayNames
     NativityOfMaryDay, // Liechtenstein
     NaturesDayOfIran, // Iran (Sizdah Bedar, 13 Farvardin)
     NevruzDay, // Albania
-    NewYearsDay, // also Nigeria, Egypt, Morocco, Thailand, Myanmar
+    NewYearsDay, // also Nigeria, Egypt, Morocco, Thailand, Myanmar, Mongolia
     NewYearsEve, // Latvia, San Marino, Thailand, Venezuela
     NowruzDay, // Uzbekistan, Iran (Persian New Year, computed 1-4 Farvardin rather than Uzbekistan's fixed Mar 21)
     OctoberBankHoliday, // Ireland
@@ -207,7 +209,7 @@ public enum HolidayNames
     QueensBirthdayOfThailand, // Thailand
     ReformationDay, // Germany, Slovenia
     RepentanceAndPrayerDay, // Germany
-    RepublicDay, // Italy, Portugal, Malta, India, Turkey, Iraq
+    RepublicDay, // Italy, Portugal, Malta, India, Turkey, Iraq, Mongolia
     RemembranceDayOfCroatia, // Croatia
     RestorationOfIndependenceDay, // Portugal, Lithuania, Latvia
     RestorationOfStateDay, // Lithuania
@@ -261,6 +263,7 @@ public enum HolidayNames
     ThirdDayOfLunarNewYear, // Taiwan
     ThroneDayOfMorocco, // Morocco
     TombSweepingDay, // Taiwan
+    TsagaanSar, // Mongolia (Lunar New Year)
     UnificationDayOfBulgaria, // Bulgaria
     UnionDayOfMyanmar, // Myanmar
     UnionDayOfRomania, // Romania
